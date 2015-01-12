@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+.modal-content {
+	position: absolute;
+	top: 50px;
+	background: #ddd;
+	width: 500px;
+	height: 100px;//  temp.
+
+}
+body {
+	background: #fff;
+ }
+ .container-960 {
+ 	margin: 20px auto;
+ }
+/*bread-navi*/
+.bread-nav {
+	text-align: left;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.bread-nav li {
+	display: inline-block;
+}
+.bread-nav li a {
+	color: #333;
+}
+/*shopping-wrapper*/
+.shopping-wrapper {
+	margin-bottom: 40px;
+}
+.step-by {
+	height: 60px;
+	margin: 30px auto;
+}
+.list-title {
+	width: 840px;
+	margin-left: 100px;
+	margin-top: 20px;
+	padding: 10px 0;
+}
+.list-title li {
+	display: inline-block;
+	text-align: center;
+}
+.shopping-list .store {
+	margin-bottom: 20px;
+}
+.store figure {
+	width: 100px;
+	text-align: center;
+	float: left;
+}
+.store figure img {
+	width: 50px;
+}
+.item-list {
+	float: left;
+}
+.item-list .item {
+	height: 100px;
+	width: 840px;
+	background: #f9f9f9;
+	letter-spacing: -4px; /*crack inline-block的4px間距*/
+	/*word-spacing: -4px;*/
+	font-size: 0;
+	margin-bottom: 5px;
+}
+.item div {
+	/*height: 120px;*/
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	zoom: 1; /*crack End*/
+}
+.t-cost div.item-pic {
+	background: transparent;
+}
+div.cancel-item {
+	width: 70px;
+	padding: 0 10px;
+}
+.cancel-item button {
+	background: transparent;
+	border: 0;
+	color: #666;
+	cursor: pointer;
+	outline: none;
+	width: 30px;
+}
+.cancel-act {
+	color: #ff3333!important;
+}
+div.item-pic {
+	width: 140px;
+	height: 100px;
+	padding: 0 10px;
+	text-align: center;
+	background: #fff;
+}
+.t-cost .item-cost {
+	height: 40px;
+	line-height: 40px;
+}
+div.item-pic img {
+	height: 100px;
+}
+.g-coin div.item-pic img {
+	height: 60px;
+	margin: 20px 0;
+}
+div.item-info {
+	width: 360px;
+	padding: 0 10px;
+	text-align: left !important;
+	font-size: 1rem;
+}
+.item-info h3 {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 10px;
+}
+.item-info h3 span {
+	padding-right: 10px;
+}
+.item-info dl {
+	text-align: left;
+	margin: 10px 0;
+	position: relative;
+	display: inline;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.item-info dt,
+.item-info dd {
+	display: inline;
+}
+.item-info dt {
+	margin-right: 5px;
+}
+.item-info .item-color {
+	height: 20px;
+	width: 20px;
+	background: transparent;
+	display: inline-block;
+	margin: 0 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+	top: 5px;
+}
+div.item-number {
+	width: 60px;
+	padding: 0 10px;
+}
+.item-number input {
+	width: 25px;
+	text-align: right;
+}
+div.item-cost {
+	width: 99px;
+	padding: 0 10px;
+	color: #ff3333;
+	font-weight: 900;
+	height: 80px;
+	line-height: 80px;
+	border-left: 1px solid #ddd;
+}
+/*total-cost-area*/
+
+.total-cost-area {
+	width: 840px;
+	margin: 20px 0;
+	margin-left: 100px;
+}
+.total-cost-area div {
+	margin:  10px 0;
+	position: relative;
+	height: 50px;
+}
+.total-cost-area .all {
+	padding-top: 5px;
+	border-top: 1px solid #ddd;
+	text-align: right;
+}
+.total-cost-area h6 {
+	font-size: 12px;
+	display: inline-block;
+	padding: 0 20px;
+}
+.total-cost-area h3 {
+	color: #ff3333;
+	font-size: 18px;
+	font-weight: 900;
+	text-align: right;
+	display: inline-block;
+}
+.item-list .t-cost {
+	/*background: #fff;*/
+}
+.g-coin .item {
+	background: #FFD19B;
+}
+.g-coin .item-pic {
+	background: transparent;
+}
+/*-----------------------------------BTN-----------------------------------*/
+.shopping-func-area {
+	width: 840px;
+	margin-left: 100px;
+}
+.shopping-func-area button {
+	cursor: pointer;
+}
+.step-btn-group {
+	float: right;
+}
+.step-btn-group .step-btn {
+	margin-left: 20px;
+	border: 0;
+	padding: 0;
+	background: transparent;
+}
+.step-btn-group .step-btn a {
+	display: block;
+	width: 160px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid #ffac49;
+	background: #fff;
+	font-size: 18px;
+	color: #ffac49;
+}
+.step-btn-group .step-btn i {
+	padding: 0 10px;
+	line-height: 50px;
+}
+.step-btn-group .pay a {
+	background: #ff3333;
+	color: #fff;
+	border: 1px solid #ff3333;
+}
+.step-btn-group .step-btn a:hover {
+	background: #ffac49;
+	color: #fff;
+	border: 1px solid #ffac49;
+}
+
+
+

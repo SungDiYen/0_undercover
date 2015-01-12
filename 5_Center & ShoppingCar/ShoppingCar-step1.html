@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>購物車</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="icon" href="images/Goiiz-favicon.png">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/center-basic.css">
+<link rel="stylesheet" href="css/car-process.css">
+<link rel="stylesheet" href="css/ShoppingCar.css">
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/ShopCar-collapse.js"></script>
+<script type="text/javascript" src="js/calculate.js"></script>
+</head>
+<body>
+<!--HEADER-->
+	<header>
+		<nav class="main-header">
+			<div class="container-1200">
+				<ul class="navi">
+					<li><img src="images/GoiizHerderLogoH20.png"></li>
+                    <li><a href="LeDiner-Index.html">主題活動</a></li>
+                    <li><a href="LeDiner-Index.html">樂呆了</a></li>
+                    <li><a href="LeDoor-Index.html">樂多商城</a></li>
+                    <li><img src="images/like.png"></li>
+                </ul>
+				<ul class="member">
+                    <li><a href="">登入/註冊</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+                <ul class="member member-active">
+                    <li><a href="">用戶名稱 你好</a></li>
+                    <li><a href="">登出</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+			</div>
+		</nav>
+	</header>
+
+<!--CONTENT-->
+<div class="container-960">
+	<nav class="bread-nav">
+		<ul>
+			<li><a href="">首頁</a></li>
+			<span class="bread-arrow">&gt;</span>
+			<li><a href="">購物車</a></li>
+		</ul>
+	</nav>
+	<div class="shopping-wrapper">
+		<div class="process-bar">
+			<div class="step-by checkout-wrap">
+				<ul class="checkout-bar">
+					<li class="active first"><a href="#">商品確認</a></li>
+					<li class="next">收件與付款資訊</li>
+				    <li class="next">付款</li>
+				    <li class="next">成功購物</li><!--class="visited first"-->
+				</ul>
+			</div>
+		</div>
+		<div class="shopping-list">
+			<div class="list-title">
+				<ul>
+					<li style="width:10px;"></li><li style="width:90px;">選擇</li><li style="width: 160px;">商品圖片</li><li style="width: 380px;">商品名稱與規格</li><li style="width: 80px;">數量</li><li style="width: 120px;">價格</li>
+				</ul>
+			</div>
+
+			<div class="store">
+				<figure>
+					<img src="images/u312.png"><br>
+					<figurecaption>老班的店</figurecaption>
+				</figure>
+				<div class="item-list">
+					<div class="item" id="value1">
+						<div style="background: #a6ddff; width: 10px; height: 100px;"></div>
+						<div class="cancel-item">
+							<button type="button" class="cancel-btn" value="1"><img src="images/del-01.svg"></button>
+						</div>
+						<div class="item-pic">
+							<img src="images/u140.png">
+						</div>
+						<div class="item-info">
+							<h3><span>【atmos】</span>AGSC Cotton Knit</h3>
+								<dl>
+									<dt>尺寸:</dt>
+									<dd>S號</dd>
+								</dl>
+								<dl>
+									<dt>顏色:</dt>
+									<dd class="item-color" style="background: #ff3333"></dd>
+								</dl>
+								<dl style="font-size: 12px;color: #9b9b9b;">
+									<dt>商品編號</dt>
+									<dd>E14061716584615</dd>
+								</dl>
+						</div>
+						<div class="item-number">
+							<form>
+								<input type="text" value="1">
+							</form>
+							<!--<div class="math">
+								<input type="button" id="add" value="+" />
+								<div id="num">1</div>
+								<input type="button" id="jian" value="-" />
+							</div>-->
+						</div>
+						<div class="item-cost">
+							$5,000
+						</div>
+					</div>
+					<div class="item" id="value2">
+						<div style="background: #a6ddff; width: 10px; height: 100px;"></div>
+						<div class="cancel-item">
+							<button type="button" class="cancel-btn" value="2"><img src="images/del-01.svg"></button>
+						</div>
+						<div class="item-pic">
+							<img src="images/u190.png">
+						</div>
+						<div class="item-info">
+							<h3><span>【atmos】</span>AGSC Cotton Knit</h3>
+								<dl>
+									<dt>尺寸:</dt>
+									<dd>S號</dd>
+								</dl>
+								<dl>
+									<dt>顏色:</dt>
+									<dd class="item-color" style="background: #990000"></dd>
+								</dl>
+								<dl style="font-size: 12px;color: #9b9b9b;">
+									<dt>商品編號</dt>
+									<dd>E14061716584615</dd>
+								</dl>
+						</div>
+						<div class="item-number">
+							<form>
+								<input type="text" value="1">
+							</form>
+						</div>
+						<div class="item-cost">
+							$5,000
+						</div>
+					</div>
+					<div class="item t-cost">
+						<div style=" width: 100px;"></div>
+						<div class="item-pic">
+							<img src="images/deliver-car.svg" style="height: 30px;margin: 30px 0;">
+						</div>
+						<div class="item-info" style=" width: 440px;">
+							<h3>運費</h3>
+						</div>
+						<div class="item-cost">
+							$500
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="store">
+				<figure>
+					<img src="images/u184.png"><br>
+					<figurecaption>her's Shop</figurecaption>
+				</figure>
+				<div class="item-list">
+					<div class="item" id="value3">
+						<div style="background: #a6ddff; width: 10px; height: 100px;"></div>
+						<div class="cancel-item">
+							<form>
+								<button type="button" class="cancel-btn" value="3"><img src="images/del-01.svg"></button>
+							</form>
+						</div>
+						<div class="item-pic">
+							<img src="images/u176.png">
+						</div>
+						<div class="item-info">
+							<h3><span>【NIKE】</span>WMS PRE MONTREAL RCR VNTG</h3>
+								<dl>
+									<dt>尺寸:</dt>
+									<dd>8.5</dd>
+								</dl>
+								<dl>
+									<dt>顏色:</dt>
+									<dd class="item-color" style="background: #999900"></dd>
+								</dl>
+								<dl style="font-size: 12px;color: #9b9b9b;">
+									<dt>商品編號</dt>
+									<dd>E14061716584615</dd>
+								</dl>
+						</div>
+						<div class="item-number">
+							<form>
+								<input type="text" value="1">
+							</form>
+						</div>
+						<div class="item-cost">
+							$5,000
+						</div>
+					</div>
+					<div class="item t-cost">
+						<div style=" width: 100px;"></div>
+						<div class="item-pic">
+							<img src="images/deliver-car.svg" style="height: 30px;margin: 30px 0;">
+						</div>
+						<div class="item-info" style=" width: 440px;">
+							<h3>運費</h3>
+						</div>
+						<div class="item-cost">
+							$500
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="store g-coin">
+				<figure>
+					<img src="images/goiiz_face.png"><br>
+					<figurecaption>樂多幣</figurecaption>
+				</figure>
+				<div class="item-list">
+					<div class="item">
+						<div style=" width: 100px;"></div>
+						<div class="item-pic">
+							<img src="images/goiiz-coin.png">
+						</div>
+						<div class="item-info">
+							<span>本次交易可抵用點數，您目前有X點</span>
+						</div>
+						<div class="item-number">
+							<form>
+								<input type="text" value="0">點
+							</form>
+						</div>
+						<div class="item-cost">
+							-$100
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="total-cost-area">
+			<div class="all">
+				<h6>合計金額</h6>
+				<h3>$<span style="font-size: 36px">13,300</span></h3>
+			</div>
+		</div>
+		<div class="shopping-func-area">
+			<div class="step-btn-group">
+				<button type="button" class="step-btn goback"><a href=""><i class="fa fa-caret-left"></i>我要繼續逛</a></button>
+				<button type="button" class="step-btn pay"><a href="">我要結帳<i class="fa fa-caret-right"></i></a></button>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--FOOTER-->
+<footer>
+	<div class="main-footer copy">
+		<div class="container-1200">
+			<p>人因互動信息科技股份有限公司 &copy; 2013-2014 Goiiz.com &amp; IncuSeed.it. </p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+

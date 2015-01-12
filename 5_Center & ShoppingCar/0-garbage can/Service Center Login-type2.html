@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>會員中心登入</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="images/Goiiz-favicon.png">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/center-basic.css">
+    <link rel="stylesheet" href="css/center-login.css">
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+<body>
+<!--HEADER-->
+    <header>
+        <nav class="main-header">
+            <div class="container-1200">
+                <ul class="navi">
+                    <li><img src="images/GoiizHerderLogoH20.png"></li>
+                    <li><a href="LeDiner-Index.html">主題活動</a></li>
+                    <li><a href="LeDiner-Index.html">樂呆了</a></li>
+                    <li><a href="LeDoor-Index.html">樂多商城</a></li>
+                </ul>
+                <!--<ul class="member">
+                    <li><a href="">登入/註冊</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+                <ul class="member member-active">
+                    <li><a href="">用戶名稱 你好</a></li>
+                    <li><a href="">登出</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>-->
+            </div>
+        </nav>
+    </header>
+
+<!--CONTENT-->
+ <div class="container-1200">
+    <article class="">
+        <section class="banner-area">
+                <div class="item" style="width:850px"><img src="images/login/1-1 (1).jpg"></div>
+                <div class="item" style="width:850px"><img src="images/login/1-1 (2).jpg"></div>
+                <div class="item" style="width:850px"><img src="images/login/1-1 (3).jpg"></div>
+                <div class="item" style="width:850px"><img src="images/login/1-1 (4).jpg"></div>
+                <div class="item" style="width:850px"><img src="images/login/1-1 (5).jpg"></div>
+        </section>
+        <section class="goiiz-login">
+            <div class="tab-content">
+                <h1>會員中心登入(暫定)</h1>
+                <div class="input-area-top">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i></label>
+                        <input type="email" class="form-input" maxlength="50" placeholder="帳號 / Email">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-lock"></i></label>
+                        <input type="password" id="login-passwd" class="form-input" maxlength="30" placeholder="請輸入密碼">
+                    </div>
+                </div>
+                <div class="input-area-bottom">
+                    <input type="checkbox" name="記住我的帳號" value=""><label>記住我的帳號</label>
+                    <a href="#" style="float: right;">忘記登入密碼?</a>
+                    <button type="submit" class="login-btn">登入</button>
+                    <p>或<a href="#" id="reg-btn">註冊</a></p>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="input-area-reg">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i></label>
+                        <input type="email" class="form-input" maxlength="50" placeholder="帳號 / Email">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-lock"></i></label>
+                        <input type="password" id="login-passwd" class="form-input" maxlength="30" placeholder="請輸入密碼">
+                    </div>
+                    <input type="checkbox" name="" value="">
+                    <label>我同意<a href="">購意思服務條款</a></label>
+                    <button type="submit" class="login-btn">註冊</button>
+                    <p>或<a href="#" id="reg-btn">登入</a></p>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+    </article>
+ </div>
+
+<!--FOOTER-->
+<footer>
+    <div class="main-footer copy">
+        <div class="container-1200">
+            <p>人因互動信息科技股份有限公司 &copy; 2013-2014 Goiiz.com &amp; IncuSeed.it. </p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+    $(function(){
+        $('.banner-area').slick({
+            autoplay: true,
+            autoplaySpeed: 6000,
+            infinite: true,
+            slidesToShow: 1,
+            accessibility: false,
+            arrows: true,
+            dots: true,
+        });
+        $('.input-area-reg').hide();
+        $('#reg-btn').click(function(){
+            $('.input-area-bottom,.input-area-top').slideToggle();
+            $('.input-area-reg').slideToggle();
+        });
+    });
+</script>
+</body>
+</html>

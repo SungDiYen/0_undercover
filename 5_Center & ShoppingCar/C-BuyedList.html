@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Service Center</title>
+    <meta name="description" content="">
+	<link rel="icon" href="images/Goiiz-favicon.png">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/center-basic.css">
+    <link rel="stylesheet" href="css/center-index.css">
+    <link rel="stylesheet" href="css/C-Reset-Pw.css">
+</head>
+<body>
+
+<!--HEADER-->
+	<header>
+	    <nav class="main-header">
+	    	<div class="container-1200">
+	    		<ul class="navi">
+					<li><img src="images/GoiizHerderLogoH20.png"></li>
+	                <li><a href="LeDiner-Index.html">主題活動</a></li>
+	                <li><a href="LeDiner-Index.html">樂呆了</a></li>
+	                <li><a href="LeDoor-Index.html">樂多商城</a></li>
+	            </ul>
+	        	<ul class="member">
+	                <li><a href="">登入/註冊</a></li>
+	                <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+	                <li><a href="">會員中心</a></li>
+	            </ul>
+	            <ul class="member member-active">
+	                <li><a href="">用戶名稱 你好</a></li>
+	                <li><a href="">登出</a></li>
+	                <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+	                <li><a href="">會員中心</a></li>
+	            </ul>
+	    	</div>
+	    </nav>
+	</header>
+	<nav class="nav-tab">
+	    <div class="container-960">
+	    	<ul class="tab-btns">
+	        	<li class="tab-active"><a href="#dash-board">會員中心</a></li>
+	        	<li><a href="#order-sheet">訂單查詢</a></li>
+	        	<li><a href="#order-sheet">退貨查詢</a></li>
+	        	<li><a href="#order-sheet">換貨查詢</a></li>
+	    	</ul>
+	    	<ul>
+	    		<li><a href="#reject-order" target="_blank">優惠券查詢</a></li>
+	        	<li><a href="ShoppingCar-step1.html" target="_blank">購物車</a></li>
+	    	</ul>
+	    	<div class="clearfix"></div>
+	    </div>
+	</nav>
+<!--Content-->
+	<div class="container-960 center-content" id="center-content">
+		<div class="buyed-list" id="buyed-list">
+			<h1><i class="fa fa-check-square-o"></i>買過商品清單</h1>
+			<div class="clearfix"></div>
+			<div>
+				<section class="order-row">
+					<ul class="row-title">
+						<li style="width: 130px;">商家</li>
+						<li style="width: 100px;">商品圖片</li>
+						<li style="width: 240px;">商品名稱</li>
+						<li style="width: 138px;">規格</li>
+						<li>購買數量</li>
+						<li style="width: 160px;">價格</li>
+						<li>快速購買</li>
+						<div class="clearfix"></div>
+					</ul>
+					<div class="buyed-list-group">
+						<ul class="order-sheet-detail">
+							<li style="width: 130px;">keshop</li>
+							<li style="width: 100px;">
+								<figure>
+									<img src="images/u176.png">
+								</figure>
+							</li>
+							<li style="width: 240px;">【atmos】AGSC Cotton Knit</li>
+							<li style="width: 138px;">S號</li>
+							<li>1組</li>
+							<li style="width: 160px;"><span class="price">$5,000</span></li>
+							<li><span class="sell-span">搶購</span></li>
+							<div class="clearfix"></div>
+						</ul>
+						<ul class="order-sheet-detail">
+							<li style="width: 130px;">keshop</li>
+							<li style="width: 100px;">
+								<figure>
+									<img src="images/u176.png">
+								</figure>
+							</li>
+							<li style="width: 240px;" >【atmos】AGSC Cotton Knit</li>
+							<li style="width: 138px;">S號</li>
+							<li>1組</li>
+							<li style="width: 160px;"><span class="price">$5,000</span></li>
+							<li><span class="sell-span">搶購</span></li>
+							<div class="clearfix"></div>
+						</ul>
+						<ul class="order-sheet-detail bottom-border">
+							<li style="width: 130px;">keshop</li>
+							<li style="width: 100px;">
+								<figure>
+									<img src="images/u176.png">
+								</figure>
+							</li>
+							<li style="width: 240px;">【atmos】AGSC Cotton Knit</li>
+							<li style="width: 138px;">S號</li>
+							<li>1組</li>
+							<li style="width: 160px;"><span class="price">$5,000</span></li>
+							<li><span class="sell-span">搶購</span></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+<!--Footer-->
+<footer>
+    <div class="main-footer copy">
+	    <div class="container-1200">
+	    	<p>人因互動信息科技股份有限公司 &copy; 2013-2014 Goiiz.com &amp; IncuSeed.it. </p>
+	    </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script>
+    	$(function(){
+    		$('.order-process').hide();
+			$('#center-content>div').hide();
+			$('#center-content>div:first').show();
+			$('.tab-btns ul li:first').addClass('tab-active');
+
+			$('.tab-btns li a').click(function(){
+			$('.tab-btns li').removeClass('tab-active');
+			$(this).parent().addClass('tab-active');
+			var currentTab = $(this).attr('href');
+			$('#center-content>div').hide();
+			$(currentTab).show();
+			return false;
+			});
+
+			$('.fa-plus').click(function(){
+				$($(this).attr('data-target')).slideToggle();
+			});
+
+			$('.s-tab li').each(function(i){
+			    var _i = i;
+			    $('.qa-info').children('section').hide();
+			    $('.qa-info').children('section:first-of-type').show();
+			    $('.bread-menu-list').children('dd').hide();
+			    $('.bread-menu-list').children('dd:first-of-type').show();
+			    $(this).click(function(){
+			      $(this).parent().children().removeClass('tab-active').eq(_i).addClass('tab-active');
+			      $('.qa-info').children('section').hide().eq(_i).show();
+			      $('.bread-menu-list').children('dd').hide().eq(_i).show();
+			    });
+			});
+		});
+    </script>
+</body>
+</html>

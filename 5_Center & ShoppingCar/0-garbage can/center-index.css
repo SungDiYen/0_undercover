@@ -1,0 +1,245 @@
+/*html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	position: relative;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+}*/
+
+/*------------------*/
+
+.nav-tab {
+	background: #fff;
+	border-bottom: 3px solid #f7931c;
+}
+.nav-tab ul {
+	position: relative;
+	margin-top: 20px;
+}
+.nav-tab li {
+	border: 1px solid transparent;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+}
+.nav-tab li.enable {
+	border: 1px solid #f7931c;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.nav-tab li a {
+	color: #f7931c;
+	font-size: 1rem;
+	padding: 0 1rem;
+	height: 30px;
+	vertical-align: middle;
+	line-height: 30px;
+	display: block;
+}
+.nav-tab li a:hover {
+	background: #f7931c;
+	color: #fff;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+/* 我要商店+招商說明會 Regsiter-wrap*/
+
+.reg-wrap  h2 {
+	font-size: 2rem;
+	color:#3B3D3A;
+	margin-top:20px;
+}
+.reg-content ul {
+	margin: 0 210px;
+}
+.reg-content li {
+	margin:10px 0px
+}
+.reg-content li strong {
+	width:190px;
+	height:40px;
+	font-size: 1.35rem;
+	color:#333;
+	text-align:right;
+	display:inline-block;
+	font-weight: 100;
+	line-height: 40px;
+	padding-right: 10px;
+}
+.reg-content li strong i {
+	color:#ff3333;
+	padding-right: 5px;
+}
+.reg-content li input {
+	width:500px;
+	height:38px;
+	font-size:18px;
+	color:#888888;
+	border:1px solid #CCCCCC;
+	padding:0px 10px;
+	vertical-align:bottom;
+	position:relative;
+}
+.reg-content ul .phone input {
+	margin: 0px 10px 0px 0px
+}
+.reg-content ul .phone .areaCode {
+	width: 65px
+}
+.reg-content ul .phone .localCalls {
+	width: 403px
+}
+.reg-content ul .phone .extension {
+	width: 100px
+}
+.reg-content ul .storeAddress .selectBox select {
+	width: 255px;
+	height: 40px;
+	font-size: 18px;
+	color: #888888;
+	margin: 0px 11px 0px 0px;
+	padding: 7px;
+	border: 1px solid #CCCCCC;
+	vertical-align: bottom;
+}
+.reg-content ul .storeAddress .receiverAddr{
+	margin:13px 10px 0px 200px;
+}
+.reg-content ul .storeClass .selectBox select {
+	width:520px;
+	height:40px;
+	font-size:18px;
+	color:#888888;
+	margin:0px 11px 0px 0px;
+	padding:7px;
+	border:1px solid #CCCCCC;
+	vertical-align:bottom;
+}
+.reg-content ul .storeRemark textarea {
+	width:500px;
+	height:220px;
+	font-size: 18px;
+	color:#888888;
+	border:1px solid #CCCCCC;
+	padding:10px 10px;
+	position:relative;
+	resize:none;
+}
+.reg-content ul .confirmBtn {
+	margin:5px 0px 80px 200px;
+}
+.reg-content ul .confirmBtn a {
+	width:200px;
+	height:40px; 
+	font-size: 18px;
+	line-height: 40px;
+	color:#FFFFFF;
+	text-align:center; 
+	border-radius:3px; 
+	cursor:pointer; 
+	display:inline-block;
+	background:#f7931c
+}
+ /*左側欄位*/
+ .reg-rule aside {
+ 	width: 161px;
+ 	float: left;
+ 	background: #fff;
+ 	border: 1px solid #f7931c;
+ 	border-top: 0px;
+ 	margin-bottom: 20px;
+ }
+.reg-rule aside h3 {
+ 	text-align: left;
+ 	margin: 0;
+ 	padding: 10px 20px;
+ 	background: #f7931c;
+ 	font-size: 1.2rem;
+ 	color: #fff;
+ }
+.tabs {
+ 	padding: 0 20px;
+ 	margin: 0;
+ }
+.tabs li {
+  display: block;
+  padding: 10px 0;
+  color: #7f7f7f;
+  cursor: pointer;
+  border-bottom: 1px solid #c5c5c5;
+}
+.tabs li:hover{
+  color: #f7931c;
+}
+.tabs li.enable{
+  color: #333;
+  font-weight: 900;
+}
+.tabs li:last-child {
+	border-bottom: 0px;
+}
+
+/*右側欄位*/
+ .main-content {
+ 	width: 980px;
+ 	float: left;
+ 	margin-left: 20px;
+ }
+ nav.bread-navi {
+ 	padding: 10px 0;
+ 	color: #7f7f7f;
+ }
+
+ .bread-navi dt {
+ 	display: inline;
+ }
+ .bread-navi dt a {
+ 	color: #333;
+ }
+ .bread-navi dd {
+ 	display: inline;
+ 	margin: 0;
+ }
+
+.contents {
+	font-size: 1rem;
+}
+.contents>section {
+  display: none;
+  text-align: justify;
+}
+.contents>section:first-of-type{
+  display: block;
+}
+#nav-tab-content>div {
+	display: none;
+}
+#nav-tab-content>div:first-of-type {
+	display: block;
+}
+.bread-menu-list>dd {
+	display: none;
+}
+.bread-menu-list>dd:first-of-type {
+	display: block;
+}
+.contents h4 {
+	font-size: 1.75rem;
+	border-top: 1px solid #c5c5c5;
+	padding: 0.625rem 0 0.875rem;
+}
+.contents ol {
+	list-style: decimal-leading-zero;
+	padding-left: 2rem;
+}
+.contents li {
+	padding-bottom: 0.5rem;
+}
+section p, ol {
+	line-height: 1.5rem;
+}

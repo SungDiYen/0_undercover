@@ -1,0 +1,218 @@
+  @charset "UTF-8";
+
+.shopping-wrapper h1 {
+	color: #333;
+	font-size: 18px;
+	text-align: left;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	padding: 0;
+	font-weight: 900;
+}
+.shopping-wrapper h1 i {
+	width: 20px;
+	margin-right: 5px;
+}
+.order-list {
+ 	
+}
+.order-item-area {
+	background: #f9f9f9;
+}
+.order-item-pic {
+	border: 5px solid #ffac49;
+	background: #fff;
+	padding: 20px;
+}
+.order-item-pic figure {
+	float: left;
+	margin: 10px;
+	text-align: center;
+	width: 127px;
+}
+.order-item-pic figcaption {
+	text-align: center;
+	color: #ff3333;
+	background: #fff;
+	padding-top: 10px;
+}
+.order-item-pic figcaption span {
+	margin: 0 5px;
+	color: #666;
+}
+.order-item-pic figure img {
+	height: 100px;
+}
+.order-item-pic .t-cost {
+	background: transparent;
+}
+.order-item-pic .t-cost img {
+	height: 40px;
+	margin: 30px 0;
+}
+.order-item-pic .g-coin img {
+	height: 60px;
+	margin: 20px 0;
+}
+.order-item-text {
+	margin: 0px 40px;
+	position: relative;
+	padding: 10px 0;
+}
+.order-item-text button i {
+	margin-right: 5px;
+}
+.fa-sort-desc {
+	position: relative;
+	top: -2px;
+}
+.fa-sort-asc {
+	position: relative;
+	top: 2px;
+}
+.order-item-text button {
+	cursor: pointer;
+	display: block;
+	width: 105px;
+	height: 30px;  /* 3.2 times */
+	border-radius: 5px;
+	border: 1px solid #ffac49;
+	background: #fff;
+	font-size: 12px;
+	color: #ffac49;
+	outline: none;
+	position: absolute;
+	bottom: 16.5px;
+}
+.order-item-text button:hover {
+	color: #fff;
+	background: #ffac49;
+}
+.order-item-text>div {
+	text-align: right;
+}
+.order-item-text h3 {
+	color: #ff3333;
+	font-size: 18px;
+	font-weight: 900;
+	display: inline-block;
+}
+.order-item-text h6 {
+	font-size: 12px;
+	display: inline-block;
+	padding: 0 20px;
+}
+.equal {
+	height: 30px;
+	width: 50px;
+	background: url(../images/u198.png);
+}
+.order-info {
+ 	
+}
+.order-info form div {
+
+}
+
+/*info Left*/
+
+.order-info-left {
+	width: 520px;
+	float: left;
+}
+.order-info-left form {
+	background: #f9f9f9;
+	height: 250px;
+	padding: 20px 10px;
+}
+.order-info-left form div {
+	padding: 10px 0;
+}
+.order-info-left form label {
+	width: 150px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 20px;
+}
+.order-info-left .city select {
+	margin-right: 10px;
+	width: 78px;
+}
+.receive-check input[type="checkbox"] {
+	display: inline-block;
+}
+.receive-check input[type="checkbox"]:hover .order-info-right {
+	display: block;
+}
+/*info Right*/
+
+.order-info-right {
+	/*display: none;*/
+	width: 400px;
+	float: right;
+}
+.order-info-right form {
+	background: #f9f9f9;
+	height: 250px;
+	padding: 20px 10px;
+}
+.order-info-right form div {
+	padding: 10px 0;
+}
+.order-info-right form label {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 20px;
+}
+.pay-channel-area {
+	margin-bottom: 20px;
+	padding: 17.5px 40px;
+	background: #f9f9f9;
+}
+.pay-channel-area input {
+	display: inline-block;
+}
+.pay-title {
+	display: inline-block;
+}
+.pay-title figure {
+	display: inline-block;
+	margin: 0 20px;
+	text-align: center;
+}
+.pay-title span {
+	font-size: 12px;
+	font-weight: 100;
+}
+.res {
+	border: 5px solid #A6DDFF;
+	margin-top: -20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.res h3 {
+	margin: 0 20px;
+}
+.res button {
+	margin: 20px;
+	margin-bottom: 0;
+	float: left;
+	background: transparent;
+	border: 0;
+	outline: none;
+	padding: 0;
+}
+.res h4 {
+	margin: 5px 0;
+	font-weight: 100;
+}
+.pay-act {
+	background: #A6DDFF;
+}
+.bank-unact {
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}

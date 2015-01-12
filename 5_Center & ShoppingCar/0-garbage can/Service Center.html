@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Service Center</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<link rel="icon" href="images/Goiiz-favicon.png">
+    <link rel="stylesheet" href="css/center-basic.css">
+    <link rel="stylesheet" href="css/center-index.css">
+</head>
+<body>
+
+<!--HEADER-->
+<header>
+    <nav class="main-header">
+    	<div class="container-1200">
+    		<ul class="navi">
+				<li><img src="images/GoiizHerderLogoH20.png"></li>
+                <li><a href="LeDiner-Index.html">主題活動</a></li>
+                <li><a href="LeDiner-Index.html">樂呆了</a></li>
+                <li><a href="LeDoor-Index.html">樂多商城</a></li>
+            </ul>
+        	<ul class="member">
+                <li><a href="">登入/註冊</a></li>
+                <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                <li><a href="">會員中心</a></li>
+            </ul>
+            <ul class="member member-active">
+                <li><a href="">用戶名稱 你好</a></li>
+                <li><a href="">登出</a></li>
+                <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                <li><a href="">會員中心</a></li>
+            </ul>
+    	</div>
+    </nav>
+</header>
+<nav class="nav-tab">
+    <div class="container-960">
+    	<ul>
+        	<li class="enable"><a href="#">我要開店</a></li>
+        	<li><a href="#">我要看規則</a></li>
+    	</ul>
+    </div>
+</nav>
+<!--Content-->
+<div class="container-960" id="nav-tab-content">
+	<div class="reg-wrap"><!-- PAGE01 -->
+	    <div class="reg-content">
+		    <h2>立即申請線上開店</h2>
+    		<form name="reg-form" id="reg-form">
+    			<ul>
+        			<li><strong><i>*</i>公司名稱</strong><input name="companyName" id="companyName" type="text" value=""></li>
+        			<li><strong><i>*</i>商店名稱</strong><input name="nickName" id="nickName" type="text" value=""></li>
+        			<li><strong><i>*</i>統一編號</strong><input name="idno" id="idno" type="text" value="" maxlength="8"></li>
+        			<li><strong><i>*</i>負責人</strong><input name="owner" id="owner" type="text" value=""></li>
+
+        			<li class="phone"><strong><i>*</i>公司電話</strong><input class="areaCode" type="text" value="" name="comanyPhoneCityCode" id="comanyPhoneCityCode" maxlength="10"><input class="localCalls" type="text" value="" name="comanyPhoneNo" id="comanyPhoneNo" maxlength="20"></li>
+
+        			<li class="storeAddress"><strong><i>*</i>公司住址</strong><span class="selectBox"><select name="selCity" id="selCity"><option value="台北市">台北市</option><option value="基隆市">基隆市</option><option value="新北市">新北市</option><option value="新竹縣">新竹縣</option><option value="桃園縣">桃園縣</option><option value="海外">海外</option><option value="超取">超取</option><option value="台東縣">台東縣</option><option value="宜蘭縣">宜蘭縣</option><option value="花蓮縣">花蓮縣</option><option value="南投縣">南投縣</option><option value="台中市">台中市</option><option value="彰化縣">彰化縣</option><option value="苗栗縣">苗栗縣</option><option value="雲林縣">雲林縣</option><option value="台南市">台南市</option><option value="嘉義縣">嘉義縣</option><option value="屏東縣">屏東縣</option><option value="高雄市">高雄市</option><option value="南海諸島">南海諸島</option><option value="澎湖縣">澎湖縣</option><option value="連江縣">連江縣</option><option value="金門縣">金門縣</option></select></span><span class="selectBox"><select name="selDistrict" id="selDistrict"><option value="中正區">中正區</option><option value="大同區">大同區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="大安區">大安區</option><option value="萬華區">萬華區</option><option value="信義區">信義區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="內湖區">內湖區</option><option value="南港區">南港區</option><option value="文山區">文山區</option></select></span><br><input type="text" class="receiverAddr" name="companyAddr" id="companyAddr" size="18" value="" maxlength="50"></li>
+
+        			<li><strong><i>*</i>聯絡人</strong><input name="contactName" id="contactName" type="text" value=""></li>
+
+			        <li class="phone"><strong><i>*</i>聯絡人電話</strong><input class="areaCode" type="text" value="" name="contactPhoneCityCode" id="contactPhoneCityCode" maxlength="10"><input class="localCalls" type="text" value="" name="contactPhoneNo" id="contactPhoneNo" maxlength="20"></li>
+
+			        <li><strong><i>*</i>聯絡人Email</strong><input type="text" value="" name="email" id="email"></li>
+
+			        <li class="storeClass"><strong><i>*</i>主要販售商品類別</strong><span class="selectBox"><select name="goodsItem" id="goodsItem"><option value="內睡衣">內睡衣</option><option value="男裝">男裝</option><option value="男鞋">男鞋</option><option value="流行女包">流行女包</option><option value="專櫃女包">專櫃女包</option><option value="專櫃女裝">專櫃女裝</option><option value="飾品">飾品</option><option value="男包及配件">男包及配件</option><option value="寢具及家具">寢具及家具</option><option value="電腦週邊軟體">電腦週邊軟體</option><option value="家電視聽電玩">家電視聽電玩</option><option value="手機&amp;周邊&amp;耳機">手機&amp;周邊&amp;耳機</option><option value="流行女裝">流行女裝</option><option value="相機&amp;週邊">相機&amp;週邊</option><option value="汽機車">汽機車</option><option value="精品手錶">精品手錶</option><option value="美妝">美妝</option><option value="保健">保健</option><option value="廚具衛浴清潔">廚具衛浴清潔</option><option value="食品">食品</option><option value="婦幼玩具">婦幼玩具</option><option value="運動戶外">運動戶外</option><option value="票券">票券</option><option value="書籍文具DVD">書籍文具DVD</option><option value="流行女鞋">流行女鞋</option><option value="專櫃女鞋">專櫃女鞋</option><option value="文創">文創</option><option value="寵物用品">寵物用品</option><option value="其他">其他</option></select></span></li>
+
+			        <li><strong>公司或賣場網址</strong><input type="text" value="http://" name="companyUrl" id="companyUrl"></li>
+
+			        <li class="storeRemark"><strong style="position: relative;top: -215px;">備註</strong><textarea name="note" id="note" cols="70" rows="10"></textarea></li>
+
+			        <li class="confirmBtn"><a name="btnOpenStoreApply" id="btnOpenStoreApply">確定送出</a></li>
+			    </ul>
+    		</form>
+		</div>
+	</div>
+    <div class="reg-rule"><!-- PAGE02 -->
+	    <aside>
+		    <h3>商店管理規章</h3>
+		    <div class="tab-menu">
+			    <ul class="tabs">
+				    <li class="enable">第一點</li>
+				    <li>消費者訂購須知</li>
+				    <li>服務須知</li>
+				    <li>客戶條款</li>
+				    <li>放四個字</li>
+				    <li>大於四個字</li>
+				    <li>大於五個字以上</li>
+				    <li>很多很多很多很多很多很多字的情況</li>
+				    <li>abc中英文混用</li>
+				    <li>某某條款</li>
+			    </ul>
+		    </div>
+	    </aside>
+    	<div class="main-content">
+    		<nav class="bread-navi">
+    			<dl>
+        			<dt><a href="#">首頁</a></dt>
+        			<dd><span class="bread-arrow">&gt;</span></dd>
+        			<dd>樂呆(第一層)</dd>
+        			<dd><span class="bread-arrow">&gt;</span></dd>
+        			<dd>招商說明(第二層)</dd>
+        			<dd><span class="bread-arrow">&gt;</span></dd>
+        			<dd>
+        				<dl class="bread-menu-list" style="display: inline-block;">
+        					<dd>頁籤樂透區(第三層-00000)</dd>
+        					<dd>消費者訂購須知</dd>
+        					<dd>頁籤樂透區(第三層-2)</dd>
+        				</dl>
+        			</dd>
+      			</dl>
+    		</nav>
+
+	    	<article class="reg-info">
+	    		<section><!--第一點 Layer1-->
+	        		<h4>第一點標題</h4>
+	        		<p>感謝您向 momo摩天商城中的商店（以下稱「店家」）訂購商品，為維護您的權益，請仔細閱讀下述說明：</p>
+	        		<ol>
+		        		<li>店家將會依據下列說明，處理您的訂購事宜。若您有任何購物方面的問題，歡迎您透過momo商城平台向店家提出您的意見或直接與該店家聯絡，店家將竭誠為您提供服務。</li>
+				        <li>當您訂購多筆商品並選擇以信用卡或信用卡分期付款，可能會因信用卡額度不足或系統因素等問題，導致發生當次訂購之商品無法全部取得銀行授權之情形。有此種情形發生時，店家將會就已成功取得授權部分之商品繼續處理您的訂單，若您就其他商品仍有需要時，請重新訂購。但若當次訂購享有跨產品優惠、滿額 / 滿件優惠或當次訂購有需要加計運費者，店家將視為授權全部失敗，請您重新選擇付款方式。</li>
+				        <li>您訂購商品後，店家將於確認您付款後，寄送付款完成通知給您，以確認訂單成立。為保護您的權益，在店家尚未出貨之前，您都可以申請取消訂單，出貨之後亦享有七天審閱期之保障，可以於審閱期內隨時解約退貨。但若當次訂購享有跨產品或滿額 / 滿件優惠者，若有需要取消或退貨時，須將當次訂購之商品訂單全部取消或退貨。</li>
+				        <li>店家將會依據下列說明，處理您的訂購事宜。若您有任何購物方面的問題，歡迎您透過momo商城平台向店家提出您的意見或直接與該店家聯絡，店家將竭誠為您提供服務。</li>
+				        <li>當您訂購多筆商品並選擇以信用卡或信用卡分期付款，可能會因信用卡額度不足或系統因素等問題，導致發生當次訂購之商品無法全部取得銀行授權之情形。有此種情形發生時，店家將會就已成功取得授權部分之商品繼續處理您的訂單，若您就其他商品仍有需要時，請重新訂購。但若當次訂購享有跨產品優惠、滿額 / 滿件優惠或當次訂購有需要加計運費者，店家將視為授權全部失敗，請您重新選擇付款方式。</li>
+				        <li>您訂購商品後，店家將於確認您付款後，寄送付款完成通知給您，以確認訂單成立。為保護您的權益，在店家尚未出貨之前，您都可以申請取消訂單，出貨之後亦享有七天審閱期之保障，可以於審閱期內隨時解約退貨。但若當次訂購享有跨產品或滿額 / 滿件優惠者，若有需要取消或退貨時，須將當次訂購之商品訂單全部取消或退貨。</li>
+				        <li>店家將會依據下列說明，處理您的訂購事宜。若您有任何購物方面的問題，歡迎您透過momo商城平台向店家提出您的意見或直接與該店家聯絡，店家將竭誠為您提供服務。</li>
+				        <li>當您訂購多筆商品並選擇以信用卡或信用卡分期付款，可能會因信用卡額度不足或系統因素等問題，導致發生當次訂購之商品無法全部取得銀行授權之情形。有此種情形發生時，店家將會就已成功取得授權部分之商品繼續處理您的訂單，若您就其他商品仍有需要時，請重新訂購。但若當次訂購享有跨產品優惠、滿額 / 滿件優惠或當次訂購有需要加計運費者，店家將視為授權全部失敗，請您重新選擇付款方式。</li>
+				        <li>您訂購商品後，店家將於確認您付款後，寄送付款完成通知給您，以確認訂單成立。為保護您的權益，在店家尚未出貨之前，您都可以申請取消訂單，出貨之後亦享有七天審閱期之保障，可以於審閱期內隨時解約退貨。但若當次訂購享有跨產品或滿額 / 滿件優惠者，若有需要取消或退貨時，須將當次訂購之商品訂單全部取消或退貨。</li>
+				        <li>您訂購商品後，店家將於確認您付款後，寄送付款完成通知給您，以確認訂單成立。為保護您的權益，在店家尚未出貨之前，您都可以申請取消訂單，出貨之後亦享有七天審閱期之保障，可以於審閱期內隨時解約退貨。但若當次訂購享有跨產品或滿額 / 滿件優惠者，若有需要取消或退貨時，須將當次訂購之商品訂單全部取消或退貨。</li>
+			    	</ol>
+	      		</section>
+	      
+	       		<section><!--第二點 Layer2-->
+	        		<h4>2消費者訂購須知</h4>
+	        		<p>歡迎您使用momo摩天商城，momo摩天商城是由「富邦媒體科技股份有限公司(momo.com Inc.)」（以下稱本公司）所經營之momo摩天商城購物平台提供之服務，使用momo摩天商城服務之使用者，請注意下列事項：客戶透過momo摩天商城服務所產生之交易行為，買賣或其他合約均僅存在您與各該店家兩造之間。各該店家將就其商品、服務或其他交易標的物之品質、內容、運送、保證事項與瑕疵擔保責任等，向您事先詳細闡釋與說明並履行。您因前述買賣、服務或其他交易行為所產生之爭執，應向各該店家尋求救濟或解決之道。本公司僅提供平台供您與店家間進行交易，並非交易之當事人，故絕不介入您與店家間的任何買賣、服務或其他交易行為，對於您所獲得的商品、服務或其他交易標的物亦不負任何擔保責任。momo摩天商城服務使用應優先適用上述聲明，其餘事項以不牴觸本聲明為原則，仍應適用momo摩天商城購物平台最新版之《momo摩天商城客戶服務條款》所規範之內容，本公司並保有隨時修改本聲明之權利。</p>
+	      		</section>
+	     
+			    <section> <!--第三點 Layer3-->
+				    <h4>第三點</h4>
+				    <p>歡迎您使用momo摩天商城，momo摩天商城是由「富邦媒體科技股份有限公司(momo.com Inc.)」（以下稱本公司）所經營之momo摩天商城購物平台提供之服務，使用momo摩天商城服務之使用者，請注意下列事項：</p>
+			    </section>
+	    		<section><!--第三點 Layer4-->
+		       		<h4>第4點標題</h4>
+		        	<p>歡迎您使用momo摩天商城，momo摩天商城是由「富邦媒體科技股份有限公司(momo.com Inc.)」（以下稱本公司）所經營之momo摩天商城購物平台提供之服務，使用momo摩天商城服務之使用者，請注意下列事項：客戶透過momo摩天商城服務所產生之交易行為，買賣或其他合約均僅存在您與各該店家兩造之間。各該店家將就其商品、服務或其他交易標的物之品質、內容、運送、保證事項與瑕疵擔保責任等，向您事先詳細闡釋與說明並履行。您因前述買賣、服務或其他交易行為所產生之爭執，應向各該店家尋求救濟或解決之道。本公司僅提供平台供您與店家間進行交易，並非交易之當事人，故絕不介入您與店家間的任何買賣、服務或其他交易行為，對於您所獲得的商品、服務或其他交易標的物亦不負任何擔保責任。momo摩天商城服務使用應優先適用上述聲明，其餘事項以不牴觸本聲明為原則，仍應適用momo摩天商城購物平台最新版之《momo摩天商城客戶服務條款》所規範之內容，本公司並保有隨時修改本聲明之權利。</p>
+	      		</section>
+	    	</article>
+    	</div>
+    	<div class="clearfix"></div>
+	</div>
+</div>
+
+<!--Footer-->
+<footer>
+    <nav class="sub-footer">
+    	<div class="container-1200">
+      		<figure>
+      			<img src="images/footer-logo.png" alt="" title="">
+      		</figure>
+      		<div class="dl-group">
+		    	<dl>
+		        	<dt>關於購意思</dt>
+			        <dd><a href="">關於我們</a></dd>
+			        <dd><a href="">客服中心</a></dd>
+			        <dd><a href="">徵才資訊</a></dd>
+			        <dd><a href="">特約商店服務</a></dd>
+			        <dd><a href="">招商專區</a></dd>
+		    	</dl>
+			    <dl>
+			        <dt>會員權益</dt>
+			        <dd><a href="">服務條款</a></dd>
+			        <dd><a href="">隱私權政策</a></dd>
+			        <dd><a href="">網路安全</a></dd>
+			    </dl>
+			    <dl>
+			        <dt>頻道列表</dt>
+			        <dd><a href="">購物指南</a></dd>
+			        <dd><a href="">樂多商城</a></dd>
+			        <dd><a href="">樂呆了優惠券</a></dd>
+			        <dd><a href="">達人壹號店</a></dd>
+			    </dl>
+			    <dl style="width: 200px; padding-right: 0;">
+			        <dt>購意思 連絡方式</dt>
+			        <dd>電話 : (02) 8786-9688</dd>
+			        <dd style="padding-bottom: 20px;">服務時間 : 週一至週五 09:00-18:00</dd>
+
+			        <dt>金流夥伴</dt>
+			        <dd><span class="bank"></span></dd>
+			    </dl>
+    		</div>
+    	</div>
+    </nav>
+    <div class="main-footer copy">
+	    <div class="container-1200">
+	    	<p>人因互動信息科技股份有限公司 &copy; 2013-2014 Goiiz.com &amp; IncuSeed.it. </p>
+	    </div>
+    </div>
+</footer>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+</body>
+</html>

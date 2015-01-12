@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>購物車</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="icon" href="images/Goiiz-favicon.png">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/center-basic.css">
+<link rel="stylesheet" href="css/car-process.css">
+<link rel="stylesheet" href="css/ShoppingCar.css">
+<link rel="stylesheet" href="css/ShoppingCar-step2.css">
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/ShopCar-collapse.js"></script>
+</head>
+<body>
+<!--HEADER-->
+	<header>
+		<nav class="main-header">
+			<div class="container-1200">
+				<ul class="navi"> 
+					<li><img src="images/GoiizHerderLogoH20.png"></li>
+                    <li><a href="LeDiner-Index.html">主題活動</a></li>
+                    <li><a href="LeDiner-Index.html">樂呆了</a></li>
+                    <li><a href="LeDoor-Index.html">樂多商城</a></li>
+                    <li><img src="images/like.png"></li>
+                </ul>
+				<ul class="member">
+                    <li><a href="">登入/註冊</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+                <ul class="member member-active">
+                    <li><a href="">用戶名稱 你好</a></li>
+                    <li><a href="">登出</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart fa-lg"></i>購物車</a></li>
+                    <li><a href="">會員中心</a></li>
+                </ul>
+			</div>
+		</nav>
+	</header>
+
+<!--CONTENT-->
+<div class="container-960">
+	<nav class="bread-nav">
+		<ul>
+			<li><a href="">首頁</a></li>
+			<span class="bread-arrow">&gt;</span>
+			<li><a href="">購物車</a></li>
+		</ul>
+	</nav>	
+	<div class="shopping-wrapper">
+		<div class="process-bar">
+			<div class="step-by checkout-wrap">
+				<ul class="checkout-bar">
+					<li class="visited first"><a href="#">商品確認</a></li>
+					<li class="active">收件與付款資訊</li>
+				    <li class="next">付款</li>
+				    <li class="">成功購物</li><!--class="visited first"-->
+				</ul>
+			</div>
+		</div>
+		<div class="order-list">
+			<h1><i class="fa fa-list"></i>購買清單</h1>
+			<div class="order-item-area">
+				<div class="order-item-text">
+					<button type="button" class="show-item"><i class="fa fa-sort-desc"></i>顯示購買商品</button>
+					<div>
+						<h6 style="border-right: 1px solid #aaa;">本次消費購買<span>3</span>樣商品</h6>
+						<h6>合計金額</h6>
+						<h3>$<span style="font-size: 36px">13,300</span></h3>
+					</div>
+				</div>
+				<div class="order-item-pic">
+					<figure>
+						<img src="images/u176.png" alt="">
+						<figcaption>$ 5,000<span>X1雙</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u190.png" alt="">
+						<figcaption>$ 2,000<span>X1件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u140.png" alt="">
+						<figcaption>$ 500<span>X1件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u176.png" alt="">
+						<figcaption>$ 5,000<span>X1件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u190.png" alt="">
+						<figcaption>$ 2,000<span>X1件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u140.png" alt="">
+						<figcaption>$ 500<span>X2件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u176.png" alt="">
+						<figcaption>$ 5,000<span>X3件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u190.png" alt="">
+						<figcaption>$ 2,000<span>X1件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u140.png" alt="">
+						<figcaption>$ 500<span>X3件</span></figcaption>
+					</figure>
+					<figure>
+						<img src="images/u140.png" alt="">
+						<figcaption>$ 500<span>X1件</span></figcaption>
+					</figure>
+					<figure class="t-cost">
+						<img src="images/deliver-car.svg">
+						<figcaption>$ 500<span>X2件</span></figcaption>
+					</figure>
+					<figure class="g-coin">
+						<img src="images/goiiz-coin.png">
+						<figcaption>-$ 500</figcaption>
+					</figure>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="order-info">
+			<div class="order-info-left">
+				<h1><i class="fa fa-user"></i>訂購人資訊</h1>
+				<form>
+					<div><label>姓名</label><input type="text" name="name" maxlength="30" placeholder="輸入姓名" style="width:80px;"></div>
+					<div><label>連絡電話</label><input type="text" name="phone" maxlength="12" placeholder="09xx-xxx-xxx" style="width:160px;"></div>
+					<div><label>E-mail</label><input type="text" name="e-mail" maxlength="30" style="width:160px;"></div>
+					<div class="city"><label>居住城市</label>
+						<select>
+	          					<option value="台北市">台北市</option>
+	          					<option value="新北市">新北市</option>
+	          					<option value="桃園市">桃園市</option>
+	          					<option value="新竹市">新竹市</option>
+	          					<option value="苗栗市">苗栗市</option>
+	          					<option value="台中市">台中市</option>
+	          					<option value="彰化市">彰化市</option>
+	          					<option value="南投縣">南投縣</option>
+	          					<option value="嘉義縣">嘉義縣</option>
+	          					<option value="雲林縣">雲林縣</option>
+	          					<option value="臺南市">臺南市</option>
+	       				</select>
+	       				<select>
+	          					<option value="北投區">北投區</option>
+	          					<option value="中山區">中山區</option>
+	          					<option value="大同區">大同區</option>
+	         					<option value="萬華區">萬華區</option>
+	          					<option value="中正區">中正區</option>
+	          					<option value="大安區">大安區</option>
+	          					<option value="士林區">士林區</option>
+	          					<option value="松山區">松山區</option>
+	          					<option value="內湖區">內湖區</option>
+	          					<option value="信義區">信義區</option>
+	          					<option value="南港區">南港區</option>
+	         					<option value="文山區">文山區</option>
+	        			</select>
+	        		</div>
+	        		<div><label>街道</label>
+	        			<input type="text" name="street" maxlength=25 style="width:280px;">
+	        		</div>
+	        		<div class="receive-check"><label>收件人與訂購人相同嗎？</label>
+	        			<input type="radio" name="receive" value="yes" class="hide-right">是
+	        			<input type="radio" name="receive" value="no" class="show-right">否
+	        		</div>
+				</form>
+			</div>
+			<div class="order-info-right">
+				<h1><i class="fa fa-user"></i>收件人資訊</h1>
+				<form>
+					<div><label>姓名</label><input name="name" maxlength="30" placeholder="輸入姓名" style="width:80px;"></div>
+					<div><label>連絡電話</label><input name="phone" maxlength="12" placeholder="09xx-xxx-xxx" style="width:160px;"></div>
+					<div><label>E-mail</label><input name="e-mail" maxlength="30" style="width:160px;"></div>
+					<div class="city"><label>居住城市</label>
+						<select>
+	          					<option value="台北市">台北市</option>
+	          					<option value="新北市">新北市</option>
+	          					<option value="桃園市">桃園市</option>
+	          					<option value="新竹市">新竹市</option>
+	          					<option value="苗栗市">苗栗市</option>
+	          					<option value="台中市">台中市</option>
+	          					<option value="彰化市">彰化市</option>
+	          					<option value="南投縣">南投縣</option>
+	          					<option value="嘉義縣">嘉義縣</option>
+	          					<option value="雲林縣">雲林縣</option>
+	          					<option value="臺南市">臺南市</option>
+	       				</select>
+	       				<select>
+	          					<option value="北投區">北投區</option>
+	          					<option value="中山區">中山區</option>
+	          					<option value="大同區">大同區</option>
+	         					<option value="萬華區">萬華區</option>
+	          					<option value="中正區">中正區</option>
+	          					<option value="大安區">大安區</option>
+	          					<option value="士林區">士林區</option>
+	          					<option value="松山區">松山區</option>
+	          					<option value="內湖區">內湖區</option>
+	          					<option value="信義區">信義區</option>
+	          					<option value="南港區">南港區</option>
+	         					<option value="文山區">文山區</option>
+	        			</select>
+	        		</div>
+	        		<div><label>街道</label>
+	        			<input name="street" maxlength=25 style="width:280px;">
+	        		</div>
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="how-pay">
+			<h1><i class="fa fa-usd"></i>選擇付款方式</h1>
+				<div class="pay-channel-area pca-1">
+					<input type="radio" name="pay" value="credit" class="credit">
+					<div class="pay-title">
+						<h2>信用卡一次付清
+						<figure>
+							<img src="images/creditcardpic.png" style="height: 20px; position: relative; top: 5px;">
+						</figure>
+						<span>購意思所有銀行發行之信用卡接受全台灣</span>
+						</h2>
+					</div>
+				</div>
+				<div class="pay-channel-area pca-2">
+					<input type="radio" name="pay" value="3" class="chk3">
+					<div class="pay-title">
+						<h2>信用卡3期0利率</h2>
+					</div> 
+				</div>
+					<div id="res3" class="res">
+						<h3>請選擇您要分期的發卡銀行</h3>
+							<button id="bank" class="bank-unact bank-a" type="button" value="1">
+								<img src="images/card (1).gif" width="50px">
+								<h4>玉山銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-b" type="button" value="2">
+								<img src="images/card (1).png" width="50px"><h4>國泰世華</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-c" type="button" value="3">
+								<img src="images/card (1).jpg" width="50px"><h4>中國信託</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-d" type="button" value="4">
+								<img src="images/card (2).gif" width="50px"><h4>花旗銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-e" type="button" value="5">
+								<img src="images/card (3).jpg" width="50px"><h4>台新銀行</h4>
+							</button>
+						<div class="clearfix"></div>
+					</div>
+				<div class="pay-channel-area pca-3">
+					<input type="radio" name="pay" value="6" class="chk6">
+						<div class="pay-title">
+							<h2>信用卡6期0利率</h2>
+						</div>
+				</div>
+						<div id="res6" class="res">
+							<h3>請選擇您要分期的發卡銀行</h3>
+							<button id="bank" class="bank-unact bank-a" type="button" value="1">
+								<img src="images/card (1).gif" width="50px">
+								<h4>玉山銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-b" type="button" value="2">
+								<img src="images/card (1).png" width="50px"><h4>國泰世華</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-c" type="button" value="3">
+								<img src="images/card (1).jpg" width="50px"><h4>中國信託</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-d" type="button" value="4">
+								<img src="images/card (2).gif" width="50px"><h4>花旗銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-e" type="button" value="5">
+								<img src="images/card (3).jpg" width="50px"><h4>台新銀行</h4>
+							</button>
+							<div class="clearfix"></div>
+						</div>
+					<div class="pay-channel-area pca-4">
+						<input type="radio" name="pay" value="12" class="chk12">
+						<div class="pay-title">
+							<h2>信用卡12期0利率</h2>
+						</div>
+					</div>
+					<div id="res12" class="res">
+						<h3>請選擇您要分期的發卡銀行</h3>
+							<button id="bank" class="bank-unact bank-a" type="button" value="1">
+								<img src="images/card (1).gif" width="50px">
+								<h4>玉山銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-b" type="button" value="2">
+								<img src="images/card (1).png" width="50px"><h4>國泰世華</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-c" type="button" value="3">
+								<img src="images/card (1).jpg" width="50px"><h4>中國信託</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-d" type="button" value="4">
+								<img src="images/card (2).gif" width="50px"><h4>花旗銀行</h4>
+							</button>
+							<button id="bank" class="bank-unact bank-e" type="button" value="5">
+								<img src="images/card (3).jpg" width="50px"><h4>台新銀行</h4>
+							</button>
+							<div class="clearfix"></div>
+					</div>
+					
+				<div class="pay-channel-area pca-5">
+					<input type="radio" name="pay" value="atm" class="atm">
+					<div class="pay-title">
+						<h2>ATM付款</h2>
+					</div>
+				</div>
+		</div>
+		<div class="shopping-func-area">
+			<div class="step-btn-group">
+				<button type="button" class="step-btn goback"><a href=""><i class="fa fa-caret-left"></i>我要繼續逛</a></button>
+				<button type="button" class="step-btn pay"><a href="">我要結帳<i class="fa fa-caret-right"></i></a></button>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--FOOTER-->
+<footer>
+	<div class="main-footer copy">
+		<div class="container-1200">
+			<p>人因互動信息科技股份有限公司 &copy; 2013-2014 Goiiz.com &amp; IncuSeed.it. </p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

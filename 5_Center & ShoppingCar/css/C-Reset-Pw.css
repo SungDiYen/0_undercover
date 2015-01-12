@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+
+.form-group {
+	margin: 20px 0;
+}
+.form-group label {
+	display: block;
+	color: #666;
+	background: #ddd;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	z-index: 10;
+	margin-bottom: -36px;
+	text-align: center;
+	line-height: 36px;
+	border-radius: 3px 0 0 3px;
+	font-size: 1.35rem;
+}
+.form-group label i {
+	color: #666;
+	margin: 0;
+}
+.form-input {
+	display: inline-block;
+	width: 100%;
+	font-size: 14px;
+	height: 36px;
+	background: #fff;
+	color: #666;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	padding: 5px 5px 5px 50px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 5;
+}
+.send-btn {
+	width: 100%;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 900;
+	background: #ffac49;
+	border-radius: 3px;
+	line-height: 40px;
+	margin: 20px 0 10px 0;
+	cursor: pointer;
+}
+.login-btn:hover {
+	background: #f7931c;
+}
+.input-area-bottom {
+	color: #999;
+}
+/*-------------PW--------------*/
+div.resetPw {
+	margin: 0 auto;
+	width: 300px;
+	background: #f9f9f9;
+	padding: 20px 40px;
+	margin-top: 85px;
+	text-align: center;
+	border-radius: 3px;
+}
+.resetPw h1 {
+	font-size: 1.5rem;
+	color: #666;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.resetPw .form-title {
+	margin-right: 20px;
+}
+.pw-wording {
+	text-align: left;
+	line-height: 28px;
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+.resetPw .input-area {
+	width: 360px;
+	margin: 0 auto;
+}
+.cfa-btn {
+	width: 100%;
+	border: none;
+	color: rgba(255,153,0,1);
+	font-size: 1.5rem;
+	font-weight: 900;
+	font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
+	background: rgba(255,255,255,.02);
+	border-radius: 3px;
+	border: 1px solid rgba(255,153,0,1);
+	line-height: 40px;
+	margin: 20px 0 10px 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	cursor: pointer;
+	outline: none;
+}
+.cfa-btn:hover {
+	color: rgba(255,255,255,1);
+	background: rgba(255,153,0,.76);
+}
+.cfa-btn:active {
+	color: rgba(255,255,255,1);
+	background: rgba(255,153,0,1);
+}
+/*change here*/
+.dash-title {
+	text-align: left;
+}

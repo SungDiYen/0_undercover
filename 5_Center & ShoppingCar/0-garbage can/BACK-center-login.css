@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/*Footer 置底*/
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+}
+
+/*整體*/
+article {
+	margin: 100px 0;
+} 
+
+/*--------Left Side--------*/
+.login-banner {
+	float: left;
+	width: 840px!important;
+	height: 500px;
+}
+
+/*--------Right Side--------*/
+.goiiz-login {
+	float: right;
+}
+.goiiz-login li {
+	display: inline;
+}
+.goiiz-login li a {
+	color: #333;
+	padding: 0px 20px;
+	border: 1px solid transparent;
+	border-bottom: 0px;
+	display: inline-block;
+	border-radius: 3px 3px 0 0;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 29px;
+}
+.goiiz-login li a:hover {
+	color: #f7931c;
+	border: 1px solid #ffac49;
+	border-bottom: 0px;
+}
+.tab-content {
+	padding: 110px 20px;
+	width: 280px;
+	border: 1px solid #dedede;
+	border-top: 3px solid #ffac49;
+}
+.tab-content h1 {
+	font-size: 2rem;
+	color: #666;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.form-group {
+	margin: 20px 0;
+}
+label {
+	display: block;
+	color: #666;
+	background: #ddd;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: -36px;
+	text-align: center;
+	line-height: 36px;
+	border-radius: 3px 0 0 3px;
+	font-size: 1.35rem;
+}
+.form-input {
+	display: inline-block;
+	width: 100%;
+	font-size: 14px;
+	height: 36px;
+	background: transparent;
+	color: #666;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	padding: 5px 5px 5px 50px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 5;
+}
+.login-btn {
+	width: 100%;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 900;
+	background: #ffac49;
+	border-radius: 3px;
+	line-height: 40px;
+	margin-top: 20px;
+}
+.login-btn:hover {
+	background: #f7931c;
+}
+/*banner-area*/
+.banner-area {
+	float: left;
+	width: 840px;
+}
