@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+figure {
+	margin:0;
+	padding: 0;
+	border: 0;
+}
+html {
+	font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+.main-header {
+	position: relative;
+	height: 54px;
+	margin-bottom: 0!important;
+}
+.main-header>div {
+	background: #616161;
+	position: fixed;
+	z-index: 997;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
+	-moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
+}
+.sub-header {
+	height: 32px;
+	background: #616161;
+}
+.sub-header ul {
+	margin: 0;
+}
+.sub-header li {
+	float: left;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+.g-logo {
+	text-align: center;
+	line-height: 54px;
+}
+.g-logo img {
+	vertical-align: middle;
+}
+header i {
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	line-height: 54px;
+}
+.calalog {
+	background: #fff;
+}
+.calalog ul {
+	top: 54px!important;
+}
+.content {
+	background: #f5f5f5;
+}
+.main-banner {
+	background: rgba(0,0,0,.87);
+	height: 448px;
+	margin-bottom: 3rem;
+}
+.main-banner img {
+	background: rgba(0,0,0,1);
+	overflow: hidden;
+}
+.event-btn {
+	/*margin: 3rem 0;*/
+}
+.event-btn span {
+	background: rgba(0,0,0,.54);
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 2px;
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 8px;
+	display: block;
+}
+.list-item {
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+.list-item figure {
+	
+}
+.list-item img {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: rgba(0,0,0,.34);
+	height: 200px;
+	width: 100%;
+}
+.item-wording {
+	padding: 8px;
+	background: #fff;
+}
+.item-wording h3 {
+	overflow: hidden;
+	font-size: 18px;
+	margin: 0;
+}
+.item-wording .price {
+	font-size: 20px;
+	color: #f44336;
+	font-weight: 900;
+}
+.item-wording .price span {
+	font-size: 14px;
+	margin-right: 4px;
+}
+.item-tag {
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 48px;
+	color: #fff;
+	top: -5px;
+	left: 16px;
+}
+.item-tag.spec {
+	background: #ff9800;
+}
+.item-tag.hot {
+	background: #448aff;
+}

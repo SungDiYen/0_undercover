@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>樂多商城</title>
+<meta name="description" content="">
+<link rel="icon" href="images/Goiiz-favicon.png">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/materialize.min.css">
+<link rel="stylesheet" href="css/m-basic.css">
+</head>
+	<body>
+	<header>
+		<div class="main-header row">
+			<div class="col s12">
+				<div class="col s4" style="text-align:left;">
+				  <a href="#" data-activates="slide-out" class="button-collapse" id="menu-btn"><i class="small menu-icon mdi-navigation-menu"></i></a>
+				</div>
+				<div class="col s4 g-logo">
+					<img src="images/logo-22h-v3.png">
+				</div>
+				<div class="col s4" style="text-align:right;">
+					<i class="small mdi-action-search" id="search-btn"></i>
+				</div>
+			</div>
+			<aside class="calalog">
+				<ul id="slide-out" class="side-nav full">
+					<li>aaaa</li>
+					<li>aaaa</li>
+					<li>aaaa</li>
+					<li>aaaa</li>
+					<li class="no-padding">
+				    	<ul class="collapsible collapsible-accordion">
+					        <li>
+								<div class="collapsible-header">Dropdown</div>
+						        <div class="collapsible-body">
+						            <ul>
+						              <li><a href="#!">First Dropdown Link</a></li>
+						              <li><a href="#!">Second Dropdown Link</a></li>
+						              <li><a href="#!">Third Dropdown Link</a></li>
+						              <li><a href="#!">Fourth Dropdown Link</a></li>
+						            </ul>
+						        </div>
+						    </li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</header><!-- /header -->
+	<div class="content row">
+		<div class="main-banner col s12">
+			<img src="">
+		</div>
+		<div class="event-btn-g">
+			<div class="event-btn row">
+				<div class="col s6">
+					<span>熱銷市場</span>
+				</div>
+				<div class="col s6">
+					<span>熱賣3C</span>
+				</div>
+			</div>
+			<div class="event-btn row">
+				<div class="col s6">
+					<span>(尚未定義)</span>
+				</div>
+				<div class="col s6">
+					<span>主打活動</span>
+				</div>
+			</div>
+		</div>
+		<div class="divider" style="margin-bottom: 20px;"></div>
+		<div class="row-list row">
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag spec">特</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag hot">熱</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag spec">特</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag hot">熱</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag spec">特</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 list-item">
+				<div class="z-depth-1">
+					<span class="z-depth-1 item-tag hot">熱</span>
+					<figure>
+						<img src="">
+					</figure>
+					<div class="item-wording">
+						<h3>衣服衣服衣服衣服</h3>
+						<div class="price"><span>$</span>2,300</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+$(".button-collapse").sideNav();
+ $('.collapsible').collapsible();
+$(function(){
+	$('.button-collapse').click(function(){
+		$('.menu-icon').toggleClass('mdi-navigation-menu').toggleClass('mdi-hardware-keyboard-arrow-left');
+		$('#sidenav-overlay').click(function(){
+			$('.menu-icon').toggleClass('mdi-navigation-menu').toggleClass('mdi-hardware-keyboard-arrow-left');
+		});
+	});
+});
+</script>
+</body>
+</html>
