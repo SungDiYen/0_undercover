@@ -1,132 +1,72 @@
-@charset "UTF-8";
+/*
+Error: Undefined variable: "$basicFonts".
+        on line 36 of C:Desktop/GitGoesHere/0_undercover/6_mobile/sass/m-basic.scss
 
-figure {
-	margin:0;
-	padding: 0;
-	border: 0;
-}
-html {
-	font-family: GillSans, Calibri, Trebuchet, sans-serif;
-}
-.main-header {
-	position: relative;
-	height: 54px;
-	margin-bottom: 0!important;
-}
-.main-header>div {
-	background: #616161;
-	position: fixed;
-	z-index: 997;
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
-	-moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
-	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.8);
-}
-.sub-header {
-	height: 32px;
-	background: #616161;
-}
-.sub-header ul {
-	margin: 0;
-}
-.sub-header li {
-	float: left;
-	color: #fff;
-	font-size: 20px;
-	text-align: center;
-}
-.sub-header li:hover {
-	
-}
-.g-logo {
-	text-align: center;
-	line-height: 54px;
-}
-.g-logo img {
-	vertical-align: middle;
-}
-header i {
-	color: rgba(255,255,255,1);
-	cursor: pointer;
-	line-height: 54px;
-}
-.calalog {
-	background: #fff;
-}
-.calalog ul {
-	top: 54px!important;
-}
-.content {
-	background: #f5f5f5;
-}
-.main-banner {
-	background: rgba(0,0,0,.87);
-	height: 448px;
-	margin-bottom: 3rem;
-}
-.main-banner img {
-	background: rgba(0,0,0,1);
-	overflow: hidden;
-}
-.event-btn {
-	/*margin: 3rem 0;*/
-}
-.event-btn span {
-	background: rgba(0,0,0,.54);
-	color: #fff;
-	font-size: 16px;
-	text-align: center;
-	border-radius: 2px;
-	height: 48px;
-	line-height: 48px;
-	margin-bottom: 8px;
-	display: block;
-}
-.list-item {
-	position: relative;
-	margin-bottom: 1.5rem;
-}
-.list-item figure {
-	
-}
-.list-item img {
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-	background: rgba(0,0,0,.34);
-	height: 200px;
-	width: 100%;
-}
-.item-wording {
-	padding: 8px;
-	background: #fff;
-}
-.item-wording h3 {
-	overflow: hidden;
-	font-size: 18px;
-	margin: 0;
-}
-.item-wording .price {
-	font-size: 20px;
-	color: #f44336;
-	font-weight: 900;
-}
-.item-wording .price span {
-	font-size: 14px;
-	margin-right: 4px;
-}
-.item-tag {
-	position: absolute;
-	height: 48px;
-	width: 48px;
-	border-radius: 2px;
-	text-align: center;
-	line-height: 48px;
-	color: #fff;
-	top: -5px;
-	left: 16px;
-}
-.item-tag.spec {
-	background: #ff9800;
-}
-.item-tag.hot {
-	background: #448aff;
-}
+31: 	margin:0; 
+32: 	padding: 0;
+33: 	border: 0;
+34: }
+35: html {
+36: 	font-family: $basicFonts;
+37: }
+38: header i {
+39: 	color: rgba(255,255,255,1);
+40: 	cursor: pointer;
+41: 	line-height: 54px;
+
+Backtrace:
+C:Desktop/GitGoesHere/0_undercover/6_mobile/sass/m-basic.scss:36
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$basicFonts\".\A         on line 36 of C:Desktop/GitGoesHere/0_undercover/6_mobile/sass/m-basic.scss\A \A 31: 	margin:0; \A 32: 	padding: 0;\A 33: 	border: 0;\A 34: }\A 35: html {\A 36: 	font-family: $basicFonts;\A 37: }\A 38: header i {\A 39: 	color: rgba(255,255,255,1);\A 40: 	cursor: pointer;\A 41: 	line-height: 54px;"; }

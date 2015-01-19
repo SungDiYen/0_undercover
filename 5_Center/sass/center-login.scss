@@ -1,18 +1,18 @@
 $basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
 
+$white: rgba(#fff, 1);
 $primary-color: rgba(#ff9800, 1);
 $primary-color-sec: rgba(#ff9800, .76);
 $primary-color-dark:rgba(#f57c00, 1);
 $primary-color-light:rgba(#ffe0b2, 1);
 
 $primary-text: rgba(#212121, 1);
-$secondary-text: rgba(#727272, 1);
+$secondary-text: rgba(#212121, .64);
 
 $divide-color: rgba(#b6b6b6, 1);
 $icons: rgba(#212121, .54);
 $icons-bg: rgba(#212121, .21);
-$white: rgba(#fff, 1);
-$area-bg-color:rgba(#000,.02);
+
 
 @mixin border-box(){
 	box-sizing: border-box;
@@ -20,6 +20,8 @@ $area-bg-color:rgba(#000,.02);
 	-moz-box-sizing: border-box;
 }
 
+$area-radius: 3px;
+$area-bg-color:rgba(#000,.02);
 $area-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 @mixin area-shadow($area-shadow){
 	box-shadow: $area-shadow;
@@ -55,7 +57,7 @@ article {
 }
 .sub-wording {
 	font-size: 1.5rem;
-	color: $primary-text;
+	color: $secondary-text;
 	text-align: center;
 	margin: 10px 0 30px;
 }
@@ -67,7 +69,7 @@ article {
 	width: 360px;
 	margin-bottom: 20px;
 	background: $area-bg-color;
-	border-radius: 3px;
+	border-radius: $area-radius;
 	@include area-shadow($area-shadow);
 	@include border-box;
 }
@@ -75,13 +77,15 @@ article {
 	margin: 0 auto;
 	width: 360px;
 	overflow: auto;
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
+	border-top-right-radius: $area-radius;
+	border-top-left-radius: $area-radius;
 	.tab-style {
 		display: block;
 		float: left;
 		width: 180px;
 		height: 30px;
+		text-indent: 24px;
+		letter-spacing: 24px;
 		font-family: $basic-fonts;
 		font-size: 1.33rem;
 		font-weight: 900;
@@ -137,7 +141,7 @@ article {
 	background: $white;
 	color: rgba(0,0,0,.54);
 	border: 0px;
-	border-radius: 3px;
+	border-radius: $area-radius;
 	padding: 5px 5px 5px 50px;
 	@include border-box;
 	position: relative;
@@ -151,13 +155,15 @@ article {
 	font-weight: 900;
 	font-family: Helvetica, $basic-fonts;
 	background: $area-bg-color;
-	border-radius: 3px;
+	border-radius: $area-radius;
 	border: 1px solid $primary-color;
 	line-height: 40px;
 	margin: 20px 0 10px 0;
 	@include border-box;
 	cursor: pointer;
 	outline: none;
+	letter-spacing: 40px;
+	text-indent: 40px;
 	&:hover {
 		color: $white;
 		background: $primary-color-sec;
@@ -194,12 +200,10 @@ input[type="checkbox"] {
 	top: 10px;
 	.fa-check {
 		color: rgba(75,166,78,1);
-		display: none;
 		font-size: 1.33rem;
 	}
 	.fa-times {
 		color: rgba(230,68,54,1);
-		display: none;
 		font-size: 1.33rem;
 	}
 }
@@ -214,7 +218,7 @@ input[type="checkbox"] {
 	margin: 6px 10px;
 	background: transparent;
 	border: 0px solid ;
-	border-radius: 3px;
+	border-radius: $area-radius;
 	color: $primary-color;
 	cursor: pointer;
 	outline: none;
@@ -227,10 +231,10 @@ input[type="checkbox"] {
 	overflow: hidden;
 	float: right;
 	border: 1px solid #dedede;
-	border-radius: 3px;
+	border-radius: $area-radius;
 	img {
 		width: 100%;
-		border-radius: 3px;
+		border-radius: $area-radius;
 	}
 }
 /*-------------PW--------------*/
@@ -294,4 +298,5 @@ input[type="checkbox"] {
 	margin-top: 5px;
 	display: block;
 	float: right;
+	display: none;
 }

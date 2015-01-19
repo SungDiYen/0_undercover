@@ -10,7 +10,6 @@
     <meta property="og:site_name" content="購意思 | 會員中心" />
     <link rel="icon" href="images/Goiiz-favicon.png">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/center-basic.css">
     <link rel="stylesheet" href="css/center-login.css">
 </head>
@@ -38,8 +37,8 @@
         <h1 class="wording">立刻加入購意思會員，享受便宜又放心的購物樂趣！</h1>
  		<section class="goiiz-login">
             <div class="tabs-area">
-                <button type="button" class="tab-style tab-act" id="sign-tab">註　冊</button>
-                <button type="button" class="tab-style" id="login-tab">登　入</button>
+                <button type="button" class="tab-style tab-act" id="sign-tab">註冊</button>
+                <button type="button" class="tab-style" id="login-tab">登入</button>
             </div>
             <div class="sign-content">
                 <h3 class="sub-wording">加入購意思會員</h3>
@@ -48,34 +47,22 @@
                         <div class="form-group">
                             <label><i class="fa fa-envelope"></i></label>
                             <input type="email" name="sign-mail" placeholder="E-mail" maxlength="50" class="form-input v-email">
-                            <div class="check-alert">
-                                <i class="fa fa-check"></i>
-                                <i class="fa fa-times"></i>
-                            </div>
                         </div>
                         <div class="form-group">
                             <label><i class="fa fa-lock"></i></label>
                             <input type="password" name="sign-passwd"  placeholder="設定密碼" maxlength="16" class="form-input v-passwd">
                             <span class="hint-o">請輸入8~16碼英數混和的密碼</span>
-                            <div class="check-alert">
-                                <i class="fa fa-check"></i>
-                                <i class="fa fa-times"></i>
-                            </div>
                         </div>
                         <div class="form-group">
                             <label><i class="fa fa-lock"></i></label>
                             <input type="password" name="sign-check" placeholder="確認密碼" maxlength="16" class="form-input v-passwd">
                             <span class="hint-o">請輸入8~16碼英數混和的密碼</span>
-                            <div class="check-alert">
-                                <i class="fa fa-check"></i>
-                                <i class="fa fa-times"></i>
-                            </div>
                         </div>
                         <!--<div class="form-group">
                             <input type="checkbox" name="agree" value="agree">我同意「購意思」
                             <a href="">客戶服務條款</a>
                         </div>-->
-                        <button class="cfa-btn" id="sign-in">註　冊</button>
+                        <button class="cfa-btn" id="sign-in">註冊</button>
                     </div>
                 </section>
             </div>
@@ -86,26 +73,18 @@
          				<div class="form-group">
          					<label><i class="fa fa-user"></i></label>
          					<input type="email" name="log-email" class="form-input v-email" maxlength="50" placeholder="帳號 / Email">
-                            <div class="check-alert">
-                                <i class="fa fa-check"></i>
-                                <i class="fa fa-times"></i>
-                            </div>
          				</div>
          				<div class="form-group">
          					<label><i class="fa fa-lock"></i></label>
          					<input type="password" name="login-passwd" class="form-input v-passwd" maxlength="16" placeholder="請輸入密碼">
                             <span class="hint-o">請輸入8~16碼英數混和的密碼</span>
-                            <div class="check-alert">
-                                <i class="fa fa-check"></i>
-                                <i class="fa fa-times"></i>
-                            </div>
          				</div>
                     </div>
                     <div class="input-area-bottom">
                         <input type="checkbox" name="remberMe" value="remberMe">
                         <label>記住我的帳號</label>
                         <a href="#" class="forgetPw">忘記登入密碼?</a>
-                        <button class="cfa-btn" id="log-in">登　入</button>
+                        <button class="cfa-btn" id="log-in">登入</button>
                     </div>
                 </section>
  			</div>
@@ -139,6 +118,7 @@
         $('input').focus(function(){
             $('input').parent().children('span').css('display','none');
             $(this).parent().children('span').css('display','block');
+            $(this).css('border','0px solid');
         });
     });
 </script>
@@ -214,7 +194,8 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
     function success_form(){
         $('input').each(function(){
             $(this).css('border','0px solid');
-            $(this).next('span').remove();
+            $(this).after('<span class="check-alert"><i class="fa fa-check"></i></span>');
+            $(this).nextAll('span').remove(); 
         });
     }
 
@@ -226,7 +207,7 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
             if( $(this).val()<1 ){
                 $(this).css('border','1px solid rgba(230,68,54,1)');       
                 $(this).after('<span class="hint">'+verification.required+'</span>');
-                $(this).after('<span class="fa fa-times"></span>');
+                $('.hint-o').remove();
                 verification.flag=false;
             }
         });
@@ -235,7 +216,8 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
             if( !PATTERN.passwd.test( $(this).val() ) ){
                 $(this).css('border','1px solid rgba(230,68,54,1)');
                 $(this).after('<span class="hint">'+verification.passwd+'</span>');
-                $(this).after('<span class="fa fa-times"></span>');
+                $(this).after('<span class="check-alert"><i class="fa fa-times"></i></span>');
+                $('.hint-o').remove();
                 verification.flag=false;
             }
         });

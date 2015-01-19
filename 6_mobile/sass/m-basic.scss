@@ -1,13 +1,32 @@
 /*defaultSetting*/
-$basicFonts: GillSans, Calibri, Trebuchet, sans-serif;
-$mainColor: rgba(0,0,0,.1);
-$cardShadow: 0 1px 5px 0 rgba(0, 0, 0, 0.8);
-@mixin cardShadow($cardShadow) {
-	box-shadow: $cardShadow;
-	-moz-box-shadow: $cardShadow;
-	-webkit-box-shadow: $cardShadow;
+$basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
+
+$white: rgba(#fff, 1);
+$primary-color: rgba(#ff9800, 1);
+$primary-color-sec: rgba(#ff9800, .76);
+$primary-color-dark:rgba(#f57c00, 1);
+$primary-color-light:rgba(#ffe0b2, 1);
+
+$divide-color: rgba(#b6b6b6, 1);
+$icons: rgba(#212121, .54);
+$icons-bg: rgba(#212121, .21);
+
+@mixin border-box(){
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
-/*end*/
+
+$area-radius: 3px;
+$area-bg-color:rgba(#000,.02);
+$area-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
+@mixin area-shadow($area-shadow){
+	box-shadow: $area-shadow;
+	-webkit-box-shadow: $area-shadow;
+	-moz-box-shadow: $area-shadow;
+}
+
+
 figure {
 	margin:0; 
 	padding: 0;
@@ -33,7 +52,7 @@ header i {
 	}
 }
 .sub-header {
-	height: 32px;
+	height: 56px;
 	background: #616161;
 	ul {
 		margin: 0;
@@ -41,9 +60,13 @@ header i {
 			float: left;
 			color: #fff;
 			font-size: 20px;
+			line-height: 52px;
 			text-align: center;
+			border-bottom: 4px solid transparent;
+			cursor: pointer;
 			&:hover {
 				color: #fff;
+				border-bottom: 4px solid #fff;
 			}
 		}
 	}
