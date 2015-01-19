@@ -80,7 +80,7 @@
                 </section>
             </div>
  			<div class="login-content" style="display: none;">
-                <h3>使用您的購意思帳號登入</h3>
+                <h3 class="sub-wording">使用您的購意思帳號登入</h3>
                 <section>
                     <div class="input-area-top">
          				<div class="form-group">
@@ -94,6 +94,7 @@
          				<div class="form-group">
          					<label><i class="fa fa-lock"></i></label>
          					<input type="password" name="login-passwd" class="form-input v-passwd" maxlength="16" placeholder="請輸入密碼">
+                            <span class="hint-o">請輸入8~16碼英數混和的密碼</span>
                             <div class="check-alert">
                                 <i class="fa fa-check"></i>
                                 <i class="fa fa-times"></i>
@@ -212,7 +213,7 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
 
     function success_form(){
         $('input').each(function(){
-            $(this).css('border','1px solid yellow');
+            $(this).css('border','0px solid');
             $(this).next('span').remove();
         });
     }
@@ -225,6 +226,7 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
             if( $(this).val()<1 ){
                 $(this).css('border','1px solid rgba(230,68,54,1)');       
                 $(this).after('<span class="hint">'+verification.required+'</span>');
+                $(this).after('<span class="fa fa-times"></span>');
                 verification.flag=false;
             }
         });
@@ -233,6 +235,7 @@ alert( '<?php echo Yii::app()->request->urlReferrer; ?>' );
             if( !PATTERN.passwd.test( $(this).val() ) ){
                 $(this).css('border','1px solid rgba(230,68,54,1)');
                 $(this).after('<span class="hint">'+verification.passwd+'</span>');
+                $(this).after('<span class="fa fa-times"></span>');
                 verification.flag=false;
             }
         });

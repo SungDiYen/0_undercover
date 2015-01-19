@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*------*/
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+article {
+  margin: 80px 0;
+}
+
+.goiiz-login {
+  overflow: auto;
+}
+
+.wording {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #ff9800;
+}
+
+.sub-wording {
+  font-size: 1.5rem;
+  color: #212121;
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+.login-content,
+.sign-content,
+.reset-content {
+  margin: 0 auto;
+  padding: 20px 40px;
+  width: 360px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.tabs-area {
+  margin: 0 auto;
+  width: 360px;
+  overflow: auto;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.tabs-area .tab-style {
+  display: block;
+  float: left;
+  width: 180px;
+  height: 30px;
+  font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
+  font-size: 1.33rem;
+  font-weight: 900;
+  color: rgba(255, 152, 0, 0.76);
+  background: white;
+  border: 1px solid rgba(255, 152, 0, 0.76);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+.tabs-area .tab-style:hover {
+  color: white;
+  background: rgba(255, 152, 0, 0.76);
+}
+.tabs-area .tab-style:active {
+  color: white;
+  background: #ff9800;
+}
+.tabs-area .tab-act {
+  color: white;
+  background: #ff9800;
+}
+
+.login-content > section {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin: 20px 0 40px;
+  position: relative;
+}
+.form-group label {
+  display: block;
+  color: rgba(33, 33, 33, 0.54);
+  background: rgba(33, 33, 33, 0.21);
+  width: 36px;
+  height: 36px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -36px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 3px 0 0 3px;
+  font-size: 1.35rem;
+}
+
+.form-input {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.33rem;
+  font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
+  height: 36px;
+  background: white;
+  color: rgba(0, 0, 0, 0.54);
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px 5px 5px 50px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.cfa-btn {
+  width: 100%;
+  border: none;
+  color: #ff9800;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: Helvetica, Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 3px;
+  border: 1px solid #ff9800;
+  line-height: 40px;
+  margin: 20px 0 10px 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+.cfa-btn:hover {
+  color: white;
+  background: rgba(255, 152, 0, 0.76);
+}
+.cfa-btn:active {
+  color: white;
+  background: #ff9800;
+}
+
+.input-area-bottom {
+  overflow: auto;
+}
+
+.forgetPw {
+  color: #727272;
+  font-weight: 900;
+  float: right;
+}
+.forgetPw:hover {
+  color: #ff9800;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.input-area-bottom label {
+  color: #333;
+}
+
+.check-alert {
+  position: absolute;
+  right: -25px;
+  top: 10px;
+}
+.check-alert .fa-check {
+  color: #4ba64e;
+  display: none;
+  font-size: 1.33rem;
+}
+.check-alert .fa-times {
+  color: #e64436;
+  display: none;
+  font-size: 1.33rem;
+}
+
+/*sign-info*/
+.sign-content .form-group a {
+  color: #ff9800;
+}
+
+.refresh {
+  float: left;
+  width: 50px;
+  height: 25px;
+  margin: 6px 10px;
+  background: transparent;
+  border: 0px solid;
+  border-radius: 3px;
+  color: #ff9800;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+
+.sign-content figure {
+  width: 163px;
+  height: 34px;
+  overflow: hidden;
+  float: right;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
+.sign-content figure img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+/*-------------PW--------------*/
+.pw-container {
+  margin: 0 auto;
+  width: 320px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-top: 5px solid #ff9800;
+  margin-top: 85px;
+  text-align: center;
+}
+.pw-container > div {
+  padding: 0 20px;
+}
+.pw-container li {
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pw-container .form-title {
+  margin-right: 20px;
+}
+
+.pw-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+.pw-nav a {
+  color: #666;
+  font-size: 14px;
+  font-weight: 900;
+}
+.pw-nav a:hover {
+  color: #ff9800;
+}
+
+.d-line {
+  width: 1px;
+  background: #666;
+  height: 14px;
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.pw-wording {
+  text-align: left;
+  line-height: 28px;
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+.hint-o {
+  display: none;
+  position: relative;
+  top: 5px;
+  float: right;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.hint {
+  color: #e64436;
+  margin-top: 5px;
+  display: block;
+  float: right;
+}

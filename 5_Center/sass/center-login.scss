@@ -1,0 +1,297 @@
+$basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
+
+$primary-color: rgba(#ff9800, 1);
+$primary-color-sec: rgba(#ff9800, .76);
+$primary-color-dark:rgba(#f57c00, 1);
+$primary-color-light:rgba(#ffe0b2, 1);
+
+$primary-text: rgba(#212121, 1);
+$secondary-text: rgba(#727272, 1);
+
+$divide-color: rgba(#b6b6b6, 1);
+$icons: rgba(#212121, .54);
+$icons-bg: rgba(#212121, .21);
+$white: rgba(#fff, 1);
+$area-bg-color:rgba(#000,.02);
+
+@mixin border-box(){
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+$area-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
+@mixin area-shadow($area-shadow){
+	box-shadow: $area-shadow;
+	-webkit-box-shadow: $area-shadow;
+	-moz-box-shadow: $area-shadow;
+}
+
+
+/*------*/
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+}
+article {
+	margin: 80px 0;
+}
+.goiiz-login {
+	overflow: auto;
+}
+.wording {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 2rem;
+	color: $primary-color;
+}
+.sub-wording {
+	font-size: 1.5rem;
+	color: $primary-text;
+	text-align: center;
+	margin: 10px 0 30px;
+}
+.login-content,
+.sign-content,
+.reset-content {
+	margin: 0 auto;
+	padding: 20px 40px;
+	width: 360px;
+	margin-bottom: 20px;
+	background: $area-bg-color;
+	border-radius: 3px;
+	@include area-shadow($area-shadow);
+	@include border-box;
+}
+.tabs-area {
+	margin: 0 auto;
+	width: 360px;
+	overflow: auto;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	.tab-style {
+		display: block;
+		float: left;
+		width: 180px;
+		height: 30px;
+		font-family: $basic-fonts;
+		font-size: 1.33rem;
+		font-weight: 900;
+		color: $primary-color-sec;
+		background: $white;
+		border: 1px solid $primary-color-sec;
+		@include border-box;
+		cursor: pointer;
+		outline: none;
+		&:hover {
+			color: $white;
+			background: $primary-color-sec;
+		}
+		&:active {
+			color: $white;
+			background: $primary-color;
+		}
+	}
+	.tab-act {
+		color: $white;
+		background: $primary-color;
+	}
+}
+.login-content{
+	>section {
+		margin-top: 20px;
+	}
+}
+.form-group {
+	margin: 20px 0 40px;
+	position: relative;
+	label {
+		display: block;
+		color: $icons;
+		background: $icons-bg;
+		width: 36px;
+		height: 36px;
+		position: relative;
+		z-index: 10;
+		margin-bottom: -36px;
+		text-align: center;
+		line-height: 36px;
+		border-radius: 3px 0 0 3px;
+		font-size: 1.35rem;
+	}
+}
+.form-input {
+	display: inline-block;
+	width: 100%;
+	font-size: 1.33rem;
+	font-family: $basic-fonts;
+	height: 36px;
+	background: $white;
+	color: rgba(0,0,0,.54);
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px 5px 5px 50px;
+	@include border-box;
+	position: relative;
+	z-index: 5;
+}
+.cfa-btn {
+	width: 100%;
+	border: none;
+	color: $primary-color;
+	font-size: 1.5rem;
+	font-weight: 900;
+	font-family: Helvetica, $basic-fonts;
+	background: $area-bg-color;
+	border-radius: 3px;
+	border: 1px solid $primary-color;
+	line-height: 40px;
+	margin: 20px 0 10px 0;
+	@include border-box;
+	cursor: pointer;
+	outline: none;
+	&:hover {
+		color: $white;
+		background: $primary-color-sec;
+	}
+	&:active {
+		color: $white;
+		background: $primary-color;
+	}
+}
+.input-area-bottom {
+	overflow: auto;
+}
+.forgetPw {
+	color: $secondary-text;
+	font-weight: 900;
+	float: right;
+	&:hover {
+		color: $primary-color;
+	}
+}
+input[type="checkbox"] {
+	margin: 0;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.input-area-bottom label {
+	color: #333;
+}
+.check-alert {
+	position: absolute;
+	right: -25px;
+	top: 10px;
+	.fa-check {
+		color: rgba(75,166,78,1);
+		display: none;
+		font-size: 1.33rem;
+	}
+	.fa-times {
+		color: rgba(230,68,54,1);
+		display: none;
+		font-size: 1.33rem;
+	}
+}
+/*sign-info*/
+.sign-content .form-group a {
+	color: $primary-color;
+}
+.refresh {
+	float: left;
+	width: 50px;
+	height: 25px;
+	margin: 6px 10px;
+	background: transparent;
+	border: 0px solid ;
+	border-radius: 3px;
+	color: $primary-color;
+	cursor: pointer;
+	outline: none;
+	font-size: 16px;
+}
+
+.sign-content figure {
+	width: 163px;
+	height: 34px;
+	overflow: hidden;
+	float: right;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	img {
+		width: 100%;
+		border-radius: 3px;
+	}
+}
+/*-------------PW--------------*/
+.pw-container {
+	margin: 0 auto;
+	width: 320px;
+	background: #f9f9f9;
+	padding: 20px;
+	border-top: 5px solid $primary-color;
+	margin-top: 85px;
+	text-align: center;
+	>div {
+		padding: 0 20px;
+	}
+	li {
+		font-size: 1.5rem;
+		color: #666;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.form-title {
+		margin-right: 20px;
+	}
+}
+.pw-nav {
+	text-align: center;
+	margin: 20px 0;
+	a {
+		color: #666;
+		font-size: 14px;
+		font-weight: 900;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+.d-line {
+	width: 1px;
+	background: #666;
+	height: 14px;
+	margin: 0 10px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+}
+.pw-wording {
+	text-align: left;
+	line-height: 28px;
+	font-size: 16px;
+	padding: 20px 0;
+}
+.hint-o {
+	display: none;
+	position: relative;
+	top: 5px;
+	float: right;
+	color: rgba(0,0,0,.56);
+}
+.hint {
+	color: rgba(230,68,54,1);
+	margin-top: 5px;
+	display: block;
+	float: right;
+}
