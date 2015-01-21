@@ -1,2 +1,86 @@
+@import "_style.scss";
 
+body {
+	background: $body-color;
+}
+.main-header {
+	>div {
 
+	}
+}
+.top-area {
+	margin: 0;
+	figure {
+		height: 300px;
+		background: #ddd;
+		overflow: hidden;
+		img {
+			margin: 0!important;
+			padding: 0!important;
+		}
+	}
+}
+.middle-area {
+	h2 {
+		color: $primary-text;
+		font-size: 3rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.price-area {
+		.pro-price {
+			color: $price-color;
+			font-size: 2rem;
+			font-weight: 900;
+			.money-tag {
+				font-size: 1.5rem;
+			}
+		}
+		.pay-way {
+			img.icon {
+				float: right;
+				margin-left: 8px;
+			}
+		}
+	}
+	.shop-img {
+		img {
+			width: 32px;
+			height: 32px;
+		}
+	}
+}
+.bottom-area {
+	h3 {
+		color: $second-text;
+		font-size: 2rem;
+	}
+	.pro-size {
+		span {
+
+		}
+	}
+	.sns {
+		button {
+
+		}
+	}
+}
+.cfa-area {
+	div {
+		position: fixed;
+		z-index: 899;
+		bottom: 0px;
+		margin: 0;
+		background: rgba(0,0,0,.5);
+		height: 50px;
+		span {
+			text-align: center;
+			line-height: 50px;
+			button {
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.step-check li {
+  text-align: center;
+}
+.step-check li:before {
+  content: '1';
+  text-align: center;
+  line-height: 5rem;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background: #ddd;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.step-check li:nth-of-type(2):before {
+  content: '2';
+}
+.step-check li:nth-of-type(3):before {
+  content: '3';
+}

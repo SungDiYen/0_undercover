@@ -1,0 +1,61 @@
+body {
+  background: #fcfcfc;
+}
+
+.top-area {
+  margin: 0;
+}
+.top-area figure {
+  height: 300px;
+  background: #ddd;
+  overflow: hidden;
+}
+.top-area figure img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.middle-area h2 {
+  color: rgba(33, 33, 33, 0.8);
+  font-size: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.middle-area .price-area .pro-price {
+  color: rgba(255, 51, 51, 0.8);
+  font-size: 2rem;
+  font-weight: 900;
+}
+.middle-area .price-area .pro-price .money-tag {
+  font-size: 1.5rem;
+}
+.middle-area .price-area .pay-way img.icon {
+  float: right;
+  margin-left: 8px;
+}
+.middle-area .shop-img img {
+  width: 32px;
+  height: 32px;
+}
+
+.bottom-area h3 {
+  color: rgba(33, 33, 33, 0.56);
+  font-size: 2rem;
+}
+
+.cfa-area div {
+  position: fixed;
+  z-index: 899;
+  bottom: 0px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+}
+.cfa-area div span {
+  text-align: center;
+  line-height: 50px;
+}
+.cfa-area div span button {
+  margin: 0;
+}
