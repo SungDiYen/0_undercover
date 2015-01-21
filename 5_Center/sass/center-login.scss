@@ -79,6 +79,7 @@ article {
 	overflow: auto;
 	border-top-right-radius: $area-radius;
 	border-top-left-radius: $area-radius;
+	border-bottom: 3px solid $primary-color;
 	.tab-style {
 		display: block;
 		float: left;
@@ -91,7 +92,7 @@ article {
 		font-weight: 900;
 		color: $primary-color-sec;
 		background: $white;
-		border: 1px solid $primary-color-sec;
+		border: 0px solid #fff;
 		@include border-box;
 		cursor: pointer;
 		outline: none;
@@ -154,7 +155,7 @@ article {
 	font-size: 1.5rem;
 	font-weight: 900;
 	font-family: Helvetica, $basic-fonts;
-	background: $area-bg-color;
+	background: #fff;
 	border-radius: $area-radius;
 	border: 1px solid $primary-color;
 	line-height: 40px;

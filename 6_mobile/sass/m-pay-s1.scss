@@ -1,12 +1,21 @@
 @import "_style.scss";
 
+header {
+	.nav-wrapper {
+		position: relative!important;
+	}
+}
 
-
-.step-check {
+div.step-check {
+	margin-bottom: 0!important;
 	li {
 		text-align: center;
+		border-bottom: 1px solid $divider-b;
+		padding-bottom: 8px!important;
 		&:before {
 			content:'1';
+			font-size: 2rem;
+			color: $second-text;
 			text-align: center;
 			line-height: 5rem;
 			display: block;
@@ -23,5 +32,61 @@
 		&:nth-of-type(3):before {
 			content:'3';
 		}
+	}
+	li.now-page {
+		&:before {
+			background: $primary-color;
+			color: $white;
+		}
+	}
+	li.done-page {
+		&:before {
+			content:'\2713';
+
+		}
+	}
+}
+.main-content {
+	label {
+		display: block;
+		font-size: 2rem;
+		color: $second-text;
+		margin-bottom: 1rem;
+	}
+	div {
+		vertical-align: middle;
+	}
+	h2.pro-name {
+		@include text-hide;
+		color: $primary-text;
+	}
+	figure.pro-pic {
+		img {
+			width: 100%;
+		}
+	}
+	.pro-size {
+		margin-bottom: 40px;
+		a {
+			border: 1px solid #aaa;
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+	.pro-num {
+		.browser-default {
+			background: #fff;
+			border: 1px solid #aaa;
+			border-radius: 2px;
+			text-align: center;
+			padding: 0;
+			width: initial;
+			outline: none;
+		}
+	}
+}
+.step-area {
+	a#next-stp {
+		background: #ddd;
 	}
 }

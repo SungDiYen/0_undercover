@@ -60,6 +60,7 @@ article {
   overflow: auto;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  border-bottom: 3px solid #ff9800;
 }
 .tabs-area .tab-style {
   display: block;
@@ -73,7 +74,7 @@ article {
   font-weight: 900;
   color: rgba(255, 152, 0, 0.76);
   background: white;
-  border: 1px solid rgba(255, 152, 0, 0.76);
+  border: 0px solid #fff;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -141,7 +142,7 @@ article {
   font-size: 1.5rem;
   font-weight: 900;
   font-family: Helvetica, Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei";
-  background: rgba(0, 0, 0, 0.02);
+  background: #fff;
   border-radius: 3px;
   border: 1px solid #ff9800;
   line-height: 40px;

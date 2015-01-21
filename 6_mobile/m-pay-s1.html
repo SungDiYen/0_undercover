@@ -13,91 +13,93 @@
 </head>
 	<body>
 	<header>
-		<article>
-			<div class="main-header row">
-				<div class="col s12 m12">
-					<div class="col s4 m4" style="text-align:left;">
-						<a href="#" data-activates="slide-out" class="button-collapse" id="menu-btn">
-							<i class="small mdi-navigation-menu"></i>
-						</a>
-					</div>
-					<div class="col s4 m4 g-logo">
-						<img src="images/logo-22h-v3.png">
-					</div>
-					<div class="col s4 m4" style="text-align:right;">
-						<i class="small mdi-action-search" id="search-btn"></i>
-					</div>
-				</div>
-				<aside class="calalog">
-					<ul id="slide-out" class="side-nav full">
-						<li>aaaa</li>
-						<li>aaaa</li>
-						<li>aaaa</li>
-						<li>aaaa</li>
-						<li class="no-padding">
-					    	<ul class="collapsible collapsible-accordion">
-						        <li>
-									<div class="collapsible-header">Dropdown</div>
-							        <div class="collapsible-body">
-							            <ul>
-							              <li><a href="#!">First Dropdown Link</a></li>
-							              <li><a href="#!">Second Dropdown Link</a></li>
-							              <li><a href="#!">Third Dropdown Link</a></li>
-							              <li><a href="#!">Fourth Dropdown Link</a></li>
-							            </ul>
-							        </div>
-							    </li>
-							</ul>
+		<div class="nav-container">
+			<nav class="main-header row">
+				<div class="nav-wrapper col s12">
+					<ul class="col s4">
+						<li>
+							<a href="#" data-activates="slide-out" id="menu-btn">
+								<i class="small mdi-hardware-keyboard-arrow-left"></i>
+							</a>
 						</li>
 					</ul>
-				</aside>
-			</div>
-		</article>
+					<div class="g-logo page-title col s4">
+						確認商品規格
+					</div>
+					<ul class="col s4">
+						<li class="right">
+							<a href="" id="search-btn">
+								<i class="small mdi-action-search"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	</header><!-- /header -->
 	<div class="step-check row">
-		<ul class="s12">
-			<li class="col s4 m2 offset-m3">確認商品規格</li>
-			<li class="col s4 m2">送貨資訊</li>
-			<li class="col s4 m2">付款並完成訂購</li>
+		<ul class="col s12 m12 l12">
+			<li class="col s4 m4 l2 offset-l3 now-page">確認商品規格</li>
+			<li class="col s4 m4 l2 done-page">送貨資訊</li>
+			<li class="col s4 m4 l2">付款並完成訂購</li>
 		</ul>
 	</div>
 	<article class="main-content row">
-		<h2 class="pro-name col s12"></h2>
-		<figure class="pro-pic col s4"></figure>
-		<div class="col s8">
-			<span class="pro-size"></span>
-			<label>數量</label>
-			<select name="" id="pro-num" class="pro-num">
-				<option value="">1</option>
-				<option value="">2</option>
-				<option value="">3</option>
-			</select>
+		<h2 class="pro-name col s12 m12 l8 offset-l2">upreme x Nike Air Foamposite One 太空鞋 Penny</h2>
+		<figure class="pro-pic col s6 m6 l4 offset-l2">
+			<img src="images/demo-pic/20150120.jpg">
+		</figure>
+		<div class="col s6 m6 l4">
+			<div class="pro-size">
+				<label>尺碼</label>
+				<a class="btn-flat waves-effect">8號</a>
+				<a class="btn-flat waves-effect">11號</a>
+			</div>
+			<div class="pro-num">
+				<label>數量</label>
+				<select id="num-select" class="select browser-default">
+					<option value="" disabled="" selected="">選擇數量</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</div>
 		</div>
 	</article>
-	<div class="price-area">
-		<dl class="row ori-price">
-			<dt class="col s6 m4 offset-m2">購物金額總計</dt>
-			<dd class="col s6 m4 ">$6,500</dd>
-		</dl>
-		<dl class="row deli-price">
-			<dt class="col s6 m4 offset-m2">
-				<select name="" id="deli-drop">
-					<option value=""></option>
-					<option value=""></option>
-					<option value=""></option>
-				</select>
-			</dt>
-			<dd class="col s6 m4">$100</dd>
-		</dl>
-		<dl class="row total-price">
-			<dt class="col s6 m4 offset-m2">應付金額</dt>
-			<dd class="col s6 m4">$6,000</dd>
-		</dl>
+	<div class="price-area row">
+		<div class="card col s12 m8 offset-m2 l6 offset-l3">
+			<dl class="ori-price row">
+				<dt class="left">購物金額總計</dt>
+				<dd class="right">$6,500</dd>
+			</dl>
+			<dl class="deli-price row">
+				<dt class="left">
+					<select name="" id="deli-drop">
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+				</dt>
+				<dd class="right">$100</dd>
+			</dl>
+			<div class="divider"></div>
+			<dl class="total-price row">
+				<dt class="left">應付金額</dt>
+				<dd class="right">$6,000</dd>
+			</dl>
+		</div>
 	</div>
-	<div>
-		<button id="next-btn"></button>
+	<div class="step-area row">
+		<div class="col s8 offset-s2 m6 offset-m3 l4 offset-l4 center">
+			<a class="btn-flat waves-effect" id="next-stp">下一步，送貨資訊</a>
+		</div>
 	</div>
 <script src="js/jquery-1.11.1.js"></script>
 <script src="js/materialize.min.js"></script>
+<script>
+$(function(){
+	$('.select').material_select();
+});
+</script>
 </body>
 </html>

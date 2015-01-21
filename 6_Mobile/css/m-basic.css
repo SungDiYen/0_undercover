@@ -9,63 +9,78 @@ html {
   font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", GillSans, Calibri, Trebuchet, sans-serif;
 }
 
-header i {
-  color: white;
-  cursor: pointer;
-  line-height: 54px;
+header .nav-container a {
+  height: 64px;
 }
-header article {
+header .nav-container a i {
+  color: #ff9800;
+  cursor: pointer;
+}
+header .nav-container nav {
+  background: transparent;
   position: relative;
+  margin-bottom: 0 !important;
+}
+header .nav-container ul, header .nav-container .g-logo {
+  background: #fcfcfc;
+}
+header .nav-container .nav-wrapper {
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+header .nav-container .nav-wrapper ul {
+  padding: 0 !important;
+}
+header .nav-container .main-header .nav-wrapper {
+  width: 100%;
+  height: 64px;
+}
+header .nav-container .main-header > div {
+  position: fixed;
+  z-index: 900;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
 }
-header article .main-header {
-  height: 54px;
-  margin-bottom: 0 !important;
-}
-header article .main-header > div {
-  background: #616161;
+header .nav-container .sub-header ul {
+  border-top: 1px solid rgba(33, 33, 33, 0.24);
   position: fixed;
   z-index: 900;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
 }
-header article .sub-header {
-  height: 56px;
-  margin-bottom: 0 !important;
-}
-header article .sub-header ul {
-  margin: 0;
-  background: #616161;
-  position: fixed;
-  z-index: 900;
-}
-header article .sub-header ul li {
+header .nav-container .sub-header ul li {
   float: left;
-  color: #fff;
+  color: #ff9800;
   font-size: 20px;
-  line-height: 52px;
+  font-weight: 900;
+  line-height: 59px;
   text-align: center;
   border-bottom: 4px solid transparent;
   cursor: pointer;
 }
-header article .sub-header ul li:hover {
-  color: #fff;
-  border-bottom: 4px solid #fff;
+header .nav-container .sub-header ul li:hover {
+  border-bottom: 4px solid #ff9800;
+  background: #fcfcfc;
 }
-
-.g-logo {
+header .nav-container .g-logo {
   text-align: center;
-  line-height: 54px;
+  line-height: 64px;
 }
-.g-logo img {
+header .nav-container .g-logo img {
   vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+header .nav-container .page-title {
+  color: rgba(33, 33, 33, 0.8);
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
-.calalog {
-  background: #fff;
-}
 .calalog ul {
-  top: 54px !important;
+  top: 64px !important;
 }
 
 .content {
@@ -141,6 +156,7 @@ header article .sub-header ul li:hover {
   color: #fff;
   top: -5px;
   left: 16px;
+  z-index: 99;
 }
 .item-tag.spec {
   background: #ff9800;

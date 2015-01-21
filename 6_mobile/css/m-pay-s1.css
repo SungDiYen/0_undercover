@@ -1,8 +1,19 @@
-.step-check li {
-  text-align: center;
+header .nav-wrapper {
+  position: relative !important;
 }
-.step-check li:before {
+
+div.step-check {
+  margin-bottom: 0 !important;
+}
+div.step-check li {
+  text-align: center;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.24);
+  padding-bottom: 8px !important;
+}
+div.step-check li:before {
   content: '1';
+  font-size: 2rem;
+  color: rgba(33, 33, 33, 0.56);
   text-align: center;
   line-height: 5rem;
   display: block;
@@ -13,9 +24,56 @@
   margin: 0 auto;
   margin-bottom: 5px;
 }
-.step-check li:nth-of-type(2):before {
+div.step-check li:nth-of-type(2):before {
   content: '2';
 }
-.step-check li:nth-of-type(3):before {
+div.step-check li:nth-of-type(3):before {
   content: '3';
+}
+div.step-check li.now-page:before {
+  background: #ff9800;
+  color: white;
+}
+div.step-check li.done-page:before {
+  content: '\2713';
+}
+
+.main-content label {
+  display: block;
+  font-size: 2rem;
+  color: rgba(33, 33, 33, 0.56);
+  margin-bottom: 1rem;
+}
+.main-content div {
+  vertical-align: middle;
+}
+.main-content h2.pro-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(33, 33, 33, 0.8);
+}
+.main-content figure.pro-pic img {
+  width: 100%;
+}
+.main-content .pro-size {
+  margin-bottom: 40px;
+}
+.main-content .pro-size a {
+  border: 1px solid #aaa;
+  margin-bottom: 0;
+  text-align: center;
+}
+.main-content .pro-num .browser-default {
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0;
+  width: initial;
+  outline: none;
+}
+
+.step-area a#next-stp {
+  background: #ddd;
 }

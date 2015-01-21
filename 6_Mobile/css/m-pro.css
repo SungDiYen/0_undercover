@@ -7,8 +7,8 @@ body {
 }
 .top-area figure {
   height: 300px;
-  background: #ddd;
   overflow: hidden;
+  padding: 0 !important;
 }
 .top-area figure img {
   margin: 0 !important;
@@ -29,6 +29,8 @@ body {
 }
 .middle-area .price-area .pro-price .money-tag {
   font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 4px;
 }
 .middle-area .price-area .pay-way img.icon {
   float: right;
@@ -42,6 +44,15 @@ body {
 .bottom-area h3 {
   color: rgba(33, 33, 33, 0.56);
   font-size: 2rem;
+}
+.bottom-area a {
+  border: 1px solid #aaa;
+  background: #ddd;
+  text-align: center;
+}
+
+.pro-sub-img figure img {
+  width: 100%;
 }
 
 .cfa-area div {

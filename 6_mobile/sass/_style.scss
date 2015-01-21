@@ -1,12 +1,15 @@
-
 $basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
 
 $body-color: rgba(#fcfcfc, 1);
+
 $white: rgba(#fff, 1);
 $primary-color: rgba(#ff9800, 1);
 $primary-color-sec: rgba(#ff9800, .76);
 $primary-color-dark: rgba(#f57c00, 1);
 $primary-color-light: rgba(#ffe0b2, 1);
+
+$divider-w: rgba(#fff,.8);
+$divider-b: rgba(#212121,.24);
 
 $primary-text: rgba(#212121, .8);
 $second-text: rgba(#212121, .56);
@@ -38,4 +41,13 @@ $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 	box-shadow: $card-shadow;
 	-webkit-box-shadow: $card-shadow;
 	-moz-box-shadow: $card-shadow;
+}
+@mixin money-tag(){
+	font-weight: 700;
+	padding-right: 4px;
+}
+@mixin text-hide(){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
