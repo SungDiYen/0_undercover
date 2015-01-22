@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>樂多商城</title>
+<meta name="description" content="">
+<link rel="icon" href="images/Goiiz-favicon.png">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="css/m-basic.css">
+<link rel="stylesheet" href="css/m-pay-s1.css">
+<link rel="stylesheet" href="css/m-pay-s2.css">
+</head>
+	<body>
+	<header>
+		<div class="nav-container">
+			<nav class="main-header row">
+				<div class="nav-wrapper col s12">
+					<ul class="col s4">
+						<li>
+							<a href="#" data-activates="slide-out" id="menu-btn">
+								<i class="small mdi-hardware-keyboard-arrow-left"></i>
+							</a>
+						</li>
+					</ul>
+					<div class="g-logo page-title col s4">
+						確認商品規格
+					</div>
+					<ul class="col s4">
+						<li class="right">
+							<a href="" id="search-btn">
+								<i class="small mdi-action-search"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header><!-- /header -->
+	<div class="step-check row">
+		<ul class="col s12 m12 l10 offset-l1">
+			<li class="col s4 m4 l4 now-page">確認商品規格</li>
+			<li class="col s4 m4 l4 done-page">送貨資訊</li>
+			<li class="col s4 m4 l4">付款並完成訂購</li>
+		</ul>
+	</div>
+	<article class="buyer-info row">
+		<form class="col s12 m12 l8 offset-l2 card grey lighten-5" autocomplete="on">
+			<h2 class="col s12 m12 l12">購買者資料</h2>
+			<div class="input-field col s12 m12 l12">
+				<input type="text" id="name" class="validate" required="required">
+				<label for="name">姓名</label>
+			</div>
+			<div class="input-field col s12 m12 l12">
+				<input type="text" id="phone" class="validate" required="required">
+				<label for="phone">聯絡電話</label>
+			</div>
+			<div class="input-field col s12 m12 l12">
+				<input type="email" id="email" class="validate" required="required">
+				<label for="email">電子信箱</label>
+			</div>
+			<div class="col s6 m6 l6">
+				<label>地址</label>
+				<select class="drop-select">
+					<option value="台北市" selected>台北市</option>
+					<option value="新北市">新北市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="之類的">之類的</option>
+				</select>
+			</div>
+			<div class="col s6 m6 l6">
+				<label style="color: transparent">.</label>
+				<select class="drop-select">
+					<option value="信義區" selected>信義區</option>
+					<option value="松山區">松山區</option>
+					<option value="中正區">中正區</option>
+					<option value="士林區">士林區</option>
+				</select>
+			</div>
+			<div class="address input-field col s12 m12 l12">
+				<textarea class="materialize-textarea"></textarea>
+			</div>
+		</form>
+	</article>
+	<article class="receiver-info">
+		
+	</article>
+	<div class="step-area row">
+		<div class="col s8 offset-s2 m6 offset-m3 l4 offset-l4 center">
+			<a class="btn-flat waves-effect" id="next-stp">下一步，付款</a>
+		</div>
+	</div>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+$(function(){
+	$('.drop-select').material_select();
+});
+</script>
+</body>
+</html>
