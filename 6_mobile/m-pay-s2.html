@@ -17,17 +17,17 @@
 		<div class="nav-container">
 			<nav class="main-header row">
 				<div class="nav-wrapper col s12">
-					<ul class="col s4">
+					<ul class="col s2">
 						<li>
 							<a href="#" data-activates="slide-out" id="menu-btn">
 								<i class="small mdi-hardware-keyboard-arrow-left"></i>
 							</a>
 						</li>
 					</ul>
-					<div class="g-logo page-title col s4">
+					<div class="g-logo page-title col s8">
 						確認商品規格
 					</div>
-					<ul class="col s4">
+					<ul class="col s2">
 						<li class="right">
 							<a href="" id="search-btn">
 								<i class="small mdi-action-search"></i>
@@ -39,30 +39,30 @@
 		</div>
 	</header><!-- /header -->
 	<div class="step-check row">
-		<ul class="col s12 m12 l10 offset-l1">
+		<ul class="col s12 m8 offset-m2 l4 offset-l4">
 			<li class="col s4 m4 l4 now-page">確認商品規格</li>
 			<li class="col s4 m4 l4 done-page">送貨資訊</li>
 			<li class="col s4 m4 l4">付款並完成訂購</li>
 		</ul>
 	</div>
 	<article class="buyer-info row">
-		<form class="col s12 m12 l8 offset-l2 card grey lighten-5" autocomplete="on">
+		<form class="col s12 m8 offset-m2 l4 offset-l4 card grey lighten-5" autocomplete="on">
 			<h2 class="col s12 m12 l12">購買者資料</h2>
 			<div class="input-field col s12 m12 l12">
-				<input type="text" id="name" class="validate" required="required">
+				<input type="text" id="name" required="required">
 				<label for="name">姓名</label>
 			</div>
 			<div class="input-field col s12 m12 l12">
-				<input type="text" id="phone" class="validate" required="required">
+				<input type="text" id="phone" required="required">
 				<label for="phone">聯絡電話</label>
 			</div>
 			<div class="input-field col s12 m12 l12">
-				<input type="email" id="email" class="validate" required="required">
+				<input type="email" id="email" required="required">
 				<label for="email">電子信箱</label>
 			</div>
 			<div class="col s6 m6 l6">
 				<label>地址</label>
-				<select class="drop-select">
+				<select class="select">
 					<option value="台北市" selected>台北市</option>
 					<option value="新北市">新北市</option>
 					<option value="桃園市">桃園市</option>
@@ -84,7 +84,7 @@
 			</div>
 			<div class="col s6 m6 l6">
 				<label style="color: transparent">.</label>
-				<select class="drop-select">
+				<select class="select">
 					<option value="信義區" selected>信義區</option>
 					<option value="松山區">松山區</option>
 					<option value="中正區">中正區</option>
@@ -96,11 +96,61 @@
 			</div>
 		</form>
 	</article>
-	<article class="receiver-info">
-		
+	<article class="receiver-info row">
+		<form class="col s12 m8 offset-m2 l4 offset-l4 card grey lighten-5" autocomplete="on">
+			<h2 class="col s6 m6 l6 left">購買者資料</h2>
+			<p class="col s6 m6 l6">
+				<input type="checkbox" id="receiver-btn" checked="checked"/>
+				<label for="receiver-btn" class="right">同購買者</label>
+			</p>
+			<div>
+				<div class="input-field col s12 m12 l12">
+					<input type="text" id="name" required="required">
+					<label for="name">姓名</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+					<input type="text" id="phone" required="required">
+					<label for="phone">聯絡電話</label>
+				</div>
+				<div class="col s6 m6 l6">
+					<label>地址</label>
+					<select class="select">
+						<option value="台北市" selected>台北市</option>
+						<option value="新北市">新北市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="之類的">之類的</option>
+					</select>
+				</div>
+				<div class="col s6 m6 l6">
+					<label style="color: transparent">.</label>
+					<select class="select">
+						<option value="信義區" selected>信義區</option>
+						<option value="松山區">松山區</option>
+						<option value="中正區">中正區</option>
+						<option value="士林區">士林區</option>
+					</select>
+				</div>
+				<div class="address input-field col s12 m12 l12">
+					<textarea class="materialize-textarea"></textarea>
+				</div>
+			</div>
+		</form>
 	</article>
 	<div class="step-area row">
-		<div class="col s8 offset-s2 m6 offset-m3 l4 offset-l4 center">
+		<div class="col s12 m8 offset-m2 l4 offset-l4 center">
 			<a class="btn-flat waves-effect" id="next-stp">下一步，付款</a>
 		</div>
 	</div>
@@ -108,7 +158,16 @@
 <script src="js/materialize.min.js"></script>
 <script>
 $(function(){
-	$('.drop-select').material_select();
+	$('.select').material_select();
+});
+</script>
+<script>
+$(function(){
+	$('.receiver-info form > div').hide();
+	$('#receiver-btn').click(function(){
+		$('.receiver-info form > div').slideToggle();
+	});
+
 });
 </script>
 </body>

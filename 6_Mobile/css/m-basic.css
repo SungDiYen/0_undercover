@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.slash {
+  padding: 0 4px;
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -77,6 +81,21 @@ header .nav-container .page-title {
   color: rgba(33, 33, 33, 0.8);
   font-size: 1.5rem;
   font-weight: 900;
+}
+@media screen and (max-width: 599px) {
+  header .nav-container .page-title {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  header .nav-container .page-title {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .nav-container .page-title {
+    font-size: 1.5rem;
+  }
 }
 
 .calalog ul {

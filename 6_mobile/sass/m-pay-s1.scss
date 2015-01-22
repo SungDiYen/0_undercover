@@ -8,9 +8,11 @@ header {
 
 div.step-check {
 	margin-bottom: 0!important;
+	ul {
+		margin-top: 2rem;
+	}
 	li {
 		text-align: center;
-		border-bottom: 1px solid $divider-b;
 		padding-bottom: 8px!important;
 		&:before {
 			content:'1';
@@ -53,9 +55,6 @@ div.step-check {
 		color: $second-text;
 		margin-bottom: 1rem;
 	}
-	div {
-		vertical-align: middle;
-	}
 	h2.pro-name {
 		@include text-hide;
 		color: $primary-text;
@@ -85,8 +84,31 @@ div.step-check {
 		}
 	}
 }
+.price-area {
+	.deli-price {
+		select {
+			background: transparent;
+			padding: 0;
+			border: 0;
+			position: relative;
+			left: -4px;
+			outline: none;
+			background: #fff;
+		}
+		dd {
+			height: 45px;
+			line-height: 45px;
+		}
+	}
+}
 .step-area {
-	a#next-stp {
-		background: #ddd;
+	div {
+		padding: 0!important;
+		a#next-stp {
+			background: #ddd;
+			width: 100%;
+			height: 48px;
+			line-height: 48px;
+		}
 	}
 }

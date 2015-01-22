@@ -4,14 +4,30 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
 }
 /*------RemoveAutofillBackgroundYellow------*/
-.buyer-info {
-	h2 {
-		
+.receiver-info, .buyer-info {
+	form {
+		h2 {
+			font-size: 1.4285rem;
+			color: $second-text;
+			margin: 0;
+			font-weight: 900;
+		}
+	}
+	.select-wrapper span.select-dropdown {
+		margin-bottom: 0;
 	}
 }
 .address {
 	margin-top: 0;
 	textarea {
 		height: 1rem;
+	}
+}
+.receiver-info {
+	[type="checkbox"]:not(:checked) + label:before {
+	top: 0px;
+	width: 18px;
+	height: 18px;
+	border: 2px solid $second-text !important;
 	}
 }

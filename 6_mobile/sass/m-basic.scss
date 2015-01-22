@@ -1,6 +1,8 @@
 @import "_style.scss";
 
-
+.slash {
+	padding: 0 4px;
+}
 figure {
 	margin:0; 
 	padding: 0;
@@ -79,6 +81,15 @@ header {
 			color: $primary-text;
 			font-size: 1.5rem;
 			font-weight: 900;
+			@media screen and (max-width: $s-screen) {
+				font-size: 0.875rem;
+			}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+				font-size: 1rem;
+			}
+			@media screen and (min-width: $l-screen) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }

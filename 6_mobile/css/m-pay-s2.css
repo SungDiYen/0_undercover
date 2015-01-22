@@ -3,9 +3,26 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 /*------RemoveAutofillBackgroundYellow------*/
+.receiver-info form h2, .buyer-info form h2 {
+  font-size: 1.4285rem;
+  color: rgba(33, 33, 33, 0.56);
+  margin: 0;
+  font-weight: 900;
+}
+.receiver-info .select-wrapper span.select-dropdown, .buyer-info .select-wrapper span.select-dropdown {
+  margin-bottom: 0;
+}
+
 .address {
   margin-top: 0;
 }
 .address textarea {
   height: 1rem;
+}
+
+.receiver-info [type="checkbox"]:not(:checked) + label:before {
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(33, 33, 33, 0.56) !important;
 }
