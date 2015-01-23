@@ -32,14 +32,13 @@
  <div class="container-960">
     <article>
      	<div class="reset-content">
-            <h3 class="sub-wording" style="margin-bottom: 10px;">忘記密碼，不用驚(暫)</h3>
-            <div class="pw-wording">(MARCOM  請給我文案)請輸入您註冊的電子信箱或手機號碼，我們將會發送驗證訊息至您的電子信箱或手機，以讓您重設登錄密碼。
-            </div>
+            <h3 class="sub-wording" style="margin-bottom: 10px;">忘記密碼？免驚！</h3>
+            <div class="pw-wording">請輸入您所註冊的電子信箱。</div>
             <div class="form-group">
                 <label><i class="fa fa-envelope"></i></label>
                 <input type="email" name="email" class="form-input" placeholder="E-mail" maxlength="50">
             </div>
-            <button class="cfa-btn" id="send-out">確認送出</button>
+            <button class="cfa-btn sent-out" id="send-out">確認送出</button>
         </div>
         <nav class="pw-nav">
             <a href="#">聯絡客服</a>
@@ -59,5 +58,20 @@
 		</div>
 	</div>
 </footer>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script>
+ $(function(){
+    $('input').focus(function(){
+         $('input').parent().children('span').css('display','none');
+         $(this).parent().children('span').css('display','block');
+    });
+    $('#send-out').click(function(){
+        if
+        $('.pw-wording').text('您的新密碼已設定成功，請使用新密碼登入購意思。').attr('style','text-align:left;color: #ff9800;');
+        else
+        $('.pw-wording').text('您所設定的新密碼不正確，請重新設定新密碼。').attr('style','text-align:left;color: #ff9800;');
+    });
+ });
+</script>
 </body>
 </html>

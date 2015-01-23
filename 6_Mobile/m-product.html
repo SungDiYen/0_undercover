@@ -12,41 +12,41 @@
 <link rel="stylesheet" href="css/m-pro.css">
 </head>
 <body>
-	<header>
-		<div class="nav-container">
-			<nav class="main-header">
+	<header style="height: 112px;">
+		<nav>
+			<div class="main-header">
 				<div class="nav-wrapper row">
-				<div class="s12 m12">
-					<ul class="left col s4 m4">
-						<li>
-							<a href="#" data-activates="slide-out" id="menu-btn">
-								<i class="small mdi-navigation-menu"></i>
-							</a>
-						</li>
-					</ul>
-					<div class="g-logo col s4 m4">
-						<img src="images/logo-22h-v3.png">
+					<div class="col s12 m12">
+						<ul class="left col s2 m2">
+							<li>
+								<a href="#" data-activates="slide-out" id="menu-btn">
+									<i class="small mdi-navigation-menu"></i>
+								</a>
+							</li>
+						</ul>
+						<div class="g-logo col s8 m8">
+							<img src="images/logo-22h-v3.png">
+						</div>
+						<ul class="right col s2 m2">
+							<li class="right">
+								<a href="" id="search-btn">
+									<i class="small mdi-action-search"></i>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<ul class="right col s4 m4">
-						<li class="right">
-							<a href="" id="search-btn">
-								<i class="small mdi-action-search"></i>
-							</a>
-						</li>
-					</ul>
 				</div>
-				</div>
-			</nav>
-			<nav class="sub-header">
+			</div>
+			<div class="sub-header">
 				<div class="nav-wrapper row">
-					<ul class="col s12 m12 l12">
-						<li class="col s4 m4 l2 offset-l3">商品詳情</li>
-						<li class="col s4 m4 l2">付款與交貨須知</li>
-						<li class="col s4 m4 l2">其他類似商品</li>
+					<ul class="tabs col s12 m12 l12">
+						<li class="tab col s4 m4 l4"><a href="">商品詳情</a></li>
+						<li class="tab col s4 m4 l4"><a href="">付款與交貨須知</a></li>
+						<li class="tab col s4 m4 l4"><a href="">其他類似商品</a></li>
 					</ul>
 				</div>
-			</nav>
-		</div>
+			</div>
+		</nav>
 	</header><!-- /header -->
 	<div class="top-area row">
 		<figure class="col s12 m12 l12">
@@ -114,5 +114,10 @@
 	</div>
 <script src="js/jquery-1.11.1.js"></script>
 <script src="js/materialize.min.js"></script>
+<script>
+$(function(){
+	$('ul.tabs').tabs();
+});
+</script>
 </body>
 </html>

@@ -32,17 +32,19 @@
  <div class="container-960">
     <article>
      	<div class="reset-content">
-            <h3 class="sub-wording"  style="margin-bottom: 10px;">修改密碼</h3>
-            <div class="pw-wording">(MARCOM  請給我文案)請重新設定您的密碼，完成設定後請用新密碼登入購意思，謝謝</div>
+            <h3 class="sub-wording"  style="margin-bottom: 10px;">修改密碼！真簡單！</h3>
+            <div class="pw-wording">請重新設定您的新密碼。</div>
             <div class="form-group">
                 <label><i class="fa fa-lock"></i></label>
                 <input type="password" name="" class="form-input" placeholder="輸入新密碼" maxlength="16">
+                <span class="hint-o">輸入8~16碼英數混和的密碼，並區分大小寫。</span>
             </div>
             <div class="form-group">
                 <label><i class="fa fa-lock"></i></label>
-                <input type="password" name="" class="form-input" placeholder="確認密碼" maxlength="16">
+                <input type="password" name="" class="form-input" placeholder="再次輸入新密碼" maxlength="16">
+                <span class="hint-o">輸入8~16碼英數混和的密碼，並區分大小寫。</span>
             </div>
-            <button id="send-out" class="cfa-btn" >確認送出</button>
+            <button id="send-out" class="cfa-btn sent-out" >確認送出</button>
         </div>
     </article>
  </div>
@@ -56,5 +58,13 @@
 	</div>
 </footer>
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script>
+    $(function(){
+        $('input').focus(function(){
+            $('input').parent().children('span').css('display','none');
+            $(this).parent().children('span').css('display','block');
+        });
+    });
+</script>
 </body>
 </html>

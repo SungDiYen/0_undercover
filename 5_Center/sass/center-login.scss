@@ -173,6 +173,10 @@ article {
 		color: $white;
 		background: $primary-color;
 	}
+	&.sent-out {
+		letter-spacing: 20px;
+		text-indent: 20px;
+	}
 }
 .input-area-bottom {
 	overflow: auto;

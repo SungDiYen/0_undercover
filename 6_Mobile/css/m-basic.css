@@ -1,4 +1,9 @@
 @charset "UTF-8";
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+/*------RemoveAutofillBackgroundYellow------*/
 .slash {
   padding: 0 4px;
 }
@@ -13,87 +18,95 @@ html {
   font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", GillSans, Calibri, Trebuchet, sans-serif;
 }
 
-header .nav-container a {
+header {
   height: 64px;
 }
-header .nav-container a i {
+header nav {
+  position: fixed;
+  margin-bottom: 0 !important;
+  height: auto;
+  z-index: 900;
+}
+header .nav-wrapper {
+  margin-bottom: 0 !important;
+  background: #fcfcfc;
+}
+header .nav-wrapper ul, header .nav-wrapper > div {
+  padding: 0 !important;
+}
+header .main-header .nav-wrapper {
+  height: 64px;
+}
+header .main-header a {
+  height: 64px;
+}
+header .main-header a i {
   color: #ff9800;
   cursor: pointer;
 }
-header .nav-container nav {
-  background: transparent;
-  position: relative;
-  margin-bottom: 0 !important;
+@media screen and (max-width: 599px) {
+  header .main-header a i {
+    font-size: 3rem;
+  }
 }
-header .nav-container ul, header .nav-container .g-logo {
-  background: #fcfcfc;
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  header .main-header a i {
+    font-size: 2.5rem;
+  }
 }
-header .nav-container .nav-wrapper {
-  padding: 0 !important;
-  margin-bottom: 0 !important;
+@media screen and (min-width: 992px) {
+  header .main-header a i {
+    font-size: 2rem;
+  }
 }
-header .nav-container .nav-wrapper ul {
-  padding: 0 !important;
+header .sub-header .nav-wrapper, .sub-header header .sub-header {
+  height: 48px;
+  line-height: 48px;
 }
-header .nav-container .main-header .nav-wrapper {
-  width: 100%;
-  height: 64px;
-}
-header .nav-container .main-header > div {
-  position: fixed;
-  z-index: 900;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-}
-header .nav-container .sub-header ul {
+header .sub-header ul.tabs {
   border-top: 1px solid rgba(33, 33, 33, 0.24);
-  position: fixed;
-  z-index: 900;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
-  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
 }
-header .nav-container .sub-header ul li {
-  float: left;
-  color: #ff9800;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 59px;
-  text-align: center;
-  border-bottom: 4px solid transparent;
-  cursor: pointer;
-}
-header .nav-container .sub-header ul li:hover {
-  border-bottom: 4px solid #ff9800;
+header .sub-header ul.tabs li.tab {
   background: #fcfcfc;
 }
-header .nav-container .g-logo {
+header .sub-header ul.tabs li.tab a {
+  color: #ff9800;
+  font-weight: 900;
+}
+header .sub-header ul.tabs li.tab a:hover {
+  color: rgba(33, 33, 33, 0.56);
+}
+header .sub-header ul.tabs .indicator {
+  background: #ff9800;
+  bottom: -1px;
+}
+header .g-logo {
   text-align: center;
   line-height: 64px;
 }
-header .nav-container .g-logo img {
+header .g-logo img {
+  /*width: 100%;*/
   vertical-align: middle;
   position: relative;
   top: -3px;
 }
-header .nav-container .page-title {
+header .page-title {
   color: rgba(33, 33, 33, 0.8);
   font-size: 1.5rem;
   font-weight: 900;
 }
 @media screen and (max-width: 599px) {
-  header .nav-container .page-title {
+  header .page-title {
     font-size: 0.875rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
-  header .nav-container .page-title {
+  header .page-title {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 992px) {
-  header .nav-container .page-title {
+  header .page-title {
     font-size: 1.5rem;
   }
 }
@@ -105,13 +118,12 @@ header .nav-container .page-title {
 .content {
   background: #f5f5f5;
 }
-
-.main-banner {
-  background: rgba(0, 0, 0, 0.87);
+.content .main-banner {
+  background: rgba(200, 200, 200, 0.87);
   height: 448px;
   margin-bottom: 3rem;
 }
-.main-banner img {
+.content .main-banner img {
   background: black;
   overflow: hidden;
 }
@@ -139,43 +151,105 @@ header .nav-container .page-title {
   height: 200px;
 }
 .list-item figure img {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-radius: 2px 2px 0 0;
   background: rgba(0, 0, 0, 0.34);
   height: 200px;
-  width: 100%;
 }
 
 .item-wording {
-  padding: 8px;
+  padding: 0.5rem !important;
   background: #fff;
 }
 .item-wording h3 {
   overflow: hidden;
-  font-size: 18px;
   margin: 0;
 }
+@media screen and (max-width: 599px) {
+  .item-wording h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .item-wording h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-wording h3 {
+    font-size: 4.5rem;
+  }
+}
 .item-wording .price {
-  font-size: 20px;
   color: rgba(255, 51, 51, 0.8);
   font-weight: 900;
 }
+@media screen and (max-width: 599px) {
+  .item-wording .price {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .item-wording .price {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-wording .price {
+    font-size: 2rem;
+  }
+}
 .item-wording .price span {
-  font-size: 14px;
   margin-right: 4px;
+}
+@media screen and (max-width: 599px) {
+  .item-wording .price span {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .item-wording .price span {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-wording .price span {
+    font-size: 1rem;
+  }
 }
 
 .item-tag {
   position: absolute;
-  height: 48px;
-  width: 48px;
   border-radius: 2px;
   text-align: center;
-  line-height: 48px;
   color: #fff;
-  top: -5px;
-  left: 16px;
+  top: 0;
+  right: 0;
+  display: block;
   z-index: 99;
+}
+@media screen and (max-width: 599px) {
+  .item-tag {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .item-tag {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-tag {
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
 }
 .item-tag.spec {
   background: #ff9800;
@@ -184,7 +258,7 @@ header .nav-container .page-title {
   content: '特';
 }
 .item-tag.hot {
-  background: #448aff;
+  background: #e91e63;
 }
 .item-tag.hot:after {
   content: '熱';
