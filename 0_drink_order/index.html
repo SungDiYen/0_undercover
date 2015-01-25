@@ -6,15 +6,151 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 <title>Tea Time</title>
 <link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/basic.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div id="page">
-		<figure class="hero_img">
-			<img src="images/IMG_2274.JPG" alt="">
-		</figure>
+<div id="page">
+	<div class="slider row">
+		<ul class="slides col s12">
+			<li><img src="images/IMG_2118.JPG" alt=""></li>
+			<li><img src="images/IMG_2196.JPG" alt=""></li>
+			<li><img src="images/IMG_2274.JPG" alt=""></li>
+		</ul>
 	</div>
+	<div class="fixed">
+		<div class="row">
+			<div class="col s12 m10 offset-m1 l8 offset-l2">
+				<div class="card">
+					<div class="card-content row">
+						<div class="tool-bar">
+							<i class="mdi-action-view-module" id="store-menu"></i>
+							<span class="store"><h2>你今天選了：水巷茶弄</h2></span>
+						</div>
+						<div class="branding row animated">
+							<h1 class="col s12 center">Dochi</h1>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/waterstreet.jpg" height="262" width="268" alt=""></a>
+							</div>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/50wind.gif" height="180" width="180" alt=""></a>
+							</div>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/coco.png" height="200" width="200" alt=""></a>
+							</div>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/comebuy.jpg" height="112" width="140" alt=""></a>
+							</div>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/qk.jpg" height="164" width="304" alt=""></a>
+							</div>
+							<div class="col s2 m2 l2">
+								<a><img class="b-logo" src="images/brand/splash.jpg" height="195" width="195" alt=""></a>
+							</div>
+						</div>
+						<div class="select-area row animated">
+							<div class="d-name col s2 m2 l2" id="select-1">
+								<label>小姐，我要點杯</label>
+								<select class="select">
+									<option value="0" selected>隨便</option>
+									<option value="1">紅茶</option>
+									<option value="2">綠茶</option>
+									<option value="3">隨便</option>
+								</select>
+							</div>
+							<div class="d-name col s2 m2 l2" id="select-2">
+								<label>甜度</label>
+								<select class="select">
+									<option value="1" selected>全糖</option>
+									<option value="1">七分糖</option>
+									<option value="2">半糖</option>
+									<option value="3">微糖</option>
+									<option value="3">無糖</option>
+									<option value="3">雙倍糖</option>
+									<option value="3" disabled>只要糖就好，謝謝</option>
+								</select>
+							</div>
+							<div class="d-name col s2 m2 l2" id="select-3">
+								<label>冷<span class="slash">/</span>熱</label>
+								<select class="select">
+									<option value="1" selected>正常冰</option>
+									<option value="1">少冰</option>
+									<option value="2">微冰</option>
+									<option value="3">去冰</option>
+									<option value="3">雙倍冰</option>
+									<option value="3" disabled>請給我一杯冰塊，謝謝</option>
+									<option value="3" class="hot">溫溫der</option>
+									<option value="3" class="hot">很燙</option>
+								</select>
+							</div>
+							<div class="d-name col s2 m2 l2" id="select-4">
+								<label>尺寸</label>
+								<select class="select">
+									<option value="1" selected>大杯</option>
+									<option value="1">中杯</option>
+									<option value="2">小杯</option>
+									<option value="3" disabled>F cup</option>
+									<option value="3" disabled>30cm</option>
+								</select>
+							</div>
+							<div class="d-name col s2 m2 l2" id="select-5">
+								<label>數量</label>
+								<select class="select">
+									<option value="1" selected>1</option>
+									<option value="1">中2</option>
+									<option value="2">3</option>
+									<option value="3">4</option>
+									<option value="3">5</option>
+								</select>
+							</div>
+							<div class="d-name input-field col s2 m2 l2">
+								<input id="buyer-name" type="text">
+								<label for="buyer-name">訂購人</label>
+							</div>
+						</div>
+						<div class="total-money row">
+							<div class="col l4 offset-l4 center">
+								總計金額：<span class="money-tag">$</span>123
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="check-area col l4 offset-l4">
+					<a class="waves-effect waves-light btn-flat">下好離手<i class="mdi-content-send"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="js/jquery-1.11.1.js"></script>
 <script src="js/materialize.min.js"></script>
+<script>
+var a = $('#select-1').val();
+var b = $('#select-2').val();
+var c = $('#select-3').val();
+var d = $('#select-4').val();
+var e = $('#select-5').val();
+
+
+$(function(){
+	$('.card-content>div, .check-area').not('.branding').hide();
+	$('select').material_select();
+	$('.slider').slider({
+		full_width: true,
+		indicators: false,
+	});
+	$('.b-logo').click(function() {
+		$(this).parents('.branding').removeClass('zoomIn').addClass('zoomOut').delay(500).hide(200);
+		$('.card').css({background: '#fff'});
+		$('.card-content>div ,.check-area').not('.branding, .total-money').removeClass('fadeOut').addClass('bounceIn').delay(500).show(200);
+	});
+	$('#store-menu').click(function() {
+		$('.branding').removeClass('zoomOut').addClass('zoomIn').delay(100).show(100);
+		$('.card').removeAttr('style')
+		$('.card-content>div ,.check-area').not('.branding').removeClass('bounceIn').addClass('fadeOut').delay(100).hide(100);
+	});
+});
+</script>
 </body>
 </html>

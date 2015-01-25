@@ -1,0 +1,115 @@
+.money-tag {
+  padding: 0 4px;
+}
+
+.slash {
+  padding: 0 4px;
+}
+
+.slider {
+  height: 900px !important;
+  min-width: 960px;
+}
+.slider ul.slides {
+  height: 100% !important;
+}
+.slider li {
+  text-align: center;
+  background: #fff;
+  min-height: 900px;
+}
+.slider li img {
+  width: 100% !important;
+  height: initial !important;
+}
+.slider li:before {
+  content: '.';
+  display: block;
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 900px;
+  position: absolute;
+}
+
+.fixed {
+  position: absolute;
+  width: 100%;
+  z-index: 899;
+  top: 30%;
+}
+.fixed .row {
+  background: transparent;
+}
+.fixed .card {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tool-bar {
+  margin-bottom: 20px;
+}
+.tool-bar .store h2 {
+  display: inherit;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0;
+  vertical-align: super;
+  color: rgba(0, 0, 0, 0.7);
+}
+.tool-bar i {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+
+.card-content {
+  margin-bottom: 0px;
+}
+.card-content h1 {
+  color: #rgba 0, 0, 0, 0.7;
+  font-weight: 900;
+  font-size: 3rem;
+}
+.card-content .branding {
+  height: 200px;
+  line-height: 200px;
+  margin-bottom: 0px;
+}
+.card-content .branding a {
+  cursor: pointer;
+}
+.card-content .branding a img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.card-content .select-area #buyer-name {
+  height: 51px;
+}
+
+.check-area {
+  text-align: center;
+  margin-top: 40px;
+}
+.check-area .btn-flat {
+  height: 60px;
+  line-height: 60px;
+  width: 240px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  color: #FFF;
+  background: transparent;
+  text-indent: 16px;
+  letter-spacing: 16px;
+  font-size: 1.4rem;
+}
+.check-area .btn-flat:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.total-money {
+  color: #dd2c00;
+  font-size: 1.2rem;
+}
