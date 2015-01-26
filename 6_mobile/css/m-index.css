@@ -9,6 +9,16 @@
   height: auto !important;
   width: 100%;
 }
+.main-banner ul.indicators {
+  bottom: 40px;
+  z-index: 999;
+}
+.main-banner ul.indicators li.indicator-item {
+  background: rgba(33, 33, 33, 0.56);
+}
+.main-banner ul.indicators li.indicator-item.active {
+  background: #ff9800;
+}
 
 .event-btn-area {
   margin: 0;
@@ -29,9 +39,13 @@
   display: block;
   position: relative;
   margin: 0 10px;
+  padding: 0 0.75rem;
 }
 .event-btn-area .btn-flat:visited {
   color: #fff;
+}
+.event-btn-area .btn-flat i {
+  padding-right: 4px;
 }
 @media screen and (max-width: 599px) {
   .event-btn-area .line:after {
@@ -109,6 +123,7 @@
 .item-wording h3 {
   overflow: hidden;
   margin: 0;
+  color: rgba(33, 33, 33, 0.56);
 }
 .item-wording .price {
   color: rgba(255, 51, 51, 0.8);
@@ -124,10 +139,10 @@
     line-height: 2rem;
   }
   .item-wording .price {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
-  .item-wording .price span {
-    font-size: 1.5rem;
+  .item-wording .price .money-tag {
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
@@ -137,10 +152,10 @@
     line-height: 2.5rem;
   }
   .item-wording .price {
-    font-size: 2rem;
+    font-size: 2.1875rem;
   }
-  .item-wording .price span {
-    font-size: 1.5rem;
+  .item-wording .price .money-tag {
+    font-size: 1.3125rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -150,10 +165,10 @@
     line-height: 3rem;
   }
   .item-wording .price {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  .item-wording .price span {
-    font-size: 1rem;
+  .item-wording .price .money-tag {
+    font-size: 1.5rem;
   }
 }
 
@@ -167,30 +182,6 @@
   display: block;
   z-index: 99;
 }
-@media screen and (max-width: 599px) {
-  .item-tag {
-    font-size: 2rem;
-    line-height: 3rem;
-    width: 3rem;
-    height: 3rem;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 991px) {
-  .item-tag {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .item-tag {
-    font-size: 1rem;
-    line-height: 2rem;
-    width: 2rem;
-    height: 2rem;
-  }
-}
 .item-tag.spec {
   background: #ff9800;
 }
@@ -202,4 +193,28 @@
 }
 .item-tag.hot:after {
   content: '熱';
+}
+@media screen and (max-width: 599px) {
+  .item-tag {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .item-tag {
+    font-size: 1.875rem;
+    line-height: 2.875rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-tag {
+    font-size: 2.625rem;
+    line-height: 4.025rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }

@@ -11,6 +11,16 @@
 			width: 100%;
 		}
 	}
+	ul.indicators {
+		bottom: 40px;
+		z-index: 999;
+		li.indicator-item {
+			background: $second-text;
+		}
+		li.indicator-item.active {
+			background: $primary-color;
+		}
+	}
 }
 .event-btn-area  {
 	margin: 0;
@@ -30,8 +40,12 @@
 		display: block;
 		position: relative;
 		margin: 0 10px;
+		padding: 0 0.75rem;
 		&:visited {
 			color: #fff;
+		}
+		i {
+			padding-right: 4px;
 		}
 	}
 	.line {
@@ -115,6 +129,7 @@
 	h3 {
 		overflow: hidden;
 		margin: 0;
+		color: $second-text;
 	}
 	.price {
 		color: $price-color;
@@ -130,9 +145,9 @@
 			line-height: 2rem;
 		}
 		.price {
-			font-size: 2rem;
-			span {
-				font-size: 1.5rem;
+			font-size: 1.5rem * 1.25;
+			.money-tag {
+				font-size: 1.5rem * 0.75;
 			}
 		}
 	}
@@ -143,9 +158,9 @@
 			line-height: 2.5rem;
 		}
 		.price {
-			font-size: 2rem;
-			span {
-				font-size: 2rem - 0.5rem;
+			font-size: 1.75rem * 1.25;
+			.money-tag {
+				font-size: 1.75rem * 0.75;
 			}
 		}
 	}
@@ -156,9 +171,9 @@
 			line-height: 3rem;
 		}
 		.price {
-			font-size: 2rem;
-			span {
-				font-size: 2rem - 1rem;
+			font-size: 2rem * 1.25;
+			.money-tag {
+				font-size: 2rem * 0.75;
 			}
 		}
 	}
@@ -172,24 +187,6 @@
 	right: 0;
 	display: block;
 	z-index: 99;
-	@media screen and (max-width: $s-screen) {
-		font-size: $l-icon - 1rem;
-		line-height: $l-icon;
-		width: $l-icon;
-		height: $l-icon;
-	}
-	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-		font-size: $m-icon - 1rem;
-		line-height: $m-icon;
-		width: $m-icon;
-		height: $m-icon;
-	}
-	@media screen and (min-width: $l-screen) {
-		font-size: $s-icon - 1rem;
-		line-height: $s-icon;
-		width: $s-icon;
-		height: $s-icon;
-	}
 	&.spec {
 		background: rgba($primary-color, 1);
 		&:after {
@@ -201,5 +198,26 @@
 		&:after {
 			content: '熱';
 		}
+	}
+	$tag-size: 2rem;
+	$tag-fs: $tag-size * 0.75;
+	$tag-lh: $tag-size * 1.15;
+	@media screen and (max-width: $s-screen) {
+		font-size: $tag-fs;
+		line-height: $tag-lh;
+		width: $tag-size;
+		height: $tag-size;
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		font-size: $tag-fs * 1.25;
+		line-height: $tag-lh * 1.25;
+		width: $tag-size * 1.25;
+		height: $tag-size * 1.25;
+	}
+	@media screen and (min-width: $l-screen) {
+		font-size: $tag-fs * 1.75;
+		line-height: $tag-lh * 1.75;
+		width: $tag-size * 1.75;
+		height: $tag-size * 1.75;
 	}
 }

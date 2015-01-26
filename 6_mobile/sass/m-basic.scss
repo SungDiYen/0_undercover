@@ -41,13 +41,13 @@ header {
 				color: $primary-color;
 				cursor: pointer;
 				@media screen and (max-width: $s-screen) {
-					font-size: $l-icon;
+					font-size: 2rem;
 				}
 				@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-					font-size: $m-icon;
+					font-size: 2rem * 1.25;
 				}
 				@media screen and (min-width: $l-screen) {
-					font-size: $s-icon;
+					font-size: 2rem * 1.5;
 				}
 			}
 		}
@@ -104,4 +104,8 @@ header {
 	ul {
 		top: 64px!important;
 	}
+}
+.search-area {
+	position: relative;
+	z-index: 99999;
 }
