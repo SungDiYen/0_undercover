@@ -1,0 +1,205 @@
+@import "_style.scss";
+
+.main-banner {
+	ul.slides {
+		background: #fff;
+		li {
+			text-align: center;
+		}
+		img {
+			height: auto!important;
+			width: 100%;
+		}
+	}
+}
+.event-btn-area  {
+	margin: 0;
+	margin-bottom: 20px;
+	>div {
+		padding: 0!important;
+		margin: 0;
+		text-align: center;
+	}
+	.btn-flat {
+		color: rgba(0,0,0,.54);
+		background: transparent;
+		font-size: 1.4rem;
+		text-align: center;
+		/*height: 48px;
+		line-height: 48px;*/
+		display: block;
+		position: relative;
+		margin: 0 10px;
+		&:visited {
+			color: #fff;
+		}
+	}
+	.line {
+		$line: 1px solid rgba(0,0,0, .26);
+		@media screen and (max-width: $s-screen) {
+			&:after {
+				content:'';
+				position: relative;
+				margin: 5px auto;
+				display: block;
+				border-bottom: $line;
+				width: 140px;
+			}
+			&:before {
+				content:'';
+				position: absolute;
+				display: block;
+				border-left: $line;
+				height: 36px - 12px;
+				margin: 6px 0;
+			}
+			&:nth-last-of-type(2), &:last-of-type {
+				&:after {
+					border-bottom: 0;
+				}
+			}
+			&:nth-of-type(odd) {
+				&:before {
+					border-left: 0;
+				}
+			}
+		}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+			&:before {
+				content:'';
+				position: absolute;
+				display: block;
+				border-right: $line;
+				height: 36px - 12px;
+				margin: 6px 0;
+			}
+			&:first-of-type {
+				border: 0px;
+				&:before {
+					border-right: 0!important;
+				}
+			}
+		}
+		@media screen and (min-width: $l-screen) {
+			&:before {
+				content:'';
+				position: absolute;
+				display: block;
+				border-right: $line;
+				height: 36px;
+			}
+			&:first-of-type {
+				border: 0px;
+				&:before {
+					border-right: 0!important;
+				}
+			}
+		}
+	}	
+}
+.list-item {
+	position: relative;
+	margin-bottom: 1.5rem;
+	figure {
+		/*height: 200px;*/
+		img {
+			border-radius: 2px 2px 0 0;
+			background: rgba(0,0,0,.34);
+			/*height: 200px;*/
+		}
+	}
+}
+.item-wording {
+	padding: 0.5rem!important;
+	background: #fff;
+	h3 {
+		overflow: hidden;
+		margin: 0;
+	}
+	.price {
+		color: $price-color;
+		font-weight: 900;
+		span {
+			margin-right: 4px;
+		}
+	}
+	@media screen and (max-width: $s-screen) {
+		h3 {
+			font-size: 1.5rem;
+			height: 2rem;
+			line-height: 2rem;
+		}
+		.price {
+			font-size: 2rem;
+			span {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		h3 {
+			font-size: 1.75rem;
+			height: 2.5rem;
+			line-height: 2.5rem;
+		}
+		.price {
+			font-size: 2rem;
+			span {
+				font-size: 2rem - 0.5rem;
+			}
+		}
+	}
+	@media screen and (min-width: $l-screen) {
+		h3 {
+			font-size: 2rem;
+			height: 3rem;
+			line-height: 3rem;
+		}
+		.price {
+			font-size: 2rem;
+			span {
+				font-size: 2rem - 1rem;
+			}
+		}
+	}
+}
+.item-tag {
+	position: absolute;
+	border-radius: 2px;
+	text-align: center;
+	color: #fff;
+	top: 0;
+	right: 0;
+	display: block;
+	z-index: 99;
+	@media screen and (max-width: $s-screen) {
+		font-size: $l-icon - 1rem;
+		line-height: $l-icon;
+		width: $l-icon;
+		height: $l-icon;
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		font-size: $m-icon - 1rem;
+		line-height: $m-icon;
+		width: $m-icon;
+		height: $m-icon;
+	}
+	@media screen and (min-width: $l-screen) {
+		font-size: $s-icon - 1rem;
+		line-height: $s-icon;
+		width: $s-icon;
+		height: $s-icon;
+	}
+	&.spec {
+		background: rgba($primary-color, 1);
+		&:after {
+			content:'特';
+		}
+	}
+	&.hot {
+		background: rgba(#e91e63, 1);
+		&:after {
+			content: '熱';
+		}
+	}
+}
