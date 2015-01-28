@@ -42,14 +42,14 @@
 		</nav>
 	</header><!-- /header -->
 	<div class="step-check row">
-		<ul class="col s12 m8 offset-m2 l4 offset-l4">
+		<ul class="col s12 m8 offset-m2 l6 offset-l3">
 			<li class="col s4 m4 l4 now-page">確認商品規格</li>
 			<li class="col s4 m4 l4 done-page">送貨資訊</li>
 			<li class="col s4 m4 l4">付款並完成訂購</li>
 		</ul>
 	</div>
 	<article class="buyer-info row">
-		<form class="col s12 m8 offset-m2 l4 offset-l4 card grey lighten-5" autocomplete="on">
+		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
 			<h2 class="col s12 m12 l12">購買者資料</h2>
 			<div class="input-field col s12 m12 l12">
 				<input type="text" id="name" required="required">
@@ -64,7 +64,6 @@
 				<label for="email">電子信箱</label>
 			</div>
 			<div class="col s6 m6 l6">
-				<label>地址</label>
 				<select class="select">
 					<option value="台北市" selected>台北市</option>
 					<option value="新北市">新北市</option>
@@ -86,7 +85,7 @@
 				</select>
 			</div>
 			<div class="col s6 m6 l6">
-				<label style="color: transparent">.</label>
+				<!--<label style="color: transparent">.</label>-->
 				<select class="select">
 					<option value="信義區" selected>信義區</option>
 					<option value="松山區">松山區</option>
@@ -95,12 +94,13 @@
 				</select>
 			</div>
 			<div class="address input-field col s12 m12 l12">
-				<textarea class="materialize-textarea"></textarea>
+				<input type="text" id="address" required="required">
+				<label for="address">地址</label>
 			</div>
 		</form>
 	</article>
 	<article class="receiver-info row">
-		<form class="col s12 m8 offset-m2 l4 offset-l4 card grey lighten-5" autocomplete="on">
+		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
 			<h2 class="col s6 m6 l6 left">購買者資料</h2>
 			<p class="col s6 m6 l6">
 				<input type="checkbox" id="receiver-btn" checked="checked"/>
@@ -116,7 +116,6 @@
 					<label for="phone">聯絡電話</label>
 				</div>
 				<div class="col s6 m6 l6">
-					<label>地址</label>
 					<select class="select">
 						<option value="台北市" selected>台北市</option>
 						<option value="新北市">新北市</option>
@@ -138,7 +137,7 @@
 					</select>
 				</div>
 				<div class="col s6 m6 l6">
-					<label style="color: transparent">.</label>
+					<!--<label style="color: transparent">.</label>-->
 					<select class="select">
 						<option value="信義區" selected>信義區</option>
 						<option value="松山區">松山區</option>
@@ -147,13 +146,14 @@
 					</select>
 				</div>
 				<div class="address input-field col s12 m12 l12">
-					<textarea class="materialize-textarea"></textarea>
+					<input type="text" id="address" required="required">
+					<label for="address">地址</label>
 				</div>
 			</div>
 		</form>
 	</article>
 	<div class="step-area row">
-		<div class="col s12 m8 offset-m2 l4 offset-l4 center">
+		<div class="col s12 m8 offset-m2 l6 offset-l3 center">
 			<a class="btn-flat waves-effect" id="next-stp">下一步，付款</a>
 		</div>
 	</div>

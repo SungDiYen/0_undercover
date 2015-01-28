@@ -4,13 +4,21 @@ body {
 	background: $body-color;
 }
 header {
-	height: 112px!important;
+	@media screen and (max-width: $s-screen) {
+		height: $s-header + 48px!important;
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		height: $m-header + 48px!important;
+	}
+	@media screen and (min-width: $l-screen) {
+		height: $l-header + 48px!important;
+	}
 }
 .top-area {
 	margin: 0;
 	figure {
-		height: 300px;
-		overflow: hidden;
+		/*height: 300px;
+		overflow: hidden;*/
 		text-align: center;
 		padding: 0!important;
 		img {
@@ -24,10 +32,10 @@ header {
 		color: $primary-text;
 		margin: 0.5rem 0 0;
 		font-size: 2rem;	//basic size
-		@include text-hide;
+		line-height: 2rem * 1.4;
+		/*@include text-hide;*/
 	}
 	.price-area {
-		margin: 0;
 		.pro-price {
 			color: $price-color;
 			font-weight: 900;
@@ -47,6 +55,9 @@ header {
 				padding: 8px;
 			}
 		}
+		br {
+			display: none;
+		}
 	}
 	@media screen and (max-width: $s-screen) {
 		h2 {
@@ -55,10 +66,19 @@ header {
 		.price-area {
 			.pro-price {
 				font-size: 1.75rem * 1.25;
+				line-height: 1.75rem * 1.25;
 				.price-title, .money-tag {
 					font-size: 1.75rem * 0.75;
 				}
 			}
+		}
+		br {
+			display: block!important;
+		}
+		img.icon {
+			width: 20%;
+			padding: 0!important;
+			margin: 8px;
 		}
 	}
 	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
@@ -73,6 +93,9 @@ header {
 				}
 			}
 		}
+		img.icon {
+			width: 20%!important;
+		}
 	}
 	@media screen and (min-width: $l-screen-a)and(max-width: $l-screen-z) {
 		h2 {
@@ -86,16 +109,19 @@ header {
 				}
 			}
 		}
+		img.icon {
+			width: 20%!important;
+		}
 	}
 	@media screen and (min-width: $xl-screen) {
 		img.icon {
-			width: 8%!important;
+			width: 10%!important;
 		}
 	}
 	.store-area.row {
 		margin: 0;
 		.col {
-			padding: 0;
+			padding-left: 0;
 		}
 		.shop-img {
 			img {
@@ -112,39 +138,50 @@ header {
 }
 .bottom-area {
 	margin: 0;
-	border-top: 1px solid $divide-color;
+	border-top: $divide-style;
 	padding-top: 1rem;
+
 	h3 {
 		color: $second-text;
 		font-size: 2rem;
-		margin: 0;
-	}
-	a {
-		border: 1px solid #aaa;
-		background: #ddd;
-		text-align: center;
-		margin-bottom: 8px;
+		margin: 0 0 0.75rem 0;
 	}
 	.pro-size, .sns {
 		margin-bottom: 1rem;
+	}
+	.btn-g {
+		>span.col {
+			padding: 0;
+			text-align: center;
+			padding: 0 8px;
+			a {
+				border: 1px solid #aaa;
+				background: #ddd;
+				text-align: center;
+				margin-bottom: 8px;
+				width: 100%;
+			}
+		}
 	}
 }
 .extra-area {
 	padding: 0;
 	padding-top: 2rem!important;
-	border-top: 1px solid $divide-color;
+	border-top: $divide-style;
 	margin-bottom: 38px;
 	.pro-sub-img {
-		padding: 0;
-		height: 330px;
+		padding: 0.75rem;
+		/*height: 330px;
 		line-height: 330px;
-		overflow: hidden;
-		margin-bottom: 1.5rem;
-		padding: 1.5rem;
-		border: 1px solid #e2e2e2;
-		background: #fff;
+		overflow: hidden;*/
+		a {
+			display: block;
+			border: 1px solid #e2e2e2;
+			background: #fff;
+		}
 		img {
 			vertical-align: middle;
+			padding: 1.5rem;
 		}
 	}
 }
@@ -164,9 +201,21 @@ header {
 			a.btn {
 				margin: 0;
 				background: $primary-color;
+				font-size: 1.25rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
 				&:hover {
 					background: $primary-color-dark;
 				}
+			}
+			i {
+				padding-right: 0.5rem;
+			}
+		}
+		@media screen and (min-width: $xl-screen) {
+			a.btn {
+				height: 3rem!important;
+				line-height: 3rem!important;
 			}
 		}
 	}

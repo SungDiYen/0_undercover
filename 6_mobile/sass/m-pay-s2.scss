@@ -1,6 +1,8 @@
 @import "_style.scss";
 
 .receiver-info, .buyer-info {
+	margin: 2rem 0;
+	padding: 0 0.75rem;
 	form {
 		h2 {
 			font-size: 1.4285rem;
@@ -11,12 +13,6 @@
 	}
 	.select-wrapper span.select-dropdown {
 		margin-bottom: 0;
-	}
-}
-.address {
-	margin-top: 0;
-	textarea {
-		height: 1rem;
 	}
 }
 .receiver-info {

@@ -5,19 +5,31 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 /*------RemoveAutofillBackgroundYellow------*/
 
-.slash {
-  padding: 0 4px;
-}
 figure {
 	margin:0; 
 	padding: 0;
 	border: 0;
 }
-html {
+html,body {
 	font-family: $basic-fonts;
 }
+.btn-active {
+	background: $btn-active !important;
+	border: 1px solid $primary-color !important;
+	color: #fff;
+}
+.slash {
+	padding: 0 4px;
+}
+/*Re*/
+.dropdown-content li {
+	text-align: center;
+	span {
+		padding: 1rem 0.5rem;
+	}
+}
+/*-----------*/
 header {
-	height: 64px;
 	nav {
 		position: fixed;
 		margin-bottom: 0!important;
@@ -32,11 +44,28 @@ header {
 		}
 	}
 	.main-header {
-		.nav-wrapper {
-			height: 64px;
+		.g-logo {
+			text-align: center;
+			img {
+				/*width: 100%;*/
+				vertical-align: middle;
+				position: relative;
+			}
+		}
+		.page-title {
+			color: $primary-text;
+			font-weight: 900;
+			@media screen and (max-width: $s-screen) {
+				font-size: 1.3rem;
+			}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+				font-size: 1.3rem * 1.25;
+			}
+			@media screen and (min-width: $l-screen) {
+				font-size: 1.3rem * 1.5;
+			}
 		}
 		a {
-			height: 64px;
 			i {
 				color: $primary-color;
 				cursor: pointer;
@@ -49,6 +78,51 @@ header {
 				@media screen and (min-width: $l-screen) {
 					font-size: 2rem * 1.5 !important;
 				}
+			}
+		}
+	}
+	@media screen and (max-width: $s-screen) {
+		height: $s-header;
+		.nav-wrapper {
+			height: $s-header;
+		}
+		.g-logo {
+			line-height: $s-header;
+		}
+		.main-header a {
+			height: $s-header;
+			i {
+				line-height: $s-header;
+			}
+		}
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		height: $m-header;
+		.nav-wrapper {
+			height: $m-header;
+		}
+		.g-logo {
+			line-height: $m-header;
+		}
+		.main-header a {
+			height: $m-header;
+			i {
+				line-height: $m-header;
+			}
+		}
+	}
+	@media screen and (min-width: $l-screen) {
+		height: $l-header;
+		.nav-wrapper {
+			height: $l-header;
+		}
+		.g-logo {
+			line-height: $l-header;
+		}
+		.main-header a {
+			height: $l-header;
+			i {
+				line-height: $l-header;
 			}
 		}
 	}
@@ -76,30 +150,6 @@ header {
 			}
 		}
 	}
-	.g-logo {
-		text-align: center;
-		line-height: 64px;
-		img {
-			/*width: 100%;*/
-			vertical-align: middle;
-			position: relative;
-			top: -3px;
-		}
-	}
-	.page-title {
-		color: $primary-text;
-		font-size: 1.5rem;
-		font-weight: 900;
-		@media screen and (max-width: $s-screen) {
-			font-size: 0.875rem;
-		}
-		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-			font-size: 1rem;
-		}
-		@media screen and (min-width: $l-screen) {
-			font-size: 1.5rem;
-		}
-	}
 }
 .calalog {
 	ul {
@@ -121,16 +171,6 @@ header {
 			}
 		}
 	}
-}
-#layer {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	height: 120vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 997;
-	will-change: opacity;
 }
 #sidenav-overlay2 {
 	position: fixed;

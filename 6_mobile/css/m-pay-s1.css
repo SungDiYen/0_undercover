@@ -1,32 +1,46 @@
+/*btn*/
 div.step-check {
   margin-bottom: 0 !important;
+  border-bottom: 1px solid #b6b6b6;
 }
 div.step-check ul {
   margin-top: 2rem;
 }
 div.step-check li {
   text-align: center;
-  padding-bottom: 8px !important;
+  margin-bottom: 8px;
 }
 div.step-check li:before {
   content: '1';
-  font-size: 2rem;
   color: rgba(33, 33, 33, 0.56);
   text-align: center;
+  font-size: 2rem;
   line-height: 5rem;
-  display: block;
   width: 5rem;
   height: 5rem;
+  display: block;
   background: #ddd;
   border-radius: 100%;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 div.step-check li:nth-of-type(2):before {
   content: '2';
 }
 div.step-check li:nth-of-type(3):before {
   content: '3';
+}
+@media screen and (max-width: 599px) {
+  div.step-check li {
+    font-size: 12px;
+    padding: 0 0.5rem !important;
+  }
+  div.step-check li:before {
+    font-size: 1.5rem;
+    line-height: 3.75rem;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
 }
 div.step-check li.now-page:before {
   background: #ff9800;
@@ -36,17 +50,38 @@ div.step-check li.done-page:before {
   content: '\2713';
 }
 
-.main-content label {
+.main-content > div {
+  padding: 0 !important;
+}
+.main-content label.strd-title {
   display: block;
   font-size: 1rem;
   color: rgba(33, 33, 33, 0.56);
   margin-bottom: 1rem;
 }
 .main-content h2.pro-name {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /*@include text-hide;*/
   color: rgba(33, 33, 33, 0.8);
+  margin: 1rem 0;
+  padding: 0 0.75rem;
+}
+@media screen and (max-width: 599px) {
+  .main-content h2.pro-name {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .main-content h2.pro-name {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-content h2.pro-name {
+    font-size: 1.95rem;
+    line-height: 3rem;
+  }
 }
 .main-content figure.pro-pic img {
   width: 100%;
@@ -59,35 +94,70 @@ div.step-check li.done-page:before {
   margin-bottom: 0;
   text-align: center;
 }
-.main-content .pro-num .browser-default {
-  background: #fff;
-  border: 1px solid #aaa;
-  border-radius: 2px;
-  text-align: center;
-  padding: 0;
-  width: initial;
-  outline: none;
+.main-content .pro-num .select-wrapper {
+  width: 6rem;
 }
 
+.price-area {
+  margin-bottom: 1rem;
+  padding: 0 0.75rem;
+}
+.price-area dl {
+  margin: 1rem 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.price-area dl dt {
+  font-size: 1rem;
+}
+.price-area dl dd {
+  font-size: 1.25rem;
+}
+.price-area dl dd .money-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding-right: 0.3rem;
+}
 .price-area .deli-price select {
-  background: transparent;
   padding: 0;
-  border: 0;
+  border: 1px solid #e0e0e;
   position: relative;
   left: -4px;
   outline: none;
   background: #fff;
 }
+.price-area .deli-price dt {
+  width: 12rem;
+  height: 3rem;
+}
+.price-area .deli-price dt .select-dropdown {
+  border: 0;
+  top: -8px;
+}
+.price-area .deli-price dt .select-dropdown:after {
+  position: relative;
+  top: 5px;
+}
 .price-area .deli-price dd {
   height: 45px;
   line-height: 45px;
 }
+.price-area .total-price dd {
+  color: rgba(255, 51, 51, 0.8);
+  font-size: 1.5rem !important;
+  font-weight: 700;
+}
+.price-area .total-price dd .money-tag {
+  font-size: 1.275rem;
+}
 
-.step-area div {
-  padding: 0 !important;
+.step-area {
+  margin-bottom: 0;
 }
 .step-area div a#next-stp {
-  background: #ddd;
+  background: #ff9800;
+  color: #fff;
+  font-size: 1.3rem;
   width: 100%;
   height: 48px;
   line-height: 48px;

@@ -58,18 +58,18 @@
 		</figure>
 	</div>
 	<div class="middle-area row">
-		<div class="col s12 m12 l10 offset-l1">
+		<div class="col s12 m12 l12">
 			<h2>POWER SUPPORT iPad Air 日本製螢幕保護膜</h2>
 			<div class="price-area row">
 				<span class="pro-price col s6 m6 l6">
-					<span class="price-title">價格</span><span class="money-tag">$</span>1,512
+					<span class="price-title">價格</span><br><span class="money-tag">$</span>1,512
 				</span>
 				<div class="pay-way col s6 m6 l6">
-					<img src="images/demo-pic/5_09.jpg" alt="" class="icon responsive-img col s4 m4 l2 right">
-					<img src="images/demo-pic/5_07.jpg" alt="" class="icon responsive-img col s4 m4 l2 right">
-					<img src="images/demo-pic/5_05.jpg" alt="" class="icon responsive-img col s4 m4 l2 right">
-					<img src="images/demo-pic/5_03.jpg" alt="" class="icon responsive-img col s4 m4 l2 right">
-					<img src="images/demo-pic/5_01.jpg" alt="" class="icon responsive-img col s4 m4 l2 right">
+					<img src="images/demo-pic/5_09.jpg" alt="" class="icon responsive-img col right">
+					<img src="images/demo-pic/5_07.jpg" alt="" class="icon responsive-img col right">
+					<img src="images/demo-pic/5_05.jpg" alt="" class="icon responsive-img col right">
+					<img src="images/demo-pic/5_03.jpg" alt="" class="icon responsive-img col right">
+					<img src="images/demo-pic/5_01.jpg" alt="" class="icon responsive-img col right">
 				</div>
 			</div>
 			<div class="store-area row valign-wrapper">
@@ -85,20 +85,33 @@
 	<div class="bottom-area row">
 		<div class="pro-size col s12 m12 l12">
 			<h3>商品規格</h3>
-			<div class="btn-g">
-				<a class="btn-flat waves-effect waves-light">8號</a>
-				<a class="btn-flat waves-effect waves-light">8號</a>
-				<a class="btn-flat waves-effect waves-light">8號</a>
-				<a class="btn-flat waves-effect waves-light">8號</a>
-				<a class="btn-flat waves-effect waves-light">8號</a>
-				<a class="btn-flat waves-effect waves-light">8號</a>
+			<div class="btn-g row">
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
+				<span class="col s4 m2 l2">
+					<a class="btn-flat waves-effect waves-light">8號</a>
+				</span>
 			</div>
 		</div>
 		<div class="sns col s12 m12 l12">
 			<h3>分享搶優惠</h3>
-			<div class="btn-g">
-				<a class="btn-flat waves-effect waves-light">facebook</a>
-				<a class="btn-flat waves-effect waves-light">facebook</a>
+			<div class="btn-g row">
+				<span class="col s12 m4 l4 ">
+					<a class="btn-flat waves-effect waves-light">facebook</a>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -124,11 +137,11 @@
 	</div>
 	<div class="cfa-area row">
 		<div class="col s12 m12 l12">
-			<span class="col s6 m2 offset-m4">
-				<a href="#" id="buy-now" class="col s12 btn waves-effect waves-orange">立即購買</a>
+			<span class="col s6 m3 offset-m3 l3 offset-l3">
+				<a href="#" id="buy-now" class="col s12 btn waves-effect waves-orange"><i class="mdi-action-shopping-cart"></i>立即購買</a>
 			</span>
-			<span class="col s6 m2">
-				<a href="#" id="tel" class="col s12 btn waves-effect waves-orange">電話專線</a>
+			<span class="col s6 m3 l3">
+				<a href="#" id="tel" class="col s12 btn waves-effect waves-orange green"><i class="mdi-communication-phone"></i>電話專線</a>
 			</span>
 		</div>
 	</div>
@@ -148,6 +161,15 @@ $(function(){
 			$('.search-area').removeClass('slideInRight').addClass('slideInLeft');
 			$('#search-bar').hide();
 		});
+	});
+
+	$('.pro-size a').click(function() {
+		$('.pro-size a').removeClass('btn-active');
+		$(this).addClass('btn-active');
+	});
+	$('.sns a').click(function() {
+		$('.sns a').removeClass('btn-active');
+		$(this).addClass('btn-active');
 	});
 });
 </script>

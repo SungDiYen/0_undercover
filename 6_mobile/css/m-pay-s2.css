@@ -1,3 +1,8 @@
+/*btn*/
+.receiver-info, .buyer-info {
+  margin: 2rem 0;
+  padding: 0 0.75rem;
+}
 .receiver-info form h2, .buyer-info form h2 {
   font-size: 1.4285rem;
   color: rgba(33, 33, 33, 0.56);
@@ -6,13 +11,6 @@
 }
 .receiver-info .select-wrapper span.select-dropdown, .buyer-info .select-wrapper span.select-dropdown {
   margin-bottom: 0;
-}
-
-.address {
-  margin-top: 0;
-}
-.address textarea {
-  height: 1rem;
 }
 
 .receiver-info [type="checkbox"]:not(:checked) + label:before {

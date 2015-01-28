@@ -3,31 +3,43 @@
 
 div.step-check {
 	margin-bottom: 0!important;
+	border-bottom: $divide-style;
 	ul {
 		margin-top: 2rem;
 	}
 	li {
 		text-align: center;
-		padding-bottom: 8px!important;
+		margin-bottom: 8px;
+		$step-size: 2rem;
 		&:before {
 			content:'1';
-			font-size: 2rem;
 			color: $second-text;
 			text-align: center;
-			line-height: 5rem;
+			font-size: $step-size;
+			line-height: $step-size * 2.5;
+			width: $step-size * 2.5;
+			height: $step-size * 2.5;
 			display: block;
-			width: 5rem;
-			height: 5rem;
 			background: #ddd;
 			border-radius: 100%;
 			margin: 0 auto;
-			margin-bottom: 5px;
+			margin-bottom: 0.5rem;
 		}
 		&:nth-of-type(2):before {
 			content:'2';
 		}
 		&:nth-of-type(3):before {
 			content:'3';
+		}
+		@media screen and (max-width: $s-screen) {
+			font-size: 12px;
+			padding: 0 0.5rem!important;
+			&:before {
+				font-size: ($step-size * 0.75);
+				line-height: ($step-size * 2.5) * 0.75;
+				width: ($step-size * 2.5) * 0.75;
+				height: ($step-size * 2.5) * 0.75;
+			}
 		}
 	}
 	li.now-page {
@@ -44,15 +56,32 @@ div.step-check {
 	}
 }
 .main-content {
-	label {
+	>div {
+		padding: 0!important;
+	}
+	label.strd-title {
 		display: block;
 		font-size: 1rem;
 		color: $second-text;
 		margin-bottom: 1rem;
 	}
 	h2.pro-name {
-		@include text-hide;
+		/*@include text-hide;*/
 		color: $primary-text;
+		margin: 1rem 0;
+		padding: 0 0.75rem;
+		@media screen and (max-width: $s-screen) {
+			font-size: 1.3rem;
+			line-height: 2rem;
+		}
+		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+			font-size: 1.3rem * 1.25;
+			line-height: 2rem * 1.25;
+		}
+		@media screen and (min-width: $l-screen) {
+			font-size: 1.3rem * 1.5;
+			line-height: 2rem * 1.5;
+		}
 	}
 	figure.pro-pic {
 		img {
@@ -68,39 +97,74 @@ div.step-check {
 		}
 	}
 	.pro-num {
-		.browser-default {
-			background: #fff;
-			border: 1px solid #aaa;
-			border-radius: 2px;
-			text-align: center;
-			padding: 0;
-			width: initial;
-			outline: none;
+		.select-wrapper {
+			width: 6rem;
 		}
 	}
 }
 .price-area {
+	margin-bottom: 1rem;
+	padding: 0 0.75rem;
+	$pa-fsz: 1rem;
+	dl {
+		margin: 1rem 0;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		dt {
+			font-size: $pa-fsz;
+		}
+		dd {
+			font-size: $pa-fsz * 1.25;
+			.money-tag {
+				font-size: $pa-fsz * 0.85;
+				@include money-tag;
+			}
+		}
+	}
 	.deli-price {
 		select {
-			background: transparent;
 			padding: 0;
-			border: 0;
+			border: 1px solid #e0e0e;
 			position: relative;
 			left: -4px;
 			outline: none;
 			background: #fff;
+		}
+		dt {
+			width: 12rem;
+			height: 3rem;
+			.select-dropdown {
+				border: 0;
+				top: -8px;
+				&:after {
+					position: relative;
+					top: 5px;
+				}
+			}
 		}
 		dd {
 			height: 45px;
 			line-height: 45px;
 		}
 	}
+	.total-price {
+		dd {
+			color: $price-color;
+			font-size: $pa-fsz * 1.5!important;
+			font-weight: 700;
+			.money-tag {
+				font-size: ($pa-fsz * 0.85) * 1.5;
+			}
+		}
+	}
 }
 .step-area {
+	margin-bottom: 0;
 	div {
-		padding: 0!important;
 		a#next-stp {
-			background: #ddd;
+			background: $primary-color;
+			color: #fff;
+			font-size: 1.3rem;
 			width: 100%;
 			height: 48px;
 			line-height: 48px;

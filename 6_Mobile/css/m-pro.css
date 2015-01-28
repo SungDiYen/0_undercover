@@ -1,17 +1,30 @@
+/*btn*/
 body {
   background: #fcfcfc;
 }
 
-header {
-  height: 112px !important;
+@media screen and (max-width: 599px) {
+  header {
+    height: 88px !important;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  header {
+    height: 96px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 112px !important;
+  }
 }
 
 .top-area {
   margin: 0;
 }
 .top-area figure {
-  height: 300px;
-  overflow: hidden;
+  /*height: 300px;
+  overflow: hidden;*/
   text-align: center;
   padding: 0 !important;
 }
@@ -24,12 +37,8 @@ header {
   color: rgba(33, 33, 33, 0.8);
   margin: 0.5rem 0 0;
   font-size: 2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.middle-area .price-area {
-  margin: 0;
+  line-height: 2.8rem;
+  /*@include text-hide;*/
 }
 .middle-area .price-area .pro-price {
   color: rgba(255, 51, 51, 0.8);
@@ -39,7 +48,7 @@ header {
 }
 .middle-area .price-area .pro-price .money-tag {
   font-weight: 700;
-  padding: 0 4px;
+  padding-right: 0.3rem;
   font-size: 1.5rem;
 }
 .middle-area .price-area .pro-price .price-title {
@@ -51,15 +60,27 @@ header {
 .middle-area .price-area .pay-way img.icon {
   padding: 8px;
 }
+.middle-area .price-area br {
+  display: none;
+}
 @media screen and (max-width: 599px) {
   .middle-area h2 {
     font-size: 1.75rem;
   }
   .middle-area .price-area .pro-price {
     font-size: 2.1875rem;
+    line-height: 2.1875rem;
   }
   .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
     font-size: 1.3125rem;
+  }
+  .middle-area br {
+    display: block !important;
+  }
+  .middle-area img.icon {
+    width: 20%;
+    padding: 0 !important;
+    margin: 8px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
@@ -72,6 +93,9 @@ header {
   .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
     font-size: 1.3125rem;
   }
+  .middle-area img.icon {
+    width: 20% !important;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1440px) {
   .middle-area h2 {
@@ -83,17 +107,20 @@ header {
   .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
     font-size: 1.5rem;
   }
+  .middle-area img.icon {
+    width: 20% !important;
+  }
 }
 @media screen and (min-width: 1441px) {
   .middle-area img.icon {
-    width: 8% !important;
+    width: 10% !important;
   }
 }
 .middle-area .store-area.row {
   margin: 0;
 }
 .middle-area .store-area.row .col {
-  padding: 0;
+  padding-left: 0;
 }
 .middle-area .store-area.row .shop-img img {
   border: 1px solid rgba(33, 33, 33, 0.24);
@@ -113,16 +140,22 @@ header {
 .bottom-area h3 {
   color: rgba(33, 33, 33, 0.56);
   font-size: 2rem;
-  margin: 0;
+  margin: 0 0 0.75rem 0;
 }
-.bottom-area a {
+.bottom-area .pro-size, .bottom-area .sns {
+  margin-bottom: 1rem;
+}
+.bottom-area .btn-g > span.col {
+  padding: 0;
+  text-align: center;
+  padding: 0 8px;
+}
+.bottom-area .btn-g > span.col a {
   border: 1px solid #aaa;
   background: #ddd;
   text-align: center;
   margin-bottom: 8px;
-}
-.bottom-area .pro-size, .bottom-area .sns {
-  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .extra-area {
@@ -132,17 +165,19 @@ header {
   margin-bottom: 38px;
 }
 .extra-area .pro-sub-img {
-  padding: 0;
-  height: 330px;
+  padding: 0.75rem;
+  /*height: 330px;
   line-height: 330px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
+  overflow: hidden;*/
+}
+.extra-area .pro-sub-img a {
+  display: block;
   border: 1px solid #e2e2e2;
   background: #fff;
 }
 .extra-area .pro-sub-img img {
   vertical-align: middle;
+  padding: 1.5rem;
 }
 
 .cfa-area div {
@@ -162,7 +197,19 @@ header {
 .cfa-area div span a.btn {
   margin: 0;
   background: #ff9800;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
 }
 .cfa-area div span a.btn:hover {
   background: #f57c00;
+}
+.cfa-area div span i {
+  padding-right: 0.5rem;
+}
+@media screen and (min-width: 1441px) {
+  .cfa-area div a.btn {
+    height: 3rem !important;
+    line-height: 3rem !important;
+  }
 }

@@ -15,7 +15,8 @@ $primary-text: rgba(#212121, .8);
 $second-text: rgba(#212121, .56);
 $third-text: rgba(#212121, .24);
 
-$divide-color: rgba(#b6b6b6, 1);
+$divide-style: 1px solid rgba(#b6b6b6, 1);
+
 $icons: rgba(#212121, .54);
 $icons-bg: rgba(#212121, .24);
 $price-color: rgba(#ff3333, .8);
@@ -44,7 +45,7 @@ $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 }
 @mixin money-tag(){
 	font-weight: 700;
-	padding: 0 4px;
+	padding-right: 0.3rem;
 }
 @mixin text-hide(){
 	overflow: hidden;
@@ -59,3 +60,10 @@ $l-screen: 992px;
 $l-screen-a: 992px;
 $l-screen-z: 1440px;
 $xl-screen: 1441px;
+
+/*btn*/
+$btn-active: rgba(#f57c00, 1);
+
+$s-header: 40px;
+$m-header: 48px;
+$l-header: 64px;

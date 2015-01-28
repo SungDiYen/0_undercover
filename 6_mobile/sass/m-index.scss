@@ -201,7 +201,7 @@
 	}
 	$tag-size: 2rem;
 	$tag-fs: $tag-size * 0.75;
-	$tag-lh: $tag-size * 1.15;
+	$tag-lh: $tag-size * 1.075;
 	@media screen and (max-width: $s-screen) {
 		font-size: $tag-fs;
 		line-height: $tag-lh;
