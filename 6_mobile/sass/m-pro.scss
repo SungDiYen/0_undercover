@@ -3,16 +3,15 @@
 body {
 	background: $body-color;
 }
-.main-header {
-	>div {
-
-	}
+header {
+	height: 112px!important;
 }
 .top-area {
 	margin: 0;
 	figure {
 		height: 300px;
 		overflow: hidden;
+		text-align: center;
 		padding: 0!important;
 		img {
 			margin: 0!important;
@@ -23,48 +22,129 @@ body {
 .middle-area {
 	h2 {
 		color: $primary-text;
-		font-size: 3rem;
+		margin: 0.5rem 0 0;
+		font-size: 2rem;	//basic size
 		@include text-hide;
 	}
 	.price-area {
+		margin: 0;
 		.pro-price {
 			color: $price-color;
-			font-size: 2rem;
 			font-weight: 900;
+			padding: 0;
+			font-size: 2rem * 1.25;
 			.money-tag {
-				font-size: 1.5rem;
 				@include money-tag;
+				font-size: 2rem * 0.75;
+			}
+			.price-title {
+				font-size: 2rem * 0.75;
 			}
 		}
 		.pay-way {
+			padding: 0;
 			img.icon {
-				float: right;
-				margin-left: 8px;
+				padding: 8px;
 			}
 		}
 	}
-	.shop-img {
-		img {
-			width: 32px;
-			height: 32px;
+	@media screen and (max-width: $s-screen) {
+		h2 {
+			font-size: 1.75rem;	//basic size
+		}
+		.price-area {
+			.pro-price {
+				font-size: 1.75rem * 1.25;
+				.price-title, .money-tag {
+					font-size: 1.75rem * 0.75;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		h2 {
+			font-size: 1.75rem;	//basic size
+		}
+		.price-area {
+			.pro-price {
+				font-size: 1.75rem * 1.25;
+				.price-title, .money-tag {
+					font-size: 1.75rem * 0.75;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: $l-screen-a)and(max-width: $l-screen-z) {
+		h2 {
+			font-size: 2rem;	//basic size
+		}
+		.price-area {
+			.pro-price {
+				font-size: 2rem * 1.25;
+				.price-title, .money-tag {
+					font-size: 2rem * 0.75;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: $xl-screen) {
+		img.icon {
+			width: 8%!important;
+		}
+	}
+	.store-area.row {
+		margin: 0;
+		.col {
+			padding: 0;
+		}
+		.shop-img {
+			img {
+				border: 1px solid $third-text;
+			}
+		}
+		.shop-name {
+			padding-left: 16px;
+			a {
+				color: $second-text;
+			}
 		}
 	}
 }
 .bottom-area {
+	margin: 0;
+	border-top: 1px solid $divide-color;
+	padding-top: 1rem;
 	h3 {
 		color: $second-text;
 		font-size: 2rem;
+		margin: 0;
 	}
 	a {
 		border: 1px solid #aaa;
 		background: #ddd;
 		text-align: center;
+		margin-bottom: 8px;
+	}
+	.pro-size, .sns {
+		margin-bottom: 1rem;
 	}
 }
-.pro-sub-img {
-	figure {
+.extra-area {
+	padding: 0;
+	padding-top: 2rem!important;
+	border-top: 1px solid $divide-color;
+	margin-bottom: 38px;
+	.pro-sub-img {
+		padding: 0;
+		height: 330px;
+		line-height: 330px;
+		overflow: hidden;
+		margin-bottom: 1.5rem;
+		padding: 1.5rem;
+		border: 1px solid #e2e2e2;
+		background: #fff;
 		img {
-			width: 100%;
+			vertical-align: middle;
 		}
 	}
 }
@@ -72,15 +152,21 @@ body {
 	div {
 		position: fixed;
 		z-index: 899;
-		bottom: 0px;
+		bottom: 0;
 		margin: 0;
+		padding: 0!important;
 		background: rgba(0,0,0,.5);
-		height: 50px;
+		text-align: center;
+		/*height: 50px;
+		line-height: 50px;*/
 		span {
-			text-align: center;
-			line-height: 50px;
-			button {
+			padding: 0.75rem!important;
+			a.btn {
 				margin: 0;
+				background: $primary-color;
+				&:hover {
+					background: $primary-color-dark;
+				}
 			}
 		}
 	}

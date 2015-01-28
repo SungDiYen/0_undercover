@@ -46,17 +46,17 @@ header .main-header a i {
 }
 @media screen and (max-width: 599px) {
   header .main-header a i {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
   header .main-header a i {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 }
 @media screen and (min-width: 992px) {
   header .main-header a i {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
 }
 header .sub-header .nav-wrapper, .sub-header header .sub-header {
@@ -79,6 +79,7 @@ header .sub-header ul.tabs li.tab a:hover {
 header .sub-header ul.tabs .indicator {
   background: #ff9800;
   bottom: -1px;
+  height: 3px;
 }
 header .g-logo {
   text-align: center;
@@ -117,5 +118,39 @@ header .page-title {
 
 .search-area {
   position: relative;
-  z-index: 99999;
+  z-index: 999;
+}
+.search-area li.row {
+  margin: 0;
+}
+.search-area li.row .input-field {
+  margin: 0;
+}
+.search-area li.row .input-field input {
+  padding: 5px;
+  margin: 0;
+  color: rgba(33, 33, 33, 0.8);
+  border-bottom: 1px solid #9e9e9e;
+}
+
+#layer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 997;
+  will-change: opacity;
+}
+
+#sidenav-overlay2 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  will-change: opacity;
 }

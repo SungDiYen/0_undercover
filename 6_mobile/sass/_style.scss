@@ -44,7 +44,7 @@ $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 }
 @mixin money-tag(){
 	font-weight: 700;
-	padding-right: 4px;
+	padding: 0 4px;
 }
 @mixin text-hide(){
 	overflow: hidden;
@@ -56,3 +56,6 @@ $s-screen: 599px;
 $m-screen-a: 601px;
 $m-screen-z: 991px;
 $l-screen: 992px;
+$l-screen-a: 992px;
+$l-screen-z: 1440px;
+$xl-screen: 1441px;

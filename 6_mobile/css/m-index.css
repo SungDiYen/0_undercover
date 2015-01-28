@@ -135,8 +135,8 @@
 @media screen and (max-width: 599px) {
   .item-wording h3 {
     font-size: 1.5rem;
-    height: 2rem;
-    line-height: 2rem;
+    height: 1.995rem;
+    line-height: 1.995rem;
   }
   .item-wording .price {
     font-size: 1.875rem;
@@ -148,8 +148,8 @@
 @media screen and (min-width: 601px) and (max-width: 991px) {
   .item-wording h3 {
     font-size: 1.75rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 2.3275rem;
+    line-height: 2.3275rem;
   }
   .item-wording .price {
     font-size: 2.1875rem;
@@ -161,8 +161,8 @@
 @media screen and (min-width: 992px) {
   .item-wording h3 {
     font-size: 2rem;
-    height: 3rem;
-    line-height: 3rem;
+    height: 2.66rem;
+    line-height: 2.66rem;
   }
   .item-wording .price {
     font-size: 2.5rem;

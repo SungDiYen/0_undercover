@@ -2,12 +2,17 @@ body {
   background: #fcfcfc;
 }
 
+header {
+  height: 112px !important;
+}
+
 .top-area {
   margin: 0;
 }
 .top-area figure {
   height: 300px;
   overflow: hidden;
+  text-align: center;
   padding: 0 !important;
 }
 .top-area figure img {
@@ -17,56 +22,147 @@ body {
 
 .middle-area h2 {
   color: rgba(33, 33, 33, 0.8);
-  font-size: 3rem;
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.middle-area .price-area {
+  margin: 0;
+}
 .middle-area .price-area .pro-price {
   color: rgba(255, 51, 51, 0.8);
-  font-size: 2rem;
   font-weight: 900;
+  padding: 0;
+  font-size: 2.5rem;
 }
 .middle-area .price-area .pro-price .money-tag {
-  font-size: 1.5rem;
   font-weight: 700;
-  padding-right: 4px;
+  padding: 0 4px;
+  font-size: 1.5rem;
+}
+.middle-area .price-area .pro-price .price-title {
+  font-size: 1.5rem;
+}
+.middle-area .price-area .pay-way {
+  padding: 0;
 }
 .middle-area .price-area .pay-way img.icon {
-  float: right;
-  margin-left: 8px;
+  padding: 8px;
 }
-.middle-area .shop-img img {
-  width: 32px;
-  height: 32px;
+@media screen and (max-width: 599px) {
+  .middle-area h2 {
+    font-size: 1.75rem;
+  }
+  .middle-area .price-area .pro-price {
+    font-size: 2.1875rem;
+  }
+  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
+    font-size: 1.3125rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  .middle-area h2 {
+    font-size: 1.75rem;
+  }
+  .middle-area .price-area .pro-price {
+    font-size: 2.1875rem;
+  }
+  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
+    font-size: 1.3125rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .middle-area h2 {
+    font-size: 2rem;
+  }
+  .middle-area .price-area .pro-price {
+    font-size: 2.5rem;
+  }
+  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .middle-area img.icon {
+    width: 8% !important;
+  }
+}
+.middle-area .store-area.row {
+  margin: 0;
+}
+.middle-area .store-area.row .col {
+  padding: 0;
+}
+.middle-area .store-area.row .shop-img img {
+  border: 1px solid rgba(33, 33, 33, 0.24);
+}
+.middle-area .store-area.row .shop-name {
+  padding-left: 16px;
+}
+.middle-area .store-area.row .shop-name a {
+  color: rgba(33, 33, 33, 0.56);
 }
 
+.bottom-area {
+  margin: 0;
+  border-top: 1px solid #b6b6b6;
+  padding-top: 1rem;
+}
 .bottom-area h3 {
   color: rgba(33, 33, 33, 0.56);
   font-size: 2rem;
+  margin: 0;
 }
 .bottom-area a {
   border: 1px solid #aaa;
   background: #ddd;
   text-align: center;
+  margin-bottom: 8px;
+}
+.bottom-area .pro-size, .bottom-area .sns {
+  margin-bottom: 1rem;
 }
 
-.pro-sub-img figure img {
-  width: 100%;
+.extra-area {
+  padding: 0;
+  padding-top: 2rem !important;
+  border-top: 1px solid #b6b6b6;
+  margin-bottom: 38px;
+}
+.extra-area .pro-sub-img {
+  padding: 0;
+  height: 330px;
+  line-height: 330px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+}
+.extra-area .pro-sub-img img {
+  vertical-align: middle;
 }
 
 .cfa-area div {
   position: fixed;
   z-index: 899;
-  bottom: 0px;
+  bottom: 0;
   margin: 0;
+  padding: 0 !important;
   background: rgba(0, 0, 0, 0.5);
-  height: 50px;
+  text-align: center;
+  /*height: 50px;
+  line-height: 50px;*/
 }
 .cfa-area div span {
-  text-align: center;
-  line-height: 50px;
+  padding: 0.75rem !important;
 }
-.cfa-area div span button {
+.cfa-area div span a.btn {
   margin: 0;
+  background: #ff9800;
+}
+.cfa-area div span a.btn:hover {
+  background: #f57c00;
 }
