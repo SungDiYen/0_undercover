@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-<title>首頁</title>
+<title>搜尋-後背包</title>
 <meta name="description" content="">
 <link rel="icon" href="images/Goiiz-favicon.png">
 <link rel="stylesheet" href="css/animate.css">
@@ -26,7 +26,7 @@
 							</li>
 						</ul>
 						<div class="g-logo page-title col s8 m6 l6">
-							<img src="images/logo_ledoor.png" class="responsive-img">
+							搜尋結果
 						</div>
 						<ul class="col s2 m3 l3">
 							<li class="right">
@@ -44,16 +44,7 @@
 				<li>aaaa</li>
 				<li>aaaa</li>
 				<li>aaaa</li>
-				<li>
-					<div>aacsaa</div>
-					<aside class="calalog">
-						<ul id="slide-out" class="side-nav full">
-							<li>bbb</li>
-							<li>bbb</li>
-							<li>bbb</li>
-						</ul>
-					</aside>
-				</li>
+				<li>aaaa</li>
 				<li class="no-padding">
 					<ul class="collapsible collapsible-accordion">
 						<li>
@@ -71,23 +62,11 @@
 				</li>
 			</ul>
 		</aside>
-		<aside class="search-area animated">
-			<a id="search-btn2" class=" left col s3">
-				<i class="small mdi-action-search"></i>
-			</a>
-			<div id="search-bar" class="input-field left col s9 animated">
-				<input id="first_name" type="text">
-			</div>
-		</aside>
 	</header><!-- /header -->
 	<div class="content row">
-		<div class="main-banner slider">
-			<ul class="slides">
-				<li><img class="responsive-img"src="images/s1.png" alt=""></li>
-				<li><img class="responsive-img"src="images/s2.png" alt=""></li>
-				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
-			</ul>
-		</div>
+		<h2 class="rltv-title col s12">
+			相關關鍵字
+		</h2>
 		<div class="event-btn-area row">
 			<div class="line col s6 m3">
 				<a class="waves-effect waves-orange btn-flat">
@@ -109,6 +88,26 @@
 					<i class="mdi-action-grade"></i>主打活動
 				</a>
 			</div>
+			<div class="line col s6 m3">
+				<a class="waves-effect waves-orange btn-flat">
+					<i class="mdi-action-grade"></i>主打活動
+				</a>
+			</div>
+			<div class="line col s6 m3">
+				<a class="waves-effect waves-orange btn-flat">
+					<i class="mdi-action-grade"></i>主打活動
+				</a>
+			</div><div class="line col s6 m3">
+				<a class="waves-effect waves-orange btn-flat">
+					<i class="mdi-action-grade"></i>主打活動
+				</a>
+			</div>
+			<div class="line col s6 m3">
+				<a class="waves-effect waves-orange btn-flat">
+					<i class="mdi-action-grade"></i>主打活動
+				</a>
+			</div>
+
 		</div>
 		<div class="row-list row">
 			<div class="col s6 m4 l3 list-item">
@@ -195,20 +194,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s12 m8 l6 list-item">
-				<div class="card">
-					<span class="item-tag spec"></span>
-					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上</h3>
-							<div class="price"><span class="money-tag">$</span>2,300</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 <script src="js/jquery-1.11.1.js"></script>
@@ -222,12 +207,6 @@ $(function(){
 	});
 	$('.collapsible').collapsible();
 
-	/*$ aa = function(){
-		$('#sidenav-overlay2, #sidenav-overlay').remove();
-		$('.search-area').removeClass('slideInRight').addClass('slideInLeft');
-		$('#search-bar').hide();
-	}*/
-
 	$('#menu-btn').click(function(){
 		$('#menu-btn i').toggleClass('mdi-navigation-menu').toggleClass('mdi-hardware-keyboard-arrow-left');
 		$('#sidenav-overlay').click(function(){
@@ -239,6 +218,7 @@ $(function(){
 			else {
 				return false;
 			}
+			$('#search-bar').hide();
 		});
 	});
 });
@@ -248,20 +228,6 @@ $(function(){
 	$('.event-btn-area a').click(function() {
 		$('.event-btn-area a').removeClass('btn-active');
 		$(this).addClass('btn-active');
-	});
-
-	/*var ow = $(window).width();
-	var oh = $(window).height();
-	$(window).resize(function() {
-	var ww = $(window).width();
-	var wh = $(window).height();
-	var fh = $('.card-image figure').height();
-	var newH = ((ww/ow)).;
-		$('.card-image figure').height(newH*fh);
-	});*/
-	$('.card-image figure').each(function() {
-		var w = $('.list-item').width();
-		$(this).height(w);
 	});
 });
 </script>

@@ -18,11 +18,15 @@ html, body {
 .btn-active {
   background: #f57c00 !important;
   border: 1px solid #ff9800 !important;
-  color: #fff;
+  color: #fff !important;
 }
 
 .slash {
   padding: 0 4px;
+}
+
+.h-line {
+  margin: 0 4px;
 }
 
 /*Re*/
@@ -51,7 +55,7 @@ header .main-header .g-logo {
   text-align: center;
 }
 header .main-header .g-logo img {
-  /*width: 100%;*/
+  width: 100%;
   vertical-align: middle;
   position: relative;
 }
@@ -72,76 +76,6 @@ header .main-header .page-title {
 @media screen and (min-width: 992px) {
   header .main-header .page-title {
     font-size: 1.95rem;
-  }
-}
-header .main-header a i {
-  color: #ff9800;
-  cursor: pointer;
-}
-@media screen and (max-width: 599px) {
-  header .main-header a i {
-    font-size: 2rem !important;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 991px) {
-  header .main-header a i {
-    font-size: 2.5rem !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  header .main-header a i {
-    font-size: 3rem !important;
-  }
-}
-@media screen and (max-width: 599px) {
-  header {
-    height: 40px;
-  }
-  header .nav-wrapper {
-    height: 40px;
-  }
-  header .g-logo {
-    line-height: 40px;
-  }
-  header .main-header a {
-    height: 40px;
-  }
-  header .main-header a i {
-    line-height: 40px;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 991px) {
-  header {
-    height: 48px;
-  }
-  header .nav-wrapper {
-    height: 48px;
-  }
-  header .g-logo {
-    line-height: 48px;
-  }
-  header .main-header a {
-    height: 48px;
-  }
-  header .main-header a i {
-    line-height: 48px;
-  }
-}
-@media screen and (min-width: 992px) {
-  header {
-    height: 64px;
-  }
-  header .nav-wrapper {
-    height: 64px;
-  }
-  header .g-logo {
-    line-height: 64px;
-  }
-  header .main-header a {
-    height: 64px;
-  }
-  header .main-header a i {
-    line-height: 64px;
   }
 }
 header .sub-header .nav-wrapper, .sub-header header .sub-header {
@@ -166,35 +100,121 @@ header .sub-header ul.tabs .indicator {
   bottom: -1px;
   height: 3px;
 }
-
-.calalog ul {
-  top: 64px !important;
-}
-
-.search-area {
-  position: relative;
+header .search-area {
+  position: absolute;
   z-index: 999;
+  right: 0;
+  background: #fcfcfc;
 }
-.search-area li.row {
+header .search-area .input-field {
   margin: 0;
 }
-.search-area li.row .input-field {
-  margin: 0;
-}
-.search-area li.row .input-field input {
-  padding: 5px;
+header .search-area .input-field input {
+  height: 2rem;
   margin: 0;
   color: rgba(33, 33, 33, 0.8);
   border-bottom: 1px solid #9e9e9e;
 }
-
-#sidenav-overlay2 {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 120vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  will-change: opacity;
+header .search-area #search-bar {
+  margin: 0;
+}
+header a {
+  display: block;
+}
+header a i {
+  color: #ff9800;
+  cursor: pointer;
+}
+@media screen and (max-width: 599px) {
+  header a i {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  header a i {
+    font-size: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  header a i {
+    font-size: 3rem !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  header {
+    height: 40px;
+  }
+  header .nav-wrapper {
+    height: 40px;
+  }
+  header .g-logo {
+    line-height: 40px;
+  }
+  header .main-header a {
+    height: 40px;
+  }
+  header .main-header a i {
+    line-height: 40px;
+  }
+  header .calalog ul {
+    top: 40px !important;
+  }
+  header .search-area {
+    height: 40px;
+  }
+  header .search-area .input-field {
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 991px) {
+  header {
+    height: 48px;
+  }
+  header .nav-wrapper {
+    height: 48px;
+  }
+  header .g-logo {
+    line-height: 48px;
+  }
+  header .main-header a {
+    height: 48px;
+  }
+  header .main-header a i {
+    line-height: 48px;
+  }
+  header .calalog ul {
+    top: 48px !important;
+  }
+  header .search-area {
+    height: 48px;
+  }
+  header .search-area .input-field {
+    line-height: 48px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 64px;
+  }
+  header .nav-wrapper {
+    height: 64px;
+  }
+  header .g-logo {
+    line-height: 64px;
+  }
+  header .main-header a {
+    height: 64px;
+  }
+  header .main-header a i {
+    line-height: 64px;
+  }
+  header .calalog ul {
+    top: 64px !important;
+  }
+  header .search-area {
+    height: 64px;
+  }
+  header .search-area .input-field {
+    line-height: 64px;
+  }
 }

@@ -13,13 +13,19 @@
 	}
 	ul.indicators {
 		bottom: 40px;
-		z-index: 999;
+		z-index: 890;
 		li.indicator-item {
 			background: $second-text;
 		}
 		li.indicator-item.active {
 			background: $primary-color;
 		}
+	}
+}
+.content {
+	h2 {
+		font-size: 2rem;
+		color: $second-text;
 	}
 }
 .event-btn-area  {
@@ -115,17 +121,26 @@
 	position: relative;
 	margin-bottom: 1.5rem;
 	figure {
-		/*height: 200px;*/
 		img {
 			border-radius: 2px 2px 0 0;
 			background: rgba(0,0,0,.34);
 			/*height: 200px;*/
 		}
+		/*@media screen and (max-width: $s-screen){
+			height: 180px;
+		}
+		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+			height: 180px * 1.25;
+		}
+		@media screen and (min-width: $l-screen){
+			height: 180px * 1.5;
+		}*/
 	}
 }
 .item-wording {
 	padding: 0.5rem!important;
 	background: #fff;
+	position: relative;
 	h3 {
 		overflow: hidden;
 		margin: 0;

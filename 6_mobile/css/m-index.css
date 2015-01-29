@@ -12,13 +12,18 @@
 }
 .main-banner ul.indicators {
   bottom: 40px;
-  z-index: 999;
+  z-index: 890;
 }
 .main-banner ul.indicators li.indicator-item {
   background: rgba(33, 33, 33, 0.56);
 }
 .main-banner ul.indicators li.indicator-item.active {
   background: #ff9800;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: rgba(33, 33, 33, 0.56);
 }
 
 .event-btn-area {
@@ -109,7 +114,15 @@
   margin-bottom: 1.5rem;
 }
 .list-item figure {
-  /*height: 200px;*/
+  /*@media screen and (max-width: $s-screen){
+  	height: 180px;
+  }
+  @media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+  	height: 180px * 1.25;
+  }
+  @media screen and (min-width: $l-screen){
+  	height: 180px * 1.5;
+  }*/
 }
 .list-item figure img {
   border-radius: 2px 2px 0 0;
@@ -120,6 +133,7 @@
 .item-wording {
   padding: 0.5rem !important;
   background: #fff;
+  position: relative;
 }
 .item-wording h3 {
   overflow: hidden;

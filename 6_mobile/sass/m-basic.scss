@@ -16,10 +16,13 @@ html,body {
 .btn-active {
 	background: $btn-active !important;
 	border: 1px solid $primary-color !important;
-	color: #fff;
+	color: #fff !important;;
 }
 .slash {
 	padding: 0 4px;
+}
+.h-line { //horizontal-line
+	margin: 0 4px;
 }
 /*Re*/
 .dropdown-content li {
@@ -47,7 +50,7 @@ header {
 		.g-logo {
 			text-align: center;
 			img {
-				/*width: 100%;*/
+				width: 100%;
 				vertical-align: middle;
 				position: relative;
 			}
@@ -63,66 +66,6 @@ header {
 			}
 			@media screen and (min-width: $l-screen) {
 				font-size: 1.3rem * 1.5;
-			}
-		}
-		a {
-			i {
-				color: $primary-color;
-				cursor: pointer;
-				@media screen and (max-width: $s-screen) {
-					font-size: 2rem !important;
-				}
-				@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-					font-size: 2rem * 1.25 !important;
-				}
-				@media screen and (min-width: $l-screen) {
-					font-size: 2rem * 1.5 !important;
-				}
-			}
-		}
-	}
-	@media screen and (max-width: $s-screen) {
-		height: $s-header;
-		.nav-wrapper {
-			height: $s-header;
-		}
-		.g-logo {
-			line-height: $s-header;
-		}
-		.main-header a {
-			height: $s-header;
-			i {
-				line-height: $s-header;
-			}
-		}
-	}
-	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-		height: $m-header;
-		.nav-wrapper {
-			height: $m-header;
-		}
-		.g-logo {
-			line-height: $m-header;
-		}
-		.main-header a {
-			height: $m-header;
-			i {
-				line-height: $m-header;
-			}
-		}
-	}
-	@media screen and (min-width: $l-screen) {
-		height: $l-header;
-		.nav-wrapper {
-			height: $l-header;
-		}
-		.g-logo {
-			line-height: $l-header;
-		}
-		.main-header a {
-			height: $l-header;
-			i {
-				line-height: $l-header;
 			}
 		}
 	}
@@ -150,35 +93,110 @@ header {
 			}
 		}
 	}
-}
-.calalog {
-	ul {
-		top: 64px!important;
-	}
-}
-.search-area {
-	position: relative;
-	z-index: 999;
-	li.row {
-		margin: 0;
+	.search-area {
+		position: absolute;
+		z-index: 999;
+		right: 0;
+		background: $body-color;
 		.input-field {
 			margin: 0;
 			input {
-				padding: 5px;
+				height: 2rem;
 				margin: 0;
 				color: $primary-text;
 				border-bottom: 1px solid #9e9e9e;
 			}
 		}
+		#search-bar {
+			margin: 0;
+		}
 	}
-}
-#sidenav-overlay2 {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	height: 120vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 100;
-	will-change: opacity;
+	a {
+		display: block;
+		i {
+			color: $primary-color;
+			cursor: pointer;
+			@media screen and (max-width: $s-screen) {
+				font-size: 2rem !important;
+			}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+				font-size: 2rem * 1.25 !important;
+			}
+			@media screen and (min-width: $l-screen) {
+				font-size: 2rem * 1.5 !important;
+			}
+		}
+	}
+	@media screen and (max-width: $s-screen) {
+		height: $s-header;
+		.nav-wrapper {
+			height: $s-header;
+		}
+		.g-logo {
+			line-height: $s-header;
+		}
+		.main-header a {
+			height: $s-header;
+			i {
+				line-height: $s-header;
+			}
+		}
+		.calalog ul {
+			top: $s-header!important;
+		}
+		.search-area {
+			height: $s-header;
+			.input-field {
+				line-height: $s-header;
+			}
+		}
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		height: $m-header;
+		.nav-wrapper {
+			height: $m-header;
+		}
+		.g-logo {
+			line-height: $m-header;
+		}
+		.main-header a {
+			height: $m-header;
+			i {
+				line-height: $m-header;
+			}
+		}
+		.calalog ul {
+			top: $m-header!important;
+		}
+		.search-area {
+			height: $m-header;
+			.input-field {
+				line-height: $m-header;
+			}
+		}
+	}
+	@media screen and (min-width: $l-screen) {
+		height: $l-header;
+		.nav-wrapper {
+			height: $l-header;
+		}
+		.g-logo {
+			line-height: $l-header;
+		}
+		.main-header a {
+			height: $l-header;
+			i {
+				line-height: $l-header;
+			}
+		}
+		.calalog ul {
+			top: $l-header!important;
+		}
+		.search-area {
+			height: $l-header;
+			.input-field {
+				line-height: $l-header;
+			}
+		}
+	}
 }
