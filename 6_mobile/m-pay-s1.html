@@ -39,6 +39,14 @@
 				</div>
 			</div>
 		</nav>
+		<aside class="search-area animated">
+			<a id="search-btn2" class=" left col s3">
+				<i class="small mdi-action-search"></i>
+			</a>
+			<div id="search-bar" class="input-field left col s9 animated">
+				<input id="first_name" type="text">
+			</div>
+		</aside>
 	</header><!-- /header -->
 	<div class="step-check row">
 		<ul class="col s12 m8 offset-m2 l6 offset-l3">
@@ -56,13 +64,18 @@
 			<div class="col s6 m6 l6">
 				<div class="pro-size">
 					<label class="strd-title">規格</label>
-					<a class="btn-flat waves-effect waves-light btn-active">8號</a>
+					<select id="size-select" class="select">
+						<option value="" disabled="">選擇尺寸</option>
+						<option value="8" selected="">8號</option>
+						<option value="9">9號</option>
+						<option value="10">10號</option>
+					</select>
 				</div>
 				<div class="pro-num">
 					<label class="strd-title">數量</label>
 					<select id="num-select" class="select">
-						<option value="" disabled="" selected="">選擇數量</option>
-						<option value="1">1</option>
+						<option value="" disabled="">選擇數量</option>
+						<option value="1" selected="">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 					</select>

@@ -41,14 +41,14 @@
 		</nav>
 		<aside class="calalog">
 			<ul id="slide-out" class="side-nav full">
-				<li>aaaa</li>
-				<li>aaaa</li>
-				<li>aaaa</li>
+				<li>一一一一</li>
+				<li>二二二</li>
+				<li>三三</li>
 				<li>
-					<div>aacsaa</div>
+					<div>四四</div>
 					<aside class="calalog">
 						<ul id="slide-out" class="side-nav full">
-							<li>bbb</li>
+							<li>四一</li>
 							<li>bbb</li>
 							<li>bbb</li>
 						</ul>
@@ -69,6 +69,7 @@
 						</li>
 					</ul>
 				</li>
+				<li>五五</li>
 			</ul>
 		</aside>
 		<aside class="search-area animated">
@@ -110,13 +111,27 @@
 				</a>
 			</div>
 		</div>
-		<div class="row-list row">
-			<div class="col s6 m4 l3 list-item">
+		<div class="col s12 m8 l6 list-item size-2">
 				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
 						<figure>
 							<img src="images/s1.png" class="responsive-img">
+						</figure>
+						<div class="card-content item-wording">
+							<h3>一二三四五六七八九十以上</h3>
+							<div class="price"><span class="money-tag">$</span>2,300</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="row-list row">
+			<div class="col s6 m4 l3 list-item size-1">
+				<div class="card">
+					<span class="item-tag spec"></span>
+					<div class="card-image">
+						<figure>
+							<img src="images/f1.jpg" class="responsive-img">
 						</figure>
 						<div class="card-content item-wording">
 							<h3>一二三四五六七八九十以上</h3>
@@ -125,12 +140,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6 m4 l3 list-item">
+			<div class="col s6 m4 l3 list-item size-1">
 				<div class="card">
 					<span class="item-tag hot"></span>
 					<div class="card-image">
 						<figure>
-							<img src="images/s1.png" class="responsive-img">
+							<img src="images/f2.jpg" class="responsive-img">
 						</figure>
 						<div class="card-content item-wording">
 							<h3>一二三四五六七八九十以上</h3>
@@ -139,7 +154,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6 m4 l3 list-item">
+			<div class="col s12 m8 l6 list-item size-2">
 				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
@@ -153,7 +168,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6 m4 l3 list-item">
+			<div class="col s6 m4 l3 list-item size-1">
+				<div class="card">
+					<span class="item-tag spec"></span>
+					<div class="card-image">
+						<figure>
+							<img src="images/f3.jpg" class="responsive-img">
+						</figure>
+						<div class="card-content item-wording">
+							<h3>一二三四五六七八九十以上</h3>
+							<div class="price"><span class="money-tag">$</span>2,300</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m4 l3 list-item size-1">
 				<div class="card">
 					<span class="item-tag hot"></span>
 					<div class="card-image">
@@ -167,7 +196,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6 m4 l3 list-item">
+			<div class="col s6 m4 l3 list-item size-1">
 				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
@@ -181,7 +210,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6 m4 l3 list-item">
+			<div class="col s6 m4 l3 list-item size-1">
 				<div class="card">
 					<span class="item-tag hot"></span>
 					<div class="card-image">
@@ -195,7 +224,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s12 m8 l6 list-item">
+			<div class="col s12 m8 l6 list-item size-2">
 				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
@@ -258,9 +287,15 @@ $(function(){
 	var fh = $('.card-image figure').height();
 	var newH = ((ww/ow)).;
 		$('.card-image figure').height(newH*fh);
-	});*/
-	$('.card-image figure').each(function() {
-		var w = $('.list-item').width();
+	});*/	
+	$(window).resize(function() {
+		var w = $('.size-1').width();
+		$('.card-image figure').each(function() {
+			$(this).height(w);
+		});
+	});
+	var w = $('.size-1').width();
+		$('.card-image figure').each(function() {
 		$(this).height(w);
 	});
 });

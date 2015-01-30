@@ -41,20 +41,30 @@
 		background: transparent;
 		font-size: 1.4rem;
 		text-align: center;
-		/*height: 48px;
-		line-height: 48px;*/
+		height: 48px;
+		line-height: 48px;
 		display: block;
 		position: relative;
-		margin: 0 10px;
+		margin: 0 10px 20px;
 		padding: 0 0.75rem;
+		border: 1px solid #aaa;
 		&:visited {
 			color: #fff;
 		}
 		i {
 			padding-right: 4px;
 		}
+		@media screen and (max-width: $s-screen){
+
+		}
+		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z){
+
+		}
+		@media screen and (min-width: $l-screen){
+
+		}
 	}
-	.line {
+	/*.line {
 		$line: 1px solid rgba(0,0,0, .26);
 		@media screen and (max-width: $s-screen) {
 			&:after {
@@ -115,7 +125,7 @@
 				}
 			}
 		}
-	}	
+	}	*/
 }
 .list-item {
 	position: relative;
@@ -196,8 +206,6 @@
 .item-tag {
 	position: absolute;
 	border-radius: 100%;
-	border: 1px solid #fff;
-	background: rgba(0,0,0,.5);
 	text-align: center;
 	color: #fff;
 	top: 4px;
@@ -205,22 +213,22 @@
 	display: block;
 	z-index: 99;
 	&.spec {
-		border-color: rgba($primary-color, .25);
-		color: rgba($primary-color,.5);
+		background: rgba($primary-color,.18);
+		color: rgba($primary-color,.8);
 		&:after {
 			content:'特';
 		}
 	}
 	&.hot {
-		border-color: rgba(#e91e63, .25);
-		color: rgba(#e91e63,.5);
+		background: rgba(#e91e63,.18);
+		color: rgba(#e91e63,.8);
 		&:after {
 			content: '熱';
 		}
 	}
 	$tag-size: 2rem;
 	$tag-fs: $tag-size * 0.75;
-	$tag-lh: $tag-size * 1.075;
+	$tag-lh: $tag-size * 1;
 	@media screen and (max-width: $s-screen) {
 		font-size: $tag-fs;
 		line-height: $tag-lh;

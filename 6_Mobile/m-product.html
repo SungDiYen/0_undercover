@@ -48,6 +48,14 @@
 				</div>
 			</div>
 		</nav>
+		<aside class="search-area animated">
+			<a id="search-btn2" class=" left col s3">
+				<i class="small mdi-action-search"></i>
+			</a>
+			<div id="search-bar" class="input-field left col s9 animated">
+				<input id="first_name" type="text">
+			</div>
+		</aside>
 	</header><!-- /header -->
 	<div class="top-area row">
 		<figure class="col s12 m12 l12">
@@ -156,6 +164,19 @@ $(function(){
 	$('.sns a').click(function() {
 		$('.sns a').removeClass('btn-active');
 		$(this).addClass('btn-active');
+	});
+
+	$(window).resize(function() {
+		var w = $('.pro-sub-img').width();
+		$('.extra-area figure').each(function() {
+			$(this).height(w);
+			$('.pro-sub-img a').height(w-45).css('line-height','45px');
+		});
+	});
+	var w = $('.pro-sub-img').width();
+	$('.extra-area figure').each(function() {
+		$(this).height(w);
+		$('.pro-sub-img a').height(w-45).css('line-height','50px');
 	});
 });
 </script>

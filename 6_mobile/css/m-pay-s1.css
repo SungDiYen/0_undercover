@@ -1,4 +1,3 @@
-/*btn*/
 div.step-check {
   margin-bottom: 0 !important;
   border-bottom: 1px solid #b6b6b6;
@@ -86,16 +85,25 @@ div.step-check li.done-page:before {
 .main-content figure.pro-pic img {
   width: 100%;
 }
-.main-content .pro-size {
+.main-content .pro-size, .main-content .pro-num {
   margin-bottom: 40px;
 }
-.main-content .pro-size a {
+.main-content .pro-size a, .main-content .pro-num a {
   border: 1px solid #aaa;
   margin-bottom: 0;
   text-align: center;
 }
-.main-content .pro-num .select-wrapper {
+.main-content .pro-size .select-wrapper, .main-content .pro-num .select-wrapper {
   width: 6rem;
+}
+.main-content .pro-size .select-wrapper span, .main-content .pro-num .select-wrapper span {
+  background: #ff9800;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #ff9800;
 }
 
 .price-area {

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*btn*/
 .main-banner ul.slides {
   background: #fff;
 }
@@ -29,6 +28,68 @@
 .event-btn-area {
   margin: 0;
   margin-bottom: 20px;
+  /*.line {
+  	$line: 1px solid rgba(0,0,0, .26);
+  	@media screen and (max-width: $s-screen) {
+  		&:after {
+  			content:'';
+  			position: relative;
+  			margin: 5px auto;
+  			display: block;
+  			border-bottom: $line;
+  			width: 140px;
+  		}
+  		&:before {
+  			content:'';
+  			position: absolute;
+  			display: block;
+  			border-left: $line;
+  			height: 36px - 12px;
+  			margin: 6px 0;
+  		}
+  		&:nth-last-of-type(2), &:last-of-type {
+  			&:after {
+  				border-bottom: 0;
+  			}
+  		}
+  		&:nth-of-type(odd) {
+  			&:before {
+  				border-left: 0;
+  			}
+  		}
+  	}
+  		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+  		&:before {
+  			content:'';
+  			position: absolute;
+  			display: block;
+  			border-right: $line;
+  			height: 36px - 12px;
+  			margin: 6px 0;
+  		}
+  		&:first-of-type {
+  			border: 0px;
+  			&:before {
+  				border-right: 0!important;
+  			}
+  		}
+  	}
+  	@media screen and (min-width: $l-screen) {
+  		&:before {
+  			content:'';
+  			position: absolute;
+  			display: block;
+  			border-right: $line;
+  			height: 36px;
+  		}
+  		&:first-of-type {
+  			border: 0px;
+  			&:before {
+  				border-right: 0!important;
+  			}
+  		}
+  	}
+  }	*/
 }
 .event-btn-area > div {
   padding: 0 !important;
@@ -40,73 +101,19 @@
   background: transparent;
   font-size: 1.4rem;
   text-align: center;
-  /*height: 48px;
-  line-height: 48px;*/
+  height: 48px;
+  line-height: 48px;
   display: block;
   position: relative;
-  margin: 0 10px;
+  margin: 0 10px 20px;
   padding: 0 0.75rem;
+  border: 1px solid #aaa;
 }
 .event-btn-area .btn-flat:visited {
   color: #fff;
 }
 .event-btn-area .btn-flat i {
   padding-right: 4px;
-}
-@media screen and (max-width: 599px) {
-  .event-btn-area .line:after {
-    content: '';
-    position: relative;
-    margin: 5px auto;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
-    width: 140px;
-  }
-  .event-btn-area .line:before {
-    content: '';
-    position: absolute;
-    display: block;
-    border-left: 1px solid rgba(0, 0, 0, 0.26);
-    height: 24px;
-    margin: 6px 0;
-  }
-  .event-btn-area .line:nth-last-of-type(2):after, .event-btn-area .line:last-of-type:after {
-    border-bottom: 0;
-  }
-  .event-btn-area .line:nth-of-type(odd):before {
-    border-left: 0;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 991px) {
-  .event-btn-area .line:before {
-    content: '';
-    position: absolute;
-    display: block;
-    border-right: 1px solid rgba(0, 0, 0, 0.26);
-    height: 24px;
-    margin: 6px 0;
-  }
-  .event-btn-area .line:first-of-type {
-    border: 0px;
-  }
-  .event-btn-area .line:first-of-type:before {
-    border-right: 0 !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .event-btn-area .line:before {
-    content: '';
-    position: absolute;
-    display: block;
-    border-right: 1px solid rgba(0, 0, 0, 0.26);
-    height: 36px;
-  }
-  .event-btn-area .line:first-of-type {
-    border: 0px;
-  }
-  .event-btn-area .line:first-of-type:before {
-    border-right: 0 !important;
-  }
 }
 
 .list-item {
@@ -189,22 +196,24 @@
 
 .item-tag {
   position: absolute;
-  border-radius: 2px;
+  border-radius: 100%;
   text-align: center;
   color: #fff;
-  top: 0;
-  right: 0;
+  top: 4px;
+  right: 4px;
   display: block;
   z-index: 99;
 }
 .item-tag.spec {
-  background: #ff9800;
+  background: rgba(255, 152, 0, 0.18);
+  color: rgba(255, 152, 0, 0.8);
 }
 .item-tag.spec:after {
   content: '特';
 }
 .item-tag.hot {
-  background: #e91e63;
+  background: rgba(233, 30, 99, 0.18);
+  color: rgba(233, 30, 99, 0.8);
 }
 .item-tag.hot:after {
   content: '熱';
@@ -212,7 +221,7 @@
 @media screen and (max-width: 599px) {
   .item-tag {
     font-size: 1.5rem;
-    line-height: 2.15rem;
+    line-height: 2rem;
     width: 2rem;
     height: 2rem;
   }
@@ -220,7 +229,7 @@
 @media screen and (min-width: 601px) and (max-width: 991px) {
   .item-tag {
     font-size: 1.875rem;
-    line-height: 2.6875rem;
+    line-height: 2.5rem;
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -228,7 +237,7 @@
 @media screen and (min-width: 992px) {
   .item-tag {
     font-size: 2.625rem;
-    line-height: 3.7625rem;
+    line-height: 3.5rem;
     width: 3.5rem;
     height: 3.5rem;
   }

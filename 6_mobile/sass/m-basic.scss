@@ -14,8 +14,8 @@ html,body {
 	font-family: $basic-fonts;
 }
 .btn-active {
-	background: $btn-active !important;
-	border: 1px solid $primary-color !important;
+	background: rgba($primary-color, 1) !important;
+	border: 1px solid $primary-color-light !important;
 	color: #fff !important;;
 }
 .slash {
@@ -50,7 +50,6 @@ header {
 		.g-logo {
 			text-align: center;
 			img {
-				width: 100%;
 				vertical-align: middle;
 				position: relative;
 			}
@@ -89,15 +88,17 @@ header {
 			.indicator {
 				background: $primary-color;
 				bottom: -1px;
-				height: 3px;
+				height: 4px;
+				border-radius: 3px;
 			}
 		}
 	}
 	.search-area {
-		position: absolute;
-		z-index: 999;
-		right: 0;
 		background: $body-color;
+		position: fixed;
+		width: 230px;
+		right: -230px;
+		z-index: 999;
 		.input-field {
 			margin: 0;
 			input {
@@ -107,8 +108,8 @@ header {
 				border-bottom: 1px solid #9e9e9e;
 			}
 		}
-		#search-bar {
-			margin: 0;
+		#search-btn2 {
+			padding: 0 8px;
 		}
 	}
 	a {

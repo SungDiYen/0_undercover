@@ -1,4 +1,3 @@
-/*btn*/
 body {
   background: #fcfcfc;
 }
@@ -59,6 +58,7 @@ body {
 }
 .middle-area .price-area .pay-way img.icon {
   padding: 8px;
+  max-width: 72px;
 }
 .middle-area .price-area br {
   display: none;
@@ -122,6 +122,9 @@ body {
 .middle-area .store-area.row .col {
   padding-left: 0;
 }
+.middle-area .store-area.row .shop-img {
+  max-width: 100px;
+}
 .middle-area .store-area.row .shop-img img {
   border: 1px solid rgba(33, 33, 33, 0.24);
 }
@@ -156,6 +159,14 @@ body {
   text-align: center;
   margin-bottom: 8px;
   width: 100%;
+  height: 48px;
+  line-height: 48px;
+}
+@media screen and (max-width: 599px) {
+  .bottom-area .btn-g > span.col a {
+    height: 32px;
+    line-height: 32px;
+  }
 }
 
 .extra-area {
@@ -166,18 +177,17 @@ body {
 }
 .extra-area .pro-sub-img {
   padding: 0.75rem;
-  /*height: 330px;
-  line-height: 330px;
-  overflow: hidden;*/
+  overflow: hidden;
 }
 .extra-area .pro-sub-img a {
   display: block;
   border: 1px solid #e2e2e2;
   background: #fff;
+  padding: 1.5rem;
+  overflow: hidden;
 }
 .extra-area .pro-sub-img img {
   vertical-align: middle;
-  padding: 1.5rem;
 }
 
 .cfa-area div {

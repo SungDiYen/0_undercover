@@ -88,17 +88,24 @@ div.step-check {
 			width: 100%;
 		}
 	}
-	.pro-size {
+	.pro-size, .pro-num {
 		margin-bottom: 40px;
 		a {
 			border: 1px solid #aaa;
 			margin-bottom: 0;
 			text-align: center;
 		}
-	}
-	.pro-num {
 		.select-wrapper {
 			width: 6rem;
+			span {
+				background: rgba($primary-color,1);
+				color: #fff;
+				border-radius: 2px;
+				text-align: center;
+				height: 32px;
+				line-height: 32px;
+				border: 1px solid rgba($primary-color, 1);
+			}
 		}
 	}
 }
