@@ -1,6 +1,6 @@
 $basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
 
-$body-color: rgba(#fcfcfc, 1);
+$body-color: rgba(#fbfaf5, 1);
 
 $white: rgba(#fff, 1);
 $primary-color: rgba(#ff9800, 1);
@@ -8,18 +8,18 @@ $primary-color-sec: rgba(#ff9800, .76);
 $primary-color-dark: rgba(#f57c00, 1);
 $primary-color-light: rgba(#ffe0b2, 1);
 
+$primary-text: #17184b;
+$second-text: #383c3c;
+$third-text: #949495;
+
+$price-color: rgba(#d9333f, 1);
+
 $divider-w: rgba(#fff,.8);
 $divider-b: rgba(#212121,.24);
-
-$primary-text: rgba(#212121, .8);
-$second-text: rgba(#212121, .56);
-$third-text: rgba(#212121, .24);
-
 $divide-style: 1px solid rgba(#b6b6b6, 1);
 
 $icons: rgba(#212121, .54);
 $icons-bg: rgba(#212121, .24);
-$price-color: rgba(#ff3333, .8);
 
 @mixin border-box(){
 	box-sizing: border-box;
@@ -61,8 +61,33 @@ $l-screen-a: 992px;
 $l-screen-z: 1440px;
 $xl-screen: 1441px;
 
-
-
 $s-header: 40px;
 $m-header: 48px;
 $l-header: 64px;
+
+@mixin btn-cata(){
+	background: transparent;
+	font-size: 1.4rem;
+	text-align: center;
+	border: 3px solid $third-text;
+	color: $third-text;
+	height: 48px;
+	line-height: 48px - 6px;
+	letter-spacing: 0.25rem;
+	text-indent: 0.25rem;
+	@include border-box;
+	display: block;
+	i {
+		padding-right: 4px;
+	}
+	@media screen and (max-width: $s-screen){
+
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z){
+
+	}
+	@media screen and (min-width: $l-screen){
+
+	}
+}
+

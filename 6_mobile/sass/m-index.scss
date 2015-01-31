@@ -23,9 +23,16 @@
 	}
 }
 .content {
-	h2 {
-		font-size: 2rem;
-		color: $second-text;
+	div.section-title {
+		margin: 1rem 0 1.25rem;
+		span {
+			font-size: 1.5rem;
+			color: $second-text;
+			letter-spacing: 0.5rem;
+			text-indent: 0.5rem;
+			border-bottom: 3px solid $second-text;
+			padding-bottom: .25rem;
+		}
 	}
 }
 .event-btn-area  {
@@ -36,33 +43,11 @@
 		margin: 0;
 		text-align: center;
 	}
-	.btn-flat {
-		color: rgba(0,0,0,.54);
-		background: transparent;
-		font-size: 1.4rem;
-		text-align: center;
-		height: 48px;
-		line-height: 48px;
-		display: block;
+	.btn-cata {
 		position: relative;
 		margin: 0 10px 20px;
 		padding: 0 0.75rem;
-		border: 1px solid #aaa;
-		&:visited {
-			color: #fff;
-		}
-		i {
-			padding-right: 4px;
-		}
-		@media screen and (max-width: $s-screen){
-
-		}
-		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z){
-
-		}
-		@media screen and (min-width: $l-screen){
-
-		}
+		@include btn-cata;
 	}
 	/*.line {
 		$line: 1px solid rgba(0,0,0, .26);
@@ -201,50 +186,5 @@
 				font-size: 2rem * 0.75;
 			}
 		}
-	}
-}
-.item-tag {
-	position: absolute;
-	border-radius: 100%;
-	text-align: center;
-	color: #fff;
-	top: 4px;
-	right: 4px;
-	display: block;
-	z-index: 99;
-	&.spec {
-		background: rgba($primary-color,.18);
-		color: rgba($primary-color,.8);
-		&:after {
-			content:'特';
-		}
-	}
-	&.hot {
-		background: rgba(#e91e63,.18);
-		color: rgba(#e91e63,.8);
-		&:after {
-			content: '熱';
-		}
-	}
-	$tag-size: 2rem;
-	$tag-fs: $tag-size * 0.75;
-	$tag-lh: $tag-size * 1;
-	@media screen and (max-width: $s-screen) {
-		font-size: $tag-fs;
-		line-height: $tag-lh;
-		width: $tag-size;
-		height: $tag-size;
-	}
-	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-		font-size: $tag-fs * 1.25;
-		line-height: $tag-lh * 1.25;
-		width: $tag-size * 1.25;
-		height: $tag-size * 1.25;
-	}
-	@media screen and (min-width: $l-screen) {
-		font-size: $tag-fs * 1.75;
-		line-height: $tag-lh * 1.75;
-		width: $tag-size * 1.75;
-		height: $tag-size * 1.75;
 	}
 }

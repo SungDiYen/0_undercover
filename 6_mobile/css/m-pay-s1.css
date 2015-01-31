@@ -11,7 +11,7 @@ div.step-check li {
 }
 div.step-check li:before {
   content: '1';
-  color: rgba(33, 33, 33, 0.56);
+  color: #383c3c;
   text-align: center;
   font-size: 2rem;
   line-height: 5rem;
@@ -55,12 +55,12 @@ div.step-check li.done-page:before {
 .main-content label.strd-title {
   display: block;
   font-size: 1rem;
-  color: rgba(33, 33, 33, 0.56);
+  color: #383c3c;
   margin-bottom: 1rem;
 }
 .main-content h2.pro-name {
   /*@include text-hide;*/
-  color: rgba(33, 33, 33, 0.8);
+  color: #17184b;
   margin: 1rem 0;
   padding: 0 0.75rem;
 }
@@ -151,7 +151,7 @@ div.step-check li.done-page:before {
   line-height: 45px;
 }
 .price-area .total-price dd {
-  color: rgba(255, 51, 51, 0.8);
+  color: #d9333f;
   font-size: 1.5rem !important;
   font-weight: 700;
 }

@@ -1,5 +1,5 @@
 body {
-  background: #fcfcfc;
+  background: #fbfaf5;
 }
 
 @media screen and (max-width: 599px) {
@@ -33,14 +33,14 @@ body {
 }
 
 .middle-area h2 {
-  color: rgba(33, 33, 33, 0.8);
+  color: #17184b;
   margin: 0.5rem 0 0;
   font-size: 2rem;
   line-height: 2.8rem;
   /*@include text-hide;*/
 }
 .middle-area .price-area .pro-price {
-  color: rgba(255, 51, 51, 0.8);
+  color: #d9333f;
   font-weight: 900;
   padding: 0;
   font-size: 2.5rem;
@@ -126,13 +126,13 @@ body {
   max-width: 100px;
 }
 .middle-area .store-area.row .shop-img img {
-  border: 1px solid rgba(33, 33, 33, 0.24);
+  border: 1px solid #949495;
 }
 .middle-area .store-area.row .shop-name {
   padding-left: 16px;
 }
 .middle-area .store-area.row .shop-name a {
-  color: rgba(33, 33, 33, 0.56);
+  color: #383c3c;
 }
 
 .bottom-area {
@@ -141,7 +141,7 @@ body {
   padding-top: 1rem;
 }
 .bottom-area h3 {
-  color: rgba(33, 33, 33, 0.56);
+  color: #383c3c;
   font-size: 2rem;
   margin: 0 0 0.75rem 0;
 }
