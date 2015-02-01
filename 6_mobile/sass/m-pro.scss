@@ -45,9 +45,9 @@ header {
 				@include money-tag;
 				font-size: 2rem * 0.75;
 			}
-			.price-title {
+			/*.price-title {
 				font-size: 2rem * 0.75;
-			}
+			}*/
 		}
 		.pay-way {
 			padding: 0;
@@ -144,8 +144,9 @@ header {
 	padding-top: 1rem;
 
 	h3 {
-		color: $second-text;
-		font-size: 2rem;
+		color: $third-text;
+		font-size: 1.5rem;
+		font-weight: 100;
 		margin: 0 0 0.75rem 0;
 	}
 	.pro-size, .sns {

@@ -12,6 +12,7 @@ figure {
 
 html, body {
   font-family: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", GillSans, Calibri, Trebuchet, sans-serif;
+  background: #f3f3f3;
 }
 
 .btn-active {
@@ -58,7 +59,7 @@ header .main-header .g-logo img {
   position: relative;
 }
 header .main-header .page-title {
-  color: #17184b;
+  color: #1f3134;
   font-weight: 700;
   letter-spacing: 0.5rem;
   text-indent: 0.5rem;
@@ -89,11 +90,14 @@ header .sub-header ul.tabs li.tab {
   background: #fbfaf5;
 }
 header .sub-header ul.tabs li.tab a {
-  color: #ff9800;
+  color: #383c3c;
   font-weight: 900;
 }
 header .sub-header ul.tabs li.tab a:hover {
   color: #383c3c;
+}
+header .sub-header ul.tabs li.tab a.active {
+  color: #ff9800;
 }
 header .sub-header ul.tabs .indicator {
   background: #ff9800;
@@ -114,7 +118,7 @@ header .search-area .input-field {
 header .search-area .input-field input {
   height: 2rem;
   margin: 0;
-  color: #17184b;
+  color: #1f3134;
   border-bottom: 1px solid #9e9e9e;
 }
 header .search-area #search-btn2 {
@@ -230,20 +234,25 @@ header a i {
   right: 4px;
   display: block;
   z-index: 99;
+  font-family: '新細明體';
 }
 .item-tag.spec {
-  background: rgba(255, 152, 0, 0.18);
   color: rgba(255, 152, 0, 0.8);
+  /*& + .card-image > figure {
+  	background: rgba($primary-color,.5);
+  }*/
 }
 .item-tag.spec:after {
   content: '特';
 }
 .item-tag.hot {
-  background: rgba(233, 30, 99, 0.18);
   color: rgba(233, 30, 99, 0.8);
+  /*& + .card-image > figure {
+  	background: rgba(#e91e63,.5);
+  }*/
 }
 .item-tag.hot:after {
-  content: '熱';
+  content: 'Hot';
 }
 @media screen and (max-width: 599px) {
   .item-tag {
@@ -263,9 +272,9 @@ header a i {
 }
 @media screen and (min-width: 992px) {
   .item-tag {
-    font-size: 2.625rem;
-    line-height: 3.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }

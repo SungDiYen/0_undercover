@@ -60,7 +60,7 @@ div.step-check li.done-page:before {
 }
 .main-content h2.pro-name {
   /*@include text-hide;*/
-  color: #17184b;
+  color: #1f3134;
   margin: 1rem 0;
   padding: 0 0.75rem;
 }
@@ -151,7 +151,7 @@ div.step-check li.done-page:before {
   line-height: 45px;
 }
 .price-area .total-price dd {
-  color: #d9333f;
+  color: #e9546b;
   font-size: 1.5rem !important;
   font-weight: 700;
 }

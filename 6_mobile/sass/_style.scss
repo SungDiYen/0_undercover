@@ -1,6 +1,9 @@
-$basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
+$basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", 
+"Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
 
-$body-color: rgba(#fbfaf5, 1);
+$body-color: rgba(#fbfaf5, 1); //生成り色きなりいろ
+$ground-color: #f3f3f3; //乳白色
+
 
 $white: rgba(#fff, 1);
 $primary-color: rgba(#ff9800, 1);
@@ -8,11 +11,12 @@ $primary-color-sec: rgba(#ff9800, .76);
 $primary-color-dark: rgba(#f57c00, 1);
 $primary-color-light: rgba(#ffe0b2, 1);
 
-$primary-text: #17184b;
-$second-text: #383c3c;
-$third-text: #949495;
+$primary-text: #1f3134; //百入茶
+$second-text: #383c3c;  //羊羹色
+$third-text: #9fa0a0;  //素鼠
+$fourth-text: #c0c6c9;  //青灰
 
-$price-color: rgba(#d9333f, 1);
+$price-color: rgba(#e9546b, 1);
 
 $divider-w: rgba(#fff,.8);
 $divider-b: rgba(#212121,.24);
@@ -68,6 +72,7 @@ $l-header: 64px;
 @mixin btn-cata(){
 	background: transparent;
 	font-size: 1.4rem;
+	font-weight: 100;
 	text-align: center;
 	border: 3px solid $third-text;
 	color: $third-text;
@@ -79,9 +84,15 @@ $l-header: 64px;
 	display: block;
 	i {
 		padding-right: 4px;
+		font-size: 1.4rem;
 	}
 	@media screen and (max-width: $s-screen){
-
+		font-size: 1.15rem;
+		height: 40px;
+		line-height: 40px - 6px;
+		i {
+			font-size: 1.15rem;
+		}
 	}
 	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z){
 

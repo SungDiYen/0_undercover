@@ -12,6 +12,7 @@ figure {
 }
 html,body {
 	font-family: $basic-fonts;
+	background: $ground-color;
 }
 .btn-active {
 	background: rgba($primary-color, 1) !important;
@@ -80,10 +81,13 @@ header {
 			li.tab {
 				background: $body-color;
 				a {
-					color: $primary-color;
+					color: $second-text;
 					font-weight: 900;
 					&:hover {
 						color: $second-text;
+					}
+					&.active {
+						color: $primary-color;
 					}
 				}
 			}
@@ -212,19 +216,24 @@ header {
 	right: 4px;
 	display: block;
 	z-index: 99;
+	font-family: '新細明體';
 	&.spec {
-		background: rgba($primary-color,.18);
 		color: rgba($primary-color,.8);
 		&:after {
 			content:'特';
 		}
+		/*& + .card-image > figure {
+			background: rgba($primary-color,.5);
+		}*/
 	}
 	&.hot {
-		background: rgba(#e91e63,.18);
 		color: rgba(#e91e63,.8);
 		&:after {
-			content: '熱';
+			content: 'Hot';
 		}
+		/*& + .card-image > figure {
+			background: rgba(#e91e63,.5);
+		}*/
 	}
 	$tag-size: 2rem;
 	$tag-fs: $tag-size * 0.75;
@@ -242,9 +251,9 @@ header {
 		height: $tag-size * 1.25;
 	}
 	@media screen and (min-width: $l-screen) {
-		font-size: $tag-fs * 1.75;
-		line-height: $tag-lh * 1.75;
-		width: $tag-size * 1.75;
-		height: $tag-size * 1.75;
+		font-size: $tag-fs * 1.4;
+		line-height: $tag-lh * 1.4;
+		width: $tag-size * 1.4;
+		height: $tag-size * 1.4;
 	}
 }

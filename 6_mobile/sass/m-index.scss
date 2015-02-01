@@ -37,7 +37,6 @@
 }
 .event-btn-area  {
 	margin: 0;
-	margin-bottom: 20px;
 	>div {
 		padding: 0!important;
 		margin: 0;
@@ -112,24 +111,19 @@
 		}
 	}	*/
 }
+.row-list {
+	margin: 20px - 7px auto 20px;
+}
 .list-item {
 	position: relative;
-	margin-bottom: 1.5rem;
+	/*margin-bottom: 1.5rem;*/
 	figure {
+		/*margin: 6px;*/
+		overflow: hidden;
 		img {
 			border-radius: 2px 2px 0 0;
 			background: rgba(0,0,0,.34);
-			/*height: 200px;*/
 		}
-		/*@media screen and (max-width: $s-screen){
-			height: 180px;
-		}
-		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-			height: 180px * 1.25;
-		}
-		@media screen and (min-width: $l-screen){
-			height: 180px * 1.5;
-		}*/
 	}
 }
 .item-wording {
@@ -138,52 +132,63 @@
 	position: relative;
 	h3 {
 		overflow: hidden;
-		margin: 0;
+		margin: 4px 0 6px;
 		color: $second-text;
 	}
 	.price {
 		color: $price-color;
-		font-weight: 900;
+		font-weight: 400;
 		span {
 			margin-right: 4px;
 		}
 	}
+	$p-name-fz: 1.3rem;  //basic size
+	$p-name-h: $p-name-fz * 1.33;
+	$p-name-lh: $p-name-fz * 1.33;
+	
+	$p-price-fz: $p-name-fz * 1.15 * 1.25;
+	$p-price-lh: $p-name-fz * 1.15 * 1.25;
+	$p-moneyTag-fz: $p-name-fz * 1.15 * 0.75;
+	
 	@media screen and (max-width: $s-screen) {
 		h3 {
-			font-size: 1.5rem;		//basic size
-			height: 1.5rem * 1.33;
-			line-height: 1.5rem * 1.33;
+			font-size: $p-name-fz;
+			height: $p-name-h;
+			line-height: $p-name-lh;
 		}
 		.price {
-			font-size: 1.5rem * 1.25;
+			font-size: $p-price-fz;
+			line-height: $p-price-lh;
 			.money-tag {
-				font-size: 1.5rem * 0.75;
+				font-size: $p-moneyTag-fz;
 			}
 		}
 	}
 	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
 		h3 {
-			font-size: 1.75rem;		//basic size
-			height: 1.75rem * 1.33;
-			line-height: 1.75rem * 1.33;
+			font-size: $p-name-fz * 1.25;
+			height: $p-name-h * 1.25;
+			line-height: $p-name-lh * 1.25;
 		}
 		.price {
-			font-size: 1.75rem * 1.25;
+			font-size: $p-price-fz * 1.25;
+			line-height: $p-price-lh * 1.25;
 			.money-tag {
-				font-size: 1.75rem * 0.75;
+				font-size: $p-moneyTag-fz * 1.25;
 			}
 		}
 	}
 	@media screen and (min-width: $l-screen) {
 		h3 {
-			font-size: 2rem;	//basic size
-			height: 2rem * 1.33;
-			line-height: 2rem * 1.33;
+			font-size: $p-name-fz * 1.4;
+			height: $p-name-h * 1.4;
+			line-height: $p-name-lh * 1.4;
 		}
 		.price {
-			font-size: 2rem * 1.25;
+			font-size: $p-price-fz * 1.4;
+			line-height: $p-price-lh * 1.4;
 			.money-tag {
-				font-size: 2rem * 0.75;
+				font-size: $p-moneyTag-fz * 1.4;
 			}
 		}
 	}

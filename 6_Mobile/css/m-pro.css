@@ -33,24 +33,24 @@ body {
 }
 
 .middle-area h2 {
-  color: #17184b;
+  color: #1f3134;
   margin: 0.5rem 0 0;
   font-size: 2rem;
   line-height: 2.8rem;
   /*@include text-hide;*/
 }
 .middle-area .price-area .pro-price {
-  color: #d9333f;
+  color: #e9546b;
   font-weight: 900;
   padding: 0;
   font-size: 2.5rem;
+  /*.price-title {
+  	font-size: 2rem * 0.75;
+  }*/
 }
 .middle-area .price-area .pro-price .money-tag {
   font-weight: 700;
   padding-right: 0.3rem;
-  font-size: 1.5rem;
-}
-.middle-area .price-area .pro-price .price-title {
   font-size: 1.5rem;
 }
 .middle-area .price-area .pay-way {
@@ -126,7 +126,7 @@ body {
   max-width: 100px;
 }
 .middle-area .store-area.row .shop-img img {
-  border: 1px solid #949495;
+  border: 1px solid #9fa0a0;
 }
 .middle-area .store-area.row .shop-name {
   padding-left: 16px;
@@ -141,8 +141,9 @@ body {
   padding-top: 1rem;
 }
 .bottom-area h3 {
-  color: #383c3c;
-  font-size: 2rem;
+  color: #9fa0a0;
+  font-size: 1.5rem;
+  font-weight: 100;
   margin: 0 0 0.75rem 0;
 }
 .bottom-area .pro-size, .bottom-area .sns {
