@@ -1,6 +1,6 @@
 @import "_style.scss";
 
-.receiver-info, .buyer-info {
+.receiver-info, .buyer-info, .check-info {
 	margin: 2rem 0;
 	padding: 0 0.75rem;
 	form {
@@ -21,5 +21,39 @@
 	width: 18px;
 	height: 18px;
 	border: 2px solid $second-text !important;
+	}
+}
+.dropdown-content {
+	max-height: 280px;
+	li {
+		&:hover {
+			background: $primary-color;
+			color: #fff;
+		}
+	}
+	li.disabled {
+		&:hover {
+			color: rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+.receiver-check {
+	h2, .radio-btns {
+		display: inline-block;
+		line-height: 58px;
+	}
+	.radio-btns {
+		label {
+			margin: 0 10px;
+		}
+	}
+	@media screen and (max-width: $s-screen){
+		br {
+			display: block;
+		}
+	}@media screen and (min-width: $m-screen-z){
+		br {
+			display: none;
+		}
 	}
 }

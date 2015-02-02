@@ -1,14 +1,14 @@
-.receiver-info, .buyer-info {
+.receiver-info, .buyer-info, .check-info {
   margin: 2rem 0;
   padding: 0 0.75rem;
 }
-.receiver-info form h2, .buyer-info form h2 {
+.receiver-info form h2, .buyer-info form h2, .check-info form h2 {
   font-size: 1.4285rem;
   color: #383c3c;
   margin: 0;
   font-weight: 900;
 }
-.receiver-info .select-wrapper span.select-dropdown, .buyer-info .select-wrapper span.select-dropdown {
+.receiver-info .select-wrapper span.select-dropdown, .buyer-info .select-wrapper span.select-dropdown, .check-info .select-wrapper span.select-dropdown {
   margin-bottom: 0;
 }
 
@@ -17,4 +17,33 @@
   width: 18px;
   height: 18px;
   border: 2px solid #383c3c !important;
+}
+
+.dropdown-content {
+  max-height: 280px;
+}
+.dropdown-content li:hover {
+  background: #ff9800;
+  color: #fff;
+}
+.dropdown-content li.disabled:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.receiver-check h2, .receiver-check .radio-btns {
+  display: inline-block;
+  line-height: 58px;
+}
+.receiver-check .radio-btns label {
+  margin: 0 10px;
+}
+@media screen and (max-width: 599px) {
+  .receiver-check br {
+    display: block;
+  }
+}
+@media screen and (min-width: 991px) {
+  .receiver-check br {
+    display: none;
+  }
 }

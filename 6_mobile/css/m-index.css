@@ -9,14 +9,46 @@
   width: 100%;
 }
 .main-banner ul.indicators {
-  bottom: 40px;
   z-index: 890;
+  padding: 0;
+  margin-bottom: 40px;
+  position: relative;
 }
 .main-banner ul.indicators li.indicator-item {
-  background: #383c3c;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 48px;
+  width: 25%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+.main-banner ul.indicators li.indicator-item span {
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 3px solid #9fa0a0;
+  color: #9fa0a0;
+  height: 36px;
+  line-height: 30px;
+  letter-spacing: 0.25rem;
+  text-indent: 0.25rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
 }
 .main-banner ul.indicators li.indicator-item.active {
+  background: transparent;
+}
+.main-banner ul.indicators li.indicator-item.active span {
   background: #ff9800;
+  color: #fff;
+  border: 3px solid #9fa0a0;
+  border-top: 0;
 }
 
 .content div.section-title {
@@ -107,7 +139,7 @@
   padding: 0 0.75rem;
   background: transparent;
   font-size: 1.4rem;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   border: 3px solid #9fa0a0;
   color: #9fa0a0;
@@ -156,18 +188,22 @@
   padding: 0.5rem !important;
   background: #fff;
   position: relative;
+  /*$p-price-fz: $p-name-fz * 1.15 * 1.25;
+  $p-price-lh: $p-name-fz * 1.15 * 1.25;
+  $p-moneyTag-fz: $p-name-fz * 1.15 * 0.75;*/
 }
 .item-wording h3 {
   overflow: hidden;
   margin: 4px 0 6px;
   color: #383c3c;
+  font-weight: 700;
 }
 .item-wording .price {
   color: #e9546b;
   font-weight: 400;
 }
 .item-wording .price span {
-  margin-right: 4px;
+  margin-right: 6px;
 }
 @media screen and (max-width: 599px) {
   .item-wording h3 {
@@ -176,11 +212,11 @@
     line-height: 1.729rem;
   }
   .item-wording .price {
-    font-size: 1.86875rem;
-    line-height: 1.86875rem;
+    font-size: 1.495rem;
+    line-height: 1.495rem;
   }
   .item-wording .price .money-tag {
-    font-size: 1.12125rem;
+    font-size: 1.3455rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
@@ -190,11 +226,11 @@
     line-height: 2.16125rem;
   }
   .item-wording .price {
-    font-size: 2.33594rem;
-    line-height: 2.33594rem;
+    font-size: 1.86875rem;
+    line-height: 1.86875rem;
   }
   .item-wording .price .money-tag {
-    font-size: 1.40156rem;
+    font-size: 1.68187rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -204,10 +240,10 @@
     line-height: 2.4206rem;
   }
   .item-wording .price {
-    font-size: 2.61625rem;
-    line-height: 2.61625rem;
+    font-size: 2.093rem;
+    line-height: 2.093rem;
   }
   .item-wording .price .money-tag {
-    font-size: 1.56975rem;
+    font-size: 1.8837rem;
   }
 }

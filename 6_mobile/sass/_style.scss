@@ -46,16 +46,16 @@ $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 	box-shadow: $card-shadow;
 	-webkit-box-shadow: $card-shadow;
 	-moz-box-shadow: $card-shadow;
-}
+};
 @mixin money-tag(){
 	font-weight: 700;
 	padding-right: 0.3rem;
-}
+};
 @mixin text-hide(){
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-}
+};
 
 $s-screen: 599px;
 $m-screen-a: 601px;
@@ -69,10 +69,10 @@ $s-header: 40px;
 $m-header: 48px;
 $l-header: 64px;
 
-@mixin btn-cata(){
+@mixin btn(){
 	background: transparent;
 	font-size: 1.4rem;
-	font-weight: 100;
+	font-weight: 400;
 	text-align: center;
 	border: 3px solid $third-text;
 	color: $third-text;

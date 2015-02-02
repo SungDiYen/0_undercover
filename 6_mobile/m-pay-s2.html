@@ -109,11 +109,16 @@
 	</article>
 	<article class="receiver-info row">
 		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
+			<section class="receiver-check">
+				<h2 class="col s7 m7 l7 left">收件者是否與<br>購買人相同?</h2>
+				<div class="radio-btns col s5 m5 l5 right">
+					<input class="with-gap" name="group1" type="radio" id="yes"  />
+		    		<label for="yes">Yes</label>
+		    		<input class="with-gap" name="group1" type="radio" id="no"  />
+		    		<label for="no">No</label>
+		    	</div>
+	    	</section>
 			<h2 class="col s6 m6 l6 left">收件者資料</h2>
-			<p class="col s6 m6 l6">
-				<input type="checkbox" id="receiver-btn" checked="checked"/>
-				<label for="receiver-btn" class="right">同購買者</label>
-			</p>
 			<div>
 				<div class="input-field col s12 m12 l12">
 					<input type="text" id="name" required="required">
@@ -162,7 +167,7 @@
 	</article>
 	<div class="step-area row">
 		<div class="col s12 m8 offset-m2 l6 offset-l3 center">
-			<a class="btn-flat waves-effect waves-light" id="next-stp">下一步，付款</a>
+			<a class="btn waves-effect waves-orange" id="next-stp">下一步，付款</a>
 		</div>
 	</div>
 <script src="js/jquery-1.11.1.js"></script>
@@ -172,11 +177,12 @@
 $(function(){
 	$('.select').material_select();
 
-	$('.receiver-info form > div').hide();
+	$('.receiver-info form > div ,.receiver-info form > h2').hide();
 	$('#receiver-btn').click(function(){
 		$('.receiver-info form > div').slideToggle();
-	});
+	}); // 收件者是否與購買人相同?  功能
 });
 </script>
 </body>
 </html>
+[type="radio"]:checked

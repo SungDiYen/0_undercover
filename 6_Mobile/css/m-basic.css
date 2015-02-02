@@ -19,6 +19,9 @@ html, body {
   background: #ff9800 !important;
   border-color: #ff9800 !important;
   color: #fff !important;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .slash {
@@ -45,11 +48,14 @@ header nav {
   z-index: 900;
 }
 header .nav-wrapper {
+  background: #fff;
   margin-bottom: 0 !important;
-  background: #fbfaf5;
 }
 header .nav-wrapper ul, header .nav-wrapper > div {
   padding: 0 !important;
+}
+header .main-header ul > li:hover {
+  background: transparent;
 }
 header .main-header .g-logo {
   text-align: center;
@@ -87,7 +93,7 @@ header .sub-header ul.tabs {
   border-top: 1px solid rgba(33, 33, 33, 0.24);
 }
 header .sub-header ul.tabs li.tab {
-  background: #fbfaf5;
+  background: #fff;
 }
 header .sub-header ul.tabs li.tab a {
   color: #383c3c;
@@ -108,12 +114,13 @@ header .sub-header ul.tabs .indicator {
 header .search-area {
   background: #fbfaf5;
   position: fixed;
-  width: 230px;
-  right: -230px;
+  right: 0;
+  width: 0;
   z-index: 999;
 }
 header .search-area .input-field {
   margin: 0;
+  width: 95%;
 }
 header .search-area .input-field input {
   height: 2rem;

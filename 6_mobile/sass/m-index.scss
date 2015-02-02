@@ -12,13 +12,43 @@
 		}
 	}
 	ul.indicators {
-		bottom: 40px;
 		z-index: 890;
+		padding: 0;
+		margin-bottom: 40px;
+		position: relative;
 		li.indicator-item {
-			background: $second-text;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			height: 48px;
+			width: 25%;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			background-color: transparent;
+			span {
+				background: transparent;
+				font-size: 1.3rem;
+				font-weight: 400;
+				text-align: center;
+				border-bottom: 3px solid $third-text;
+				color: $third-text;
+				height: 36px;
+				line-height: 36px - 6px;
+				letter-spacing: 0.25rem;
+				text-indent: 0.25rem;
+				@include border-box;
+				display: block;
+			}
 		}
 		li.indicator-item.active {
-			background: $primary-color;
+			background: transparent;
+			span {
+				background: $primary-color;
+				color: #fff;
+				border: 3px solid $third-text;
+				border-top: 0;
+			}
 		}
 	}
 }
@@ -46,7 +76,7 @@
 		position: relative;
 		margin: 0 10px 20px;
 		padding: 0 0.75rem;
-		@include btn-cata;
+		@include btn;
 	}
 	/*.line {
 		$line: 1px solid rgba(0,0,0, .26);
@@ -134,21 +164,25 @@
 		overflow: hidden;
 		margin: 4px 0 6px;
 		color: $second-text;
+		font-weight: 700;
 	}
 	.price {
 		color: $price-color;
 		font-weight: 400;
 		span {
-			margin-right: 4px;
+			margin-right: 6px;
 		}
 	}
 	$p-name-fz: 1.3rem;  //basic size
 	$p-name-h: $p-name-fz * 1.33;
 	$p-name-lh: $p-name-fz * 1.33;
 	
-	$p-price-fz: $p-name-fz * 1.15 * 1.25;
+	/*$p-price-fz: $p-name-fz * 1.15 * 1.25;
 	$p-price-lh: $p-name-fz * 1.15 * 1.25;
-	$p-moneyTag-fz: $p-name-fz * 1.15 * 0.75;
+	$p-moneyTag-fz: $p-name-fz * 1.15 * 0.75;*/
+	$p-price-fz: $p-name-fz * 1.15;
+	$p-price-lh: $p-name-fz * 1.15;
+	$p-moneyTag-fz: $p-name-fz * 1.15 * 0.9;
 	
 	@media screen and (max-width: $s-screen) {
 		h3 {

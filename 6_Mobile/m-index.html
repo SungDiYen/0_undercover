@@ -77,8 +77,12 @@
 				<i class="small mdi-action-search"></i>
 			</a>
 			<div id="search-bar" class="input-field left col s9 animated">
-				<input id="first_name" type="text">
+				<input id="first_name" type="text" placeholder="找好物">
+				<input type="reset" value="ss">
 			</div>
+			<a href="" class="right">
+				<i class="mdi-navigation-close"></i>
+			</a>
 		</aside>
 	</header><!-- /header -->
 	<div class="content row">
@@ -86,6 +90,7 @@
 			<ul class="slides">
 				<li><img class="responsive-img"src="images/s1.png" alt=""></li>
 				<li><img class="responsive-img"src="images/s2.png" alt=""></li>
+				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
 				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
 			</ul>
 		</div>
@@ -252,6 +257,13 @@ $(function(){
 	$('.slider').slider({
 		full_width: true,
 	});
+	$('ul.indicators').addClass('col s12');
+	$('li.indicator-item').addClass('col s3').append('<span></span>');
+	$('li.indicator-item span').eq(0).append('一二三四五六');
+	$('li.indicator-item span').eq(1).append('一二三四');
+	$('li.indicator-item span').eq(2).append('一二三四五六七八九十');
+	$('li.indicator-item span').eq(3).append('一二三四五六七八九十');
+
 	$('.collapsible').collapsible();
 
 	$('#menu-btn').click(function(){
@@ -278,6 +290,24 @@ $(function(){
 		$('.event-btn-area a').removeClass('btn-active');
 		$(this).addClass('btn-active');
 	});
+
+	sliderHeight();
+	$(window).resize(sliderHeight);
+	function sliderHeight(){
+		var sliderW = $('.main-banner').width();
+		var screenWidth = $(window).width();
+		var screenHeight = $(window).height();
+
+		if(screenWidth > screenHeight) {
+			$('.main-banner').height(sliderW/3);
+			$('ul.slides').height(sliderW/3 -40);
+			 // img 改路徑
+		}
+		else {
+			$('.main-banner').height(sliderW/1.618);
+			$('ul.slides').height(sliderW/1.618 -40);
+		}
+	}
 });
 </script>
 </body>

@@ -93,17 +93,14 @@ div.step-check li.done-page:before {
   margin-bottom: 0;
   text-align: center;
 }
-.main-content .pro-size .select-wrapper, .main-content .pro-num .select-wrapper {
-  width: 6rem;
-}
 .main-content .pro-size .select-wrapper span, .main-content .pro-num .select-wrapper span {
-  background: #ff9800;
-  color: #fff;
+  background: transparent;
+  color: #ff9800;
   border-radius: 2px;
   text-align: center;
-  height: 32px;
-  line-height: 32px;
-  border: 1px solid #ff9800;
+  height: 48px;
+  line-height: 42px;
+  border: 3px solid #ff9800;
 }
 
 .price-area {
@@ -135,7 +132,7 @@ div.step-check li.done-page:before {
   background: #fff;
 }
 .price-area .deli-price dt {
-  width: 12rem;
+  width: 15rem;
   height: 3rem;
 }
 .price-area .deli-price dt .select-dropdown {
@@ -169,4 +166,24 @@ div.step-check li.done-page:before {
   width: 100%;
   height: 48px;
   line-height: 48px;
+  background: #fff;
+  color: #ff9800;
+  border: 3px solid #ff9800;
+}
+
+.dropdown-content {
+  border: 3px solid #ff9800;
+  background: #f3f3f3;
+  max-height: 280px;
+}
+.dropdown-content:last-of-type {
+  border: 0;
+  background: white;
+}
+.dropdown-content li:hover {
+  background: #ff9800;
+  color: #fff;
+}
+.dropdown-content li.disabled:hover {
+  color: rgba(0, 0, 0, 0.3);
 }
