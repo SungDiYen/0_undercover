@@ -30,6 +30,13 @@ $icons-bg: rgba(#212121, .24);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 };
+@mixin blur(){
+	-moz-filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    filter: blur(2.5px);
+}
 
 $card-radius: 3px;
 $card-bg-color:rgba(#000,.02);

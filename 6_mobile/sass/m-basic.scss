@@ -28,6 +28,9 @@ html,body {
 .h-line { //horizontal-line
 	margin: 0 4px;
 }
+.blur {
+	@include blur;
+}
 /*Re*/
 .dropdown-content li {
 	text-align: center;
@@ -108,19 +111,58 @@ header {
 		}
 	}
 	.search-area {
-		background: $body-color;
+		background: $white;
 		position: fixed;
 		right: 0;
 		width: 0;
 		z-index: 999;
 		.input-field {
 			margin: 0;
-			width: 95%;
-			input {
+			input[type="text"] {
 				height: 2rem;
 				margin: 0;
 				color: $primary-text;
 				border-bottom: 1px solid #9e9e9e;
+			}
+			input[type="reset"] {
+				background: transparent;
+				border: 0px;
+				color: $primary-color;
+				position: relative;
+				text-indent: 2px;
+				letter-spacing: 2px;
+			}
+			@media screen and (max-width: $s-screen){
+				width: 89%;
+				input[type="text"] {
+					width: 83%;
+					font-size: 1rem;
+				}
+				input[type="reset"] {
+					font-size: 1rem;;
+				}
+			}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+				width: 91%;
+				input[type="text"] {
+					width: 86%;
+					font-size: 1.5rem;
+				}
+				input[type="reset"] {
+					font-size: 1.5rem;;
+				}
+
+			}
+			@media screen and (min-width: $l-screen) {
+				width: 94%;
+				input[type="text"] {
+					width: 92%;
+					font-size: 1.5rem;
+				}
+				input[type="reset"] {
+					font-size: 1.5rem;;
+				}
+
 			}
 		}
 		#search-btn2 {
@@ -226,24 +268,24 @@ header {
 	display: block;
 	z-index: 99;
 	font-family: '新細明體';
-	&.spec {
+	/*&.spec {
 		color: rgba($primary-color,.8);
 		&:after {
 			content:'特';
 		}
-		/*& + .card-image > figure {
+		& + .card-image > figure {
 			background: rgba($primary-color,.5);
-		}*/
+		}
 	}
 	&.hot {
 		color: rgba(#e91e63,.8);
 		&:after {
 			content: 'Hot';
 		}
-		/*& + .card-image > figure {
+		& + .card-image > figure {
 			background: rgba(#e91e63,.5);
-		}*/
-	}
+		}
+	}*/
 	$tag-size: 2rem;
 	$tag-fs: $tag-size * 0.75;
 	$tag-lh: $tag-size * 1;
