@@ -123,6 +123,14 @@
 <script>
 $(function(){
 	$('.select').material_select();
+	/*$('.dropdown-content:last-of-type').css({
+		'border': '0',
+		'background': '#fff'
+	});*/
+	$('.select-dropdown li').click(function() {
+		/*$(this).parent('.select-dropdown').slideUp(550)*/
+		$(this).parent('ul.select-dropdown').animate({'height': '48px'}, 500);
+	});
 });
 </script>
 </body>

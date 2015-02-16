@@ -58,68 +58,70 @@
 	</div>
 	<article class="buyer-info row">
 		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
-			<h2 class="col s12 m12 l12">購買者資料</h2>
-			<div class="input-field col s12 m12 l12">
-				<input type="text" id="name" required="required">
-				<label for="name">姓名</label>
-			</div>
-			<div class="input-field col s12 m12 l12">
-				<input type="text" id="phone" required="required">
-				<label for="phone">聯絡電話</label>
-			</div>
-			<div class="input-field col s12 m12 l12">
-				<input type="email" id="email" required="required">
-				<label for="email">電子信箱</label>
-			</div>
-			<div class="col s6 m6 l6">
-				<select class="select">
-					<option value="台北市" selected>台北市</option>
-					<option value="新北市">新北市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="桃園市">桃園市</option>
-					<option value="之類的">之類的</option>
-				</select>
-			</div>
-			<div class="col s6 m6 l6">
-				<!--<label style="color: transparent">.</label>-->
-				<select class="select">
-					<option value="信義區" selected>信義區</option>
-					<option value="松山區">松山區</option>
-					<option value="中正區">中正區</option>
-					<option value="士林區">士林區</option>
-				</select>
-			</div>
-			<div class="address input-field col s12 m12 l12">
-				<input type="text" id="address" required="required">
-				<label for="address">地址</label>
+			<h2 class="col s12 m12 l12 buyer-title">購買者資料</h2>
+			<div class="buyer-form">
+				<div class="input-field col s12 m12 l12">
+					<input type="text" id="name" required="required">
+					<label for="name">姓名</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+					<input type="text" id="phone" required="required">
+					<label for="phone">聯絡電話</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+					<input type="email" id="email" required="required">
+					<label for="email">電子信箱</label>
+				</div>
+				<div class="col s6 m6 l6">
+					<select class="select">
+						<option value="台北市" selected>台北市</option>
+						<option value="新北市">新北市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="之類的">之類的</option>
+					</select>
+				</div>
+				<div class="col s6 m6 l6">
+					<!--<label style="color: transparent">.</label>-->
+					<select class="select">
+						<option value="信義區" selected>信義區</option>
+						<option value="松山區">松山區</option>
+						<option value="中正區">中正區</option>
+						<option value="士林區">士林區</option>
+					</select>
+				</div>
+				<div class="address input-field col s12 m12 l12">
+					<input type="text" id="address" required="required">
+					<label for="address">地址</label>
+				</div>
 			</div>
 		</form>
 	</article>
 	<article class="receiver-info row">
 		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
 			<section class="receiver-check">
-				<h2 class="col s7 m7 l7 left">收件者是否與<br>購買人相同?</h2>
+				<h2 class="col s7 m7 l7 left check-title">收件者是否與<br>購買人相同?</h2>
 				<div class="radio-btns col s5 m5 l5 right">
-					<input class="with-gap" name="group1" type="radio" id="yes"  />
-		    		<label for="yes">Yes</label>
-		    		<input class="with-gap" name="group1" type="radio" id="no"  />
-		    		<label for="no">No</label>
+					<input class="with-gap" name="receiver" type="radio" id="receiver-yes"  />
+		    		<label for="receiver-yes">Yes</label>
+		    		<input class="with-gap" name="receiver" type="radio" id="receiver-no"  />
+		    		<label for="receiver-no">No</label>
 		    	</div>
 	    	</section>
-			<h2 class="col s6 m6 l6 left">收件者資料</h2>
-			<div>
+			<h2 class="col s6 m6 l6 left receiver-title">收件者資料</h2>
+			<div class="receiver-form">
 				<div class="input-field col s12 m12 l12">
 					<input type="text" id="name" required="required">
 					<label for="name">姓名</label>
@@ -176,13 +178,26 @@
 <script>
 $(function(){
 	$('.select').material_select();
-
-	$('.receiver-info form > div ,.receiver-info form > h2').hide();
-	$('#receiver-btn').click(function(){
-		$('.receiver-info form > div').slideToggle();
-	}); // 收件者是否與購買人相同?  功能
+	$('.receiver-form, .receiver-title').hide();
+	function checkTitle(){
+		$('.check-title').css({
+			'color':'#9fa0a0',
+			'font-size':'1.2rem',
+			'font-weight':'100',
+		});
+	}
+	$('#receiver-yes').click(function(){
+		$('.receiver-form, .receiver-title').slideDown(250);
+		checkTitle()
+	});
+	$('#receiver-no').click(function(){
+		$('.receiver-form, .receiver-title').slideUp(250);
+		checkTitle()
+	});
+	$('.select-dropdown li').click(function() {
+		$(this).parent('.select-dropdown').slideUp(250);
+	});
 });
 </script>
 </body>
 </html>
-[type="radio"]:checked

@@ -41,9 +41,20 @@
   .receiver-check br {
     display: block;
   }
+  .receiver-check h2, .receiver-check .radio-btns {
+    line-height: 34px;
+  }
 }
 @media screen and (min-width: 991px) {
   .receiver-check br {
     display: none;
   }
+}
+
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #ff9800;
+  background-color: #ff9800;
+}
+[type="radio"].with-gap:checked + label:before {
+  border: 2px solid #ff9800;
 }

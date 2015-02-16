@@ -51,9 +51,21 @@
 		br {
 			display: block;
 		}
+		h2, .radio-btns {
+			line-height: 34px;
+		}
 	}@media screen and (min-width: $m-screen-z){
 		br {
 			display: none;
 		}
+	}
+}
+[type="radio"].with-gap:checked + label {
+	&:after {
+		border: 2px solid $primary-color;
+		background-color: $primary-color;
+	}
+	&:before {
+		border: 2px solid $primary-color;
 	}
 }

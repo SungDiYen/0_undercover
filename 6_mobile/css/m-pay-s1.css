@@ -171,19 +171,21 @@ div.step-check li.done-page:before {
   border: 3px solid #ff9800;
 }
 
+/*changeDefault*/
 .dropdown-content {
   border: 3px solid #ff9800;
   background: #f3f3f3;
   max-height: 280px;
 }
-.dropdown-content:last-of-type {
-  border: 0;
-  background: white;
-}
 .dropdown-content li:hover {
   background: #ff9800;
   color: #fff;
 }
+.dropdown-content li.disabled {
+  background: #ff9800;
+  color: #fff;
+}
 .dropdown-content li.disabled:hover {
-  color: rgba(0, 0, 0, 0.3);
+  background: #ff9800;
+  color: #fff;
 }

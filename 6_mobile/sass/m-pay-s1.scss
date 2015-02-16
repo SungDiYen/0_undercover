@@ -180,14 +180,11 @@ div.step-check {
 		}
 	}
 }
+/*changeDefault*/
 .dropdown-content {
 	border: 3px solid $primary-color;
 	background: $ground-color;
 	max-height: 280px;
-	&:last-of-type {
-		border: 0;
-		background: $white;
-	}
 	li {
 		&:hover {
 			background: $primary-color;
@@ -195,8 +192,14 @@ div.step-check {
 		}
 	}
 	li.disabled {
+			background: $primary-color;
+			color: #fff;
 		&:hover {
-			color: rgba(0, 0, 0, 0.3);
+			background: $primary-color;
+			color: #fff;
 		}
 	}
+}
+.select-wrapper span.select-dropdown:after {
+
 }
