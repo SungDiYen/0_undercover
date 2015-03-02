@@ -1,11 +1,11 @@
 $basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", 
 "Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
 
+$white: rgba(#fff, 1);
 $body-color: rgba(#fbfaf5, 1); //生成り色きなりいろ
+$bg-gray: rgba(#f6f7f8, 1);
 $ground-color: #f3f3f3; //乳白色
 
-
-$white: rgba(#fff, 1);
 $primary-color: rgba(#ff9800, 1);
 $primary-color-sec: rgba(#ff9800, .76);
 $primary-color-dark: rgba(#f57c00, 1);
@@ -16,7 +16,7 @@ $second-text: #383c3c;  //羊羹色
 $third-text: #9fa0a0;  //素鼠
 $fourth-text: #c0c6c9;  //青灰
 
-$price-color: rgba(#e9546b, 1);
+$price-color: rgba(#e9546b, 1); //Youtube Red
 
 $divider-w: rgba(#fff,.8);
 $divider-b: rgba(#212121,.24);
