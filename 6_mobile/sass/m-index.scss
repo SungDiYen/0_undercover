@@ -1,6 +1,9 @@
 @import "_style.scss";
 
 .main-banner {
+	.card {
+		margin: 0;
+	}
 	ul.slides {
 		background: #fff;
 		li {
@@ -14,14 +17,14 @@
 	ul.indicators {
 		z-index: 890;
 		padding: 0;
-		margin-bottom: 40px;
+		//margin-bottom: 40px;
 		position: relative;
 		li.indicator-item {
 			display: inline-block;
 			margin: 0;
 			padding: 0;
-			height: 48px;
-			width: 25%;
+			height: auto;
+			//width: 25%; use js to calculate...
 			-webkit-border-radius: 2px;
 			-moz-border-radius: 2px;
 			border-radius: 2px;
@@ -31,10 +34,10 @@
 				font-size: 1.3rem;
 				font-weight: 400;
 				text-align: center;
-				border-bottom: 3px solid $third-text;
+				//border-bottom: 2px solid $third-text;
 				color: $third-text;
-				height: 36px;
-				line-height: 36px - 6px;
+				height: 40px;
+				line-height: 40px - 6px;
 				letter-spacing: 0.25rem;
 				text-indent: 0.25rem;
 				@include border-box;
@@ -47,13 +50,13 @@
 			span {
 				background: $primary-color;
 				color: #fff;
-				border: 3px solid $third-text;
-				border-top: 0;
+				//border: 0;
+				//border-bottom: 2px solid $third-text;
 			}
 		}
 	}
 }
-.content {
+/*.content {
 	div.section-title {
 		margin: 1rem 0 1.25rem;
 		span {
@@ -65,7 +68,7 @@
 			padding-bottom: .25rem;
 		}
 	}
-}
+}*/
 .event-btn-area  {
 	margin: 0;
 	>div {
@@ -73,9 +76,9 @@
 		margin: 0;
 		text-align: center;
 	}
-	.btn-cata {
+	.btn {
 		position: relative;
-		margin: 0 10px 20px;
+		//margin: 0 10px 20px;
 		padding: 0 0.75rem;
 		@include btn;
 	}

@@ -1,3 +1,6 @@
+.main-banner .card {
+  margin: 0;
+}
 .main-banner ul.slides {
   background: #fff;
 }
@@ -11,15 +14,13 @@
 .main-banner ul.indicators {
   z-index: 890;
   padding: 0;
-  margin-bottom: 40px;
   position: relative;
 }
 .main-banner ul.indicators li.indicator-item {
   display: inline-block;
   margin: 0;
   padding: 0;
-  height: 48px;
-  width: 25%;
+  height: auto;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -30,10 +31,9 @@
   font-size: 1.3rem;
   font-weight: 400;
   text-align: center;
-  border-bottom: 3px solid #9fa0a0;
   color: #9fa0a0;
-  height: 36px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 34px;
   letter-spacing: 0.25rem;
   text-indent: 0.25rem;
   box-sizing: border-box;
@@ -50,22 +50,21 @@
 .main-banner ul.indicators li.indicator-item.active span {
   background: #ff9800;
   color: #fff;
-  border: 3px solid #9fa0a0;
-  border-top: 0;
 }
 
-.content div.section-title {
-  margin: 1rem 0 1.25rem;
-}
-.content div.section-title span {
-  font-size: 1.5rem;
-  color: #383c3c;
-  letter-spacing: 0.5rem;
-  text-indent: 0.5rem;
-  border-bottom: 3px solid #383c3c;
-  padding-bottom: .25rem;
-}
-
+/*.content {
+	div.section-title {
+		margin: 1rem 0 1.25rem;
+		span {
+			font-size: 1.5rem;
+			color: $second-text;
+			letter-spacing: 0.5rem;
+			text-indent: 0.5rem;
+			border-bottom: 3px solid $second-text;
+			padding-bottom: .25rem;
+		}
+	}
+}*/
 .event-btn-area {
   margin: 0;
   /*.line {
@@ -136,9 +135,8 @@
   margin: 0;
   text-align: center;
 }
-.event-btn-area .btn-cata {
+.event-btn-area .btn {
   position: relative;
-  margin: 0 10px 20px;
   padding: 0 0.75rem;
   background: transparent;
   font-size: 1.4rem;
@@ -155,17 +153,17 @@
   -moz-box-sizing: border-box;
   display: block;
 }
-.event-btn-area .btn-cata i {
+.event-btn-area .btn i {
   padding-right: 4px;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 599px) {
-  .event-btn-area .btn-cata {
+  .event-btn-area .btn {
     font-size: 1.15rem;
     height: 40px;
     line-height: 34px;
   }
-  .event-btn-area .btn-cata i {
+  .event-btn-area .btn i {
     font-size: 1.15rem;
   }
 }

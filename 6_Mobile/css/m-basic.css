@@ -48,12 +48,19 @@ html, body {
   padding: 1rem 0.5rem;
 }
 
+#sidenav-overlay {
+  background: black;
+}
+
 /*-----------*/
 header nav {
   position: fixed;
   margin-bottom: 0 !important;
   height: auto;
   z-index: 900;
+}
+header nav ul a {
+  padding: 0 0.75rem;
 }
 header .nav-wrapper {
   background: #fff;
@@ -120,7 +127,8 @@ header .sub-header ul.tabs .indicator {
   border-radius: 3px;
 }
 header .search-area {
-  background: white;
+  background: #fff;
+  opacity: 0;
   position: fixed;
   right: 0;
   width: 0;
@@ -129,11 +137,15 @@ header .search-area {
 header .search-area .input-field {
   margin: 0;
 }
+header .search-area .input-field input {
+  float: left;
+}
 header .search-area .input-field input[type="text"] {
   height: 2rem;
   margin: 0;
   color: #1f3134;
   border-bottom: 1px solid #9e9e9e;
+  height: 2.2rem;
 }
 header .search-area .input-field input[type="reset"] {
   background: transparent;
@@ -142,25 +154,20 @@ header .search-area .input-field input[type="reset"] {
   position: relative;
   text-indent: 2px;
   letter-spacing: 2px;
+  padding: 0 0.75rem;
+  outline: none;
 }
 @media screen and (max-width: 599px) {
-  header .search-area .input-field {
-    width: 89%;
-  }
   header .search-area .input-field input[type="text"] {
-    width: 83%;
     font-size: 1rem;
   }
   header .search-area .input-field input[type="reset"] {
     font-size: 1rem;
+    line-height: 40px;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
-  header .search-area .input-field {
-    width: 91%;
-  }
   header .search-area .input-field input[type="text"] {
-    width: 86%;
     font-size: 1.5rem;
   }
   header .search-area .input-field input[type="reset"] {
@@ -168,11 +175,7 @@ header .search-area .input-field input[type="reset"] {
   }
 }
 @media screen and (min-width: 992px) {
-  header .search-area .input-field {
-    width: 94%;
-  }
   header .search-area .input-field input[type="text"] {
-    width: 92%;
     font-size: 1.5rem;
   }
   header .search-area .input-field input[type="reset"] {
@@ -180,7 +183,7 @@ header .search-area .input-field input[type="reset"] {
   }
 }
 header .search-area #search-btn2 {
-  padding: 0 8px;
+  padding: 0 0.75rem;
 }
 header a {
   display: block;

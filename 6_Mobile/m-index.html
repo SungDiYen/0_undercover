@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 <title>首頁</title>
 <meta name="description" content="">
-<link rel="icon" href="images/Goiiz-favicon.png">
+<link rel="icon" href="https://ledoor.goiiz.com/images/Goiiz-favicon.png">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/materialize.css">
 <link rel="stylesheet" href="css/m-basic.css">
@@ -77,7 +77,7 @@
 				<i class="small mdi-action-search"></i>
 			</a>
 			<form id="search-bar" class="input-field left col s9 animated">
-				<input id="first_name" type="text" placeholder="找好物">
+				<input type="text" placeholder="找好物">
 				<input type="reset" value="clear">
 			</form>
 			<!--<a href="" class="right">
@@ -85,38 +85,45 @@
 			</a>-->
 		</aside>
 	</header><!-- /header -->
-	<div class="content row">
-		<div class="main-banner slider">
-			<ul class="slides">
-				<li><img class="responsive-img"src="images/s1.png" alt=""></li>
-				<li><img class="responsive-img"src="images/s2.png" alt=""></li>
-				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
-				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
-			</ul>
-		</div>
-		<div class="event-btn-area row">
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-maps-local-grocery-store"></i>熱銷市場
-				</a>
-			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-hardware-phone-iphone"></i>熱賣3C
-				</a>
-			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>(尚未定義)
-				</a>
-			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>主打活動
-				</a>
+	<div class="content">
+		<div class="main-banner row">
+			<div class="col s12 m12 l12">
+				<div class="card">
+					<div class="slider">
+						<ul class="slides">
+							<li><img class="responsive-img"src="images/f1.jpg" height="270" width="203" alt=""></li>
+							<li><img class="responsive-img"src="images/f2.jpg" height="320" width="240" alt=""></li>
+							<li><img class="responsive-img"src="images/f3.jpg" height="320" width="240" alt=""></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 
+		<div class="event-btn-area row">
+			<div class="col s12 m12 l12">
+				<div class="line col s6 m3">
+					<a class="waves-effect waves-orange btn-flat btn">
+						<i class="mdi-maps-local-grocery-store"></i>熱銷市場
+					</a>
+				</div>
+				<div class="line col s6 m3">
+					<a class="waves-effect waves-orange btn-flat btn">
+						<i class="mdi-hardware-phone-iphone"></i>熱賣3C
+					</a>
+				</div>
+				<div class="line col s6 m3">
+					<a class="waves-effect waves-orange btn-flat btn">
+						<i class="mdi-action-grade"></i>(尚未定義)
+					</a>
+				</div>
+				<div class="line col s6 m3">
+					<a class="waves-effect waves-orange btn-flat btn">
+						<i class="mdi-action-grade"></i>主打活動
+					</a>
+				</div>
+			</div>
+		</div>
 		<div class="divider"></div>
 
 		<div class="row-list row">
@@ -280,7 +287,6 @@ $(function(){
 	$('li.indicator-item span').eq(0).append('一二三四五六');
 	$('li.indicator-item span').eq(1).append('一二三四');
 	$('li.indicator-item span').eq(2).append('一二三四五六七八九十');
-	$('li.indicator-item span').eq(3).append('一二三四五六七八九十');
 
 	$('.collapsible').collapsible();
 
@@ -297,7 +303,7 @@ $(function(){
 		.toggleClass('mdi-hardware-keyboard-arrow-left');
 	}
 
-	reHeight();
+	reHeight(); //for card
 	$(window).resize(reHeight);
 	function reHeight(){
 		var w = $('.card-small').width();
@@ -310,8 +316,8 @@ $(function(){
 		$('.event-btn-area a').removeClass('btn-active');
 		$(this).addClass('btn-active');
 	});
-
-	sliderHeight();
+	/*
+	sliderHeight(); // for slider
 	$(window).resize(sliderHeight);
 	function sliderHeight(){
 		var sliderW = $('.main-banner').width();
@@ -327,6 +333,13 @@ $(function(){
 			$('.main-banner').height(sliderW/1.618);
 			$('ul.slides').height(sliderW/1.618 -40);
 		}
+	}
+	*/
+	calcu_indicator_width();
+	function calcu_indicator_width(){
+		var indicator_item_num = $("ul.indicators>li").length;
+		var new_width= 100/indicator_item_num;
+		$('li.indicator-item').css('width', new_width+'%');
 	}
 });
 </script>

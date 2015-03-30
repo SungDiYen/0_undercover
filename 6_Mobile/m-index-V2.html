@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-<title>搜尋-後背包</title>
+<title>首頁</title>
 <meta name="description" content="">
 <link rel="icon" href="https://ledoor.goiiz.com/images/Goiiz-favicon.png">
 <link rel="stylesheet" href="css/animate.css">
@@ -26,7 +26,7 @@
 							</li>
 						</ul>
 						<div class="g-logo page-title col s8 m6 l6">
-							搜尋結果
+							<img src="images/logo_ledoor.png" class="responsive-img">
 						</div>
 						<ul class="col s2 m3 l3">
 							<li class="right">
@@ -41,10 +41,19 @@
 		</nav>
 		<aside class="calalog">
 			<ul id="slide-out" class="side-nav full">
-				<li>aaaa</li>
-				<li>aaaa</li>
-				<li>aaaa</li>
-				<li>aaaa</li>
+				<li>一一一一</li>
+				<li>二二二</li>
+				<li>三三</li>
+				<li>
+					<div>四四</div>
+					<aside class="calalog">
+						<ul id="slide-out" class="side-nav full">
+							<li>四一</li>
+							<li>bbb</li>
+							<li>bbb</li>
+						</ul>
+					</aside>
+				</li>
 				<li class="no-padding">
 					<ul class="collapsible collapsible-accordion">
 						<li>
@@ -60,20 +69,30 @@
 						</li>
 					</ul>
 				</li>
+				<li>五五</li>
 			</ul>
 		</aside>
 		<aside class="search-area animated">
-			<a id="search-btn2" class=" left col s3">
+			<a id="search-btn2" class="left col s3">
 				<i class="small mdi-action-search"></i>
 			</a>
-			<div id="search-bar" class="input-field left col s9 animated">
-				<input id="first_name" type="text">
-			</div>
+			<form id="search-bar" class="input-field left col s9 animated">
+				<input id="first_name" type="text" placeholder="找好物">
+				<input type="reset" value="clear">
+			</form>
+			<!--<a href="" class="right">
+				<i class="mdi-navigation-close"></i>
+			</a>-->
 		</aside>
 	</header><!-- /header -->
 	<div class="content row">
-		<div class="section-title col s12">
-			<span>相關關鍵字</span>
+		<div class="main-banner slider">
+			<ul class="slides">
+				<li><img class="responsive-img"src="images/s1.png" alt=""></li>
+				<li><img class="responsive-img"src="images/s2.png" alt=""></li>
+				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
+				<li><img class="responsive-img"src="images/s3.jpg" alt=""></li>
+			</ul>
 		</div>
 		<div class="event-btn-area row">
 			<div class="line col s6 m3">
@@ -96,25 +115,6 @@
 					<i class="mdi-action-grade"></i>主打活動
 				</a>
 			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>主打活動
-				</a>
-			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>主打活動
-				</a>
-			</div><div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>主打活動
-				</a>
-			</div>
-			<div class="line col s6 m3">
-				<a class="waves-effect waves-orange btn-flat btn-cata">
-					<i class="mdi-action-grade"></i>主打活動
-				</a>
-			</div>
 		</div>
 
 		<div class="divider"></div>
@@ -122,43 +122,17 @@
 		<div class="row-list row">
 			<div class="col s6 m4 l3 list-item card-small">
 				<div class="card">
-					<span class="item-tag"></span>
-					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五</h3>
-							<div class="price"><span class="money-tag">$</span>200</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col s6 m4 l3 list-item card-small">
-				<div class="card">
-					<span class="item-tag hot"></span>
-					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上以上以上以上</h3>
-							<div class="price"><span class="money-tag">$</span>2,300</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col s6 m4 l3 list-item card-small">
-				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上</h3>
-							<div class="price"><span class="money-tag">$</span>2,300</div>
-						</div>
+						<a href="">
+							<figure>
+								<img src="images/f1.jpg" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五六七八九十以上</h3>
+								<div class="price"><span class="money-tag">$</span>200</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -166,13 +140,15 @@
 				<div class="card">
 					<span class="item-tag"></span>
 					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上</h3>
-							<div class="price"><span class="money-tag">$</span>21,300</div>
-						</div>
+						<a href="">
+							<figure>
+								<img src="images/f2.jpg" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五六七八九十以上</h3>
+								<div class="price"><span class="money-tag">$</span>2,300</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -180,13 +156,15 @@
 				<div class="card">
 					<span class="item-tag spec"></span>
 					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上</h3>
-							<div class="price"><span class="money-tag">$</span>300</div>
-						</div>
+						<a href="">
+							<figure>
+								<img src="images/f3.jpg" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五六七八九十以上</h3>
+								<div class="price"><span class="money-tag">$</span>2,300</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -194,13 +172,47 @@
 				<div class="card">
 					<span class="item-tag hot"></span>
 					<div class="card-image">
-						<figure>
-							<img src="images/s1.png" class="responsive-img">
-						</figure>
-						<div class="card-content item-wording">
-							<h3>一二三四五六七八九十以上</h3>
-							<div class="price"><span class="money-tag">$</span>21,300</div>
-						</div>
+						<a href="">
+							<figure>
+								<img src="images/s1.png" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五六七八九十以上</h3>
+								<div class="price"><span class="money-tag">$</span>21,300</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m4 l3 list-item card-small">
+				<div class="card">
+					<span class="item-tag spec"></span>
+					<div class="card-image">
+						<a href="">
+							<figure>
+								<img src="images/s1.png" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五六七八九十以上</h3>
+								<div class="price"><span class="money-tag">$</span>300</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m4 l3 list-item card-small">
+				<div class="card">
+					<span class="item-tag hot"></span>
+					<div class="card-image">
+						<a href="">
+							<figure>
+								<img src="images/s1.png" class="responsive-img">
+							</figure>
+							<div class="card-content item-wording">
+								<h3>一二三四五</h3>
+								<div class="price"><span class="money-tag">$</span>21,300</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -215,11 +227,20 @@ $(function(){
 	$('.slider').slider({
 		full_width: true,
 	});
+	$('ul.indicators').addClass('col s12');
+	$('li.indicator-item').addClass('col s3').append('<span></span>');
+	$('li.indicator-item span').eq(0).append('一二三四五六');
+	$('li.indicator-item span').eq(1).append('一二三四');
+	$('li.indicator-item span').eq(2).append('一二三四五六七八九十');
+	$('li.indicator-item span').eq(3).append('一二三四五六七八九十');
+
 	$('.collapsible').collapsible();
 
 	$('#menu-btn').click(function(){
+		/*$('.content').not('.calalog').addClass('blur');*/
 		toggleIcon();
 		$('#sidenav-overlay').click(function(){
+			/*$('body:visible').not('#slide-out').removeClass('blur');*/
 			toggleIcon();
 		});
 	});
@@ -236,11 +257,29 @@ $(function(){
 			$(this).height(w);
 		});
 	}
-	
+
 	$('.event-btn-area a').click(function() {
 		$('.event-btn-area a').removeClass('btn-active');
 		$(this).addClass('btn-active');
 	});
+
+	sliderHeight();
+	$(window).resize(sliderHeight);
+	function sliderHeight(){
+		var sliderW = $('.main-banner').width();
+		var screenWidth = $(window).width();
+		var screenHeight = $(window).height();
+
+		if(screenWidth > screenHeight) {
+			$('.main-banner').height(sliderW/3);
+			$('ul.slides').height(sliderW/3 -40);
+			 // img 改路徑
+		}
+		else {
+			$('.main-banner').height(sliderW/1.618);
+			$('ul.slides').height(sliderW/1.618 -40);
+		}
+	}
 });
 </script>
 </body>
