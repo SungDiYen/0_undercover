@@ -1,6 +1,6 @@
 @import "_style.scss";
 
-header {
+/*header {
 	@media screen and (max-width: $s-screen) {
 		height: $s-header + 48px!important;
 	}
@@ -10,114 +10,185 @@ header {
 	@media screen and (min-width: $l-screen) {
 		height: $l-header + 48px!important;
 	}
-}
-.top-area {
+}*/
+.top-area.row {
 	margin: 0;
-	figure {
-		/*height: 300px;
-		overflow: hidden;*/
+	figure.card {
+		max-height: 400px;	//temp
+		overflow: hidden;
 		text-align: center;
-		padding: 0!important;
+		padding: 0;
+		background: #fff;
+		margin-top: 0;
 		img {
-			margin: 0!important;
-			padding: 0!important;
+			width: 100%;
+			//margin: 0!important;
+			//padding: 0!important;
 		}
 	}
 }
 .middle-area {
+		$size-h2:			 1.7rem; //basic 
+		$size-h2-height:	 ($size-h2 * 1.4);
+		$size-price:		 ($size-h2 * 1.25);
+		$size-money-tag:	 ($size-h2 * 1.25);//($size-h2 * 0.75);
+		$size-price-title:	 ($size-h2 * 0.6);
 	h2 {
 		color: $primary-text;
-		margin: 0.5rem 0 0;
-		font-size: 2rem;	//basic size
-		line-height: 2rem * 1.4;
+		margin: 0;
+		//font-size: $size-h2;
+		//line-height: $size-h2-height;
 		/*@include text-hide;*/
 	}
 	.price-area {
-		.pro-price {
-			color: $price-color;
-			font-weight: 900;
-			padding: 0;
-			font-size: 2rem * 1.25;
+		>div {
+			display: inline-block;
+			.price {
+				font-family: $font-num;
+			}
 			.money-tag {
 				@include money-tag;
-				font-size: 2rem * 0.75;
 			}
-			/*.price-title {
-				font-size: 2rem * 0.75;
-			}*/
 		}
-		.pay-way {
+		.pro-price {
+			//font-size: $size-price;
+			color: $price-color;
+			//font-weight: 900;
+			.price-title {
+				font-size: $size-price-title;
+			}
+			.money-tag {
+				font-size: $size-money-tag;
+			}
+		}
+		.ori-price {
+			color: #aaa; //temp
+			margin-left: 0.6rem;
+			span.price {
+				text-decoration: line-through;
+			}
+		}
+	}
+	@media screen and (max-width: $s-screen){
+		$size-h2:			 1.7rem; //basic 
+		$size-h2-height:	 ($size-h2 * 1.4);
+		$size-price:		 ($size-h2 * 1.25);
+		$size-money-tag:	 ($size-h2 * 1.25);//($size-h2 * 0.75);
+		$size-price-title:	 ($size-h2 * 0.6);
+		h2 {
+			font-size: $size-h2;	//basic size
+			line-height: $size-h2-height;
+		}
+		.price-area {
+			.pro-price {
+				font-size: $size-price;
+				//line-height: $size-price-height;
+				.money-tag {
+					font-size: $size-money-tag;
+				}
+				.price-title {
+					font-size: $size-price-title;
+				}
+			}
+			.ori-price {
+				font-size: $size-price-title;
+			}
+		}
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z){
+		$size-h2:			 1.7rem; //basic 
+		$size-h2-height:	 ($size-h2 * 1.4);
+		$size-price:		 ($size-h2 * 1.25);
+		$size-money-tag:	 ($size-h2 * 1.25);//($size-h2 * 0.75);
+		$size-price-title:	 ($size-h2 * 0.6);
+		h2 {
+			font-size: $size-h2;	//basic size
+			line-height: $size-h2-height;
+		}
+		.price-area {
+			.pro-price {
+				font-size: $size-price;
+				//line-height: $size-price-height;
+				.money-tag {
+					font-size: $size-money-tag;
+				}
+				.price-title {
+					font-size: $size-price-title;
+				}
+			}
+			.ori-price {
+				font-size: $size-price-title;
+			}
+		}
+	}
+	@media screen and (min-width: $l-screen-a)and(max-width: $l-screen-z){
+		$size-h2:			 1.7rem; //basic 
+		$size-h2-height:	 ($size-h2 * 1.4);
+		$size-price:		 ($size-h2 * 1.25);
+		$size-money-tag:	 ($size-h2 * 1.25);//($size-h2 * 0.75);
+		$size-price-title:	 ($size-h2 * 0.6);
+		h2 {
+			font-size: $size-h2;	//basic size
+			line-height: $size-h2-height;
+		}
+		.price-area {
+			.pro-price {
+				font-size: $size-price;
+				//line-height: $size-price-height;
+				.money-tag {
+					font-size: $size-money-tag;
+				}
+				.price-title {
+					font-size: $size-price-title;
+				}
+			}
+			.ori-price {
+				font-size: $size-price-title;
+			}
+		}
+	}
+}
+.bottom-area {
+	margin: 0;
+	padding: 0 0.75rem;
+	section.card {
+		margin-top: 0;
+		padding: 0.75rem 0;
+	}
+	.pro-size, .sns {
+		width: 50%;
+		float: left;
+		padding: 0 0.75rem;
+		.title {
+			color: $third-text;
+			font-size: 1.25rem;
+			font-weight: 100;
+			margin: 0 0 0.75rem 0;
+			text-align: center;
+			//padding: 0 0.5rem;
+		}
+	}
+	.btn-group {
+		a {
+			@include btn;
+			margin-bottom: 8px;
+			width: 100%;
 			padding: 0;
-			img.icon {
-				padding: 8px;
-				max-width: 72px;
+			&.btn-active {
+				@include btn-active;
+				background: #3b5998;
+				border-color: #3b5998;
+				color: #fff;
 			}
-		}
-		br {
-			display: none;
-		}
-	}
-	@media screen and (max-width: $s-screen) {
-		h2 {
-			font-size: 1.75rem;	//basic size
-		}
-		.price-area {
-			.pro-price {
-				font-size: 1.75rem * 1.25;
-				line-height: 1.75rem * 1.25;
-				.price-title, .money-tag {
-					font-size: 1.75rem * 0.75;
-				}
+			&.btn-fail {
+				@include btn-fail;
 			}
-		}
-		br {
-			display: block!important;
-		}
-		img.icon {
-			width: 20%;
-			padding: 0!important;
-			margin: 8px;
-		}
-	}
-	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-		h2 {
-			font-size: 1.75rem;	//basic size
-		}
-		.price-area {
-			.pro-price {
-				font-size: 1.75rem * 1.25;
-				.price-title, .money-tag {
-					font-size: 1.75rem * 0.75;
-				}
-			}
-		}
-		img.icon {
-			width: 20%!important;
-		}
-	}
-	@media screen and (min-width: $l-screen-a)and(max-width: $l-screen-z) {
-		h2 {
-			font-size: 2rem;	//basic size
-		}
-		.price-area {
-			.pro-price {
-				font-size: 2rem * 1.25;
-				.price-title, .money-tag {
-					font-size: 2rem * 0.75;
-				}
-			}
-		}
-		img.icon {
-			width: 20%!important;
-		}
-	}
-	@media screen and (min-width: $xl-screen) {
-		img.icon {
-			width: 10%!important;
 		}
 	}
 	.store-area.row {
-		margin: 0;
+		//border-bottom: 1px solid #aaa;
+		padding: 1rem 0;
+		margin: (1rem/2) 0;
 		.col {
 			padding-left: 0;
 		}
@@ -128,45 +199,29 @@ header {
 			}
 		}
 		.shop-name {
-			padding-left: 16px;
+			//padding: 0 0 0 1.2rem;
 			a {
 				color: $second-text;
+				font-size: 1.2rem; //temp
 			}
 		}
 	}
-}
-.bottom-area {
-	margin: 0;
-	border-top: $divide-style;
-	padding-top: 1rem;
-
-	h3 {
-		color: $third-text;
-		font-size: 1.5rem;
-		font-weight: 100;
-		margin: 0 0 0.75rem 0;
-		padding: 0 0.5rem;
-	}
-	.pro-size, .sns {
-		margin-bottom: 1rem;
-	}
-	.btn-g {
-		>span.col {
-			padding: 0;
-			text-align: center;
-			padding: 0 8px;
-			a {
-				@include btn;
-				margin-bottom: 8px;
-				width: 100%;
-			}
+	.pay-way {
+		//width: 100%;
+		font-size: 0; //hack,inline 4px space
+		img.icon {
+		    padding: 0 0.75rem;
+		    opacity: .8;
+		    -webkit-filter:grayscale(1);
+			-moz-filter:   grayscale(1);
+			filter:        grayscale(1);
 		}
 	}
 }
 .extra-area {
 	padding: 0;
 	padding-top: 2rem!important;
-	border-top: $divide-style;
+	//border-top: $divide-style;
 	margin-bottom: 38px;
 	.pro-sub-img {
 		padding: 0.75rem;
@@ -183,14 +238,14 @@ header {
 		}
 	}
 }
-.cfa-area {
+.fixed-area {
 	div {
 		position: fixed;
 		z-index: 899;
 		bottom: 0;
 		margin: 0;
 		padding: 0!important;
-		background: rgba(0,0,0,.5);
+		background: rgba(0,0,0,.8);
 		text-align: center;
 		span {
 			padding: 0.75rem!important;

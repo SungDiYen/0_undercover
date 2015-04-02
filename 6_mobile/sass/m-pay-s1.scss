@@ -1,26 +1,35 @@
 @import "_style.scss";
 
-
+$primary-color: #222;
+.table-vertical {
+	display: table;
+	>* {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+////////////////////////////////////
 div.step-check {
-	margin-bottom: 0!important;
-	border-bottom: $divide-style;
+	margin-bottom: 0;
+	//border-bottom: $divide-style;
 	ul {
 		margin-top: 2rem;
 	}
 	li {
 		text-align: center;
-		margin-bottom: 8px;
+		//margin-bottom: 8px;
 		$step-size: 2rem;
+		$circle-size: $step-size * 2.5;
 		&:before {
 			content:'1';
 			color: $second-text;
 			text-align: center;
 			font-size: $step-size;
-			line-height: $step-size * 2.5;
-			width: $step-size * 2.5;
-			height: $step-size * 2.5;
+			line-height: $circle-size;
+			width: $circle-size;
+			height: $circle-size;
 			display: block;
-			background: #ddd;
+			background: #ddd; //temp
 			border-radius: 100%;
 			margin: 0 auto;
 			margin-bottom: 0.5rem;
@@ -56,135 +65,165 @@ div.step-check {
 	}
 }
 .main-content {
+	margin-bottom: 0;
+	/*
 	>div {
 		padding: 0!important;
 	}
+	*/
+	/*
 	label.strd-title {
 		display: block;
 		font-size: 1rem;
 		color: $second-text;
 		margin-bottom: 1rem;
 	}
-	h2.pro-name {
-		/*@include text-hide;*/
-		color: $primary-text;
-		margin: 1rem 0;
-		padding: 0 0.75rem;
-		@media screen and (max-width: $s-screen) {
-			font-size: 1.3rem;
-			line-height: 2rem;
+	*/
+}
+.pro-intro {
+	.card {
+		width: 100%;
+		$width-percent: 50%;
+		$size-title: 1.4rem;
+		$size-title-line: $size-title * 1.8;
+		$rate-tablet: 1.25;
+		$rate-desktop: 1.5;
+		.pro-name {
+			width: $width-percent;
+			//@include text-hide;
+			color: $primary-text;
+			//margin: 1rem 0;
+			padding: 0 0.75rem;
+			@media screen and (max-width: $s-screen) {
+				font-size: $size-title;
+				line-height: $size-title-line;
+			}
+			@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+				font-size: $size-title * $rate-tablet;
+				line-height: $size-title-line * $rate-tablet;
+			}
+			@media screen and (min-width: $l-screen) {
+				font-size: $size-title * $rate-desktop;
+				line-height: $size-title-line * $rate-desktop;
+			}
 		}
-		@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
-			font-size: 1.3rem * 1.25;
-			line-height: 2rem * 1.25;
-		}
-		@media screen and (min-width: $l-screen) {
-			font-size: 1.3rem * 1.5;
-			line-height: 2rem * 1.5;
-		}
-	}
-	figure.pro-pic {
-		img {
-			width: 100%;
-		}
-	}
-	.pro-size, .pro-num {
-		margin-bottom: 40px;
-		a {
-			border: 1px solid #aaa;
-			margin-bottom: 0;
-			text-align: center;
-		}
-		.select-wrapper {
-			span {
-				background: transparent;
-				color: $primary-color;
-				border-radius: 2px;
-				text-align: center;
-				height: 48px;
-				line-height: 48px - 6px;
-				border: 3px solid rgba($primary-color, 1);
+		.pro-pic {
+			width: 100 - $width-percent;
+			img {
+				width: 100%;
 			}
 		}
 	}
 }
-.price-area {
-	margin-bottom: 1rem;
-	padding: 0 0.75rem;
-	$pa-fsz: 1rem;
-	dl {
-		margin: 1rem 0;
-		height: 2.5rem;
-		line-height: 2.5rem;
-		dt {
-			font-size: $pa-fsz;
-		}
-		dd {
-			font-size: $pa-fsz * 1.25;
-			.money-tag {
-				font-size: $pa-fsz * 0.85;
-				@include money-tag;
-			}
-		}
-	}
-	.deli-price {
-		select {
-			padding: 0;
-			border: 1px solid #e0e0e;
-			position: relative;
-			left: -4px;
-			outline: none;
-			background: #fff;
-		}
-		dt {
-			width: 15rem;
-			height: 3rem;
-			.select-dropdown {
-				border: 0;
-				top: -8px;
+.pro-detail {
+	.card {
+		padding: 0.75rem 0;
+		.select-wrapper { //reset default
+			span {
+				$height: 36px;
+				background: transparent;
+				//color: $primary-color;
+				//border: 2px solid rgba($primary-color, 1);
+				color: #555;
+				border: 2px solid rgba(#555, 1);
+				border-radius: 24px;
+				height: $height;
+				line-height: $height - 6px;
+				text-align: center;
+				padding: 0 1rem;
+				margin: 0;
 				&:after {
-					position: relative;
-					top: 5px;
+					right: 4px;
 				}
 			}
 		}
-		dd {
-			height: 45px;
-			line-height: 45px;
+		.pro-size, .pro-num {
+			//margin-bottom: 40px;
+			/*a {
+				border: 1px solid #aaa;
+				margin-bottom: 0;
+				text-align: center;
+			}*/
+			.select-wrapper {
+				span {
+					text-align: left;
+					margin: 1.5rem 0;
+				}
+			}
 		}
-	}
-	.total-price {
-		dd {
-			color: $price-color;
-			font-size: $pa-fsz * 1.5!important;
-			font-weight: 700;
-			.money-tag {
-				font-size: ($pa-fsz * 0.85) * 1.5;
+		.price-area {
+			$title-fsz: 1rem;
+			$price-fsz: $title-fsz * 1.25;
+			border-left: 1px solid #aaa; //temp
+			.col {
+				padding: 0;
+			}
+			dl {
+				margin: 0;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				margin-bottom: 1rem;
+				dt {
+					font-size: $title-fsz;
+					text-align: left;
+				}
+				dd {
+					font-size: $price-fsz;
+					text-align: right; // 千位數對齊
+					.money-tag {
+						font-size: $price-fsz;
+						@include money-tag;
+					}
+				}
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+			.deli-price {
+				dt {
+					//width: 15rem;
+					//height: 3rem;
+				}
+				dd {
+					//height: 45px;
+					//line-height: 45px;
+				}
+				.select-wrapper {
+					span {
+						margin: 0;
+					}
+				}
+			}
+			.total-price {
+				dd {
+					color: $price-color;
+				}
 			}
 		}
 	}
 }
 .step-area {
-	margin-bottom: 0;
+	margin: .5rem 0 0 0;
 	div {
 		a#next-stp {
-			background: $primary-color;
-			color: #fff;
+			$border-width: 2px;
+			$btn-height: 48px;
 			font-size: 1.3rem;
 			width: 100%;
-			height: 48px;
-			line-height: 48px;
+			height: $btn-height;
+			line-height: ($btn-height)-($border-width*2);
 			background: #fff;
 			color: $primary-color;
-			border: 3px solid $primary-color;
+			border: $border-width solid $primary-color;
 		}
 	}
 }
 /*changeDefault*/
 .dropdown-content {
-	border: 3px solid $primary-color;
+	border: 2px solid $primary-color;
 	background: $ground-color;
-	max-height: 280px;
+	border-radius: 24px;
+	//max-height: 280px;
 	li {
 		&:hover {
 			background: $primary-color;

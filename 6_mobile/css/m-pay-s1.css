@@ -1,13 +1,19 @@
+.table-vertical {
+  display: table;
+}
+.table-vertical > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 div.step-check {
-  margin-bottom: 0 !important;
-  border-bottom: 1px solid #b6b6b6;
+  margin-bottom: 0;
 }
 div.step-check ul {
   margin-top: 2rem;
 }
 div.step-check li {
   text-align: center;
-  margin-bottom: 8px;
 }
 div.step-check li:before {
   content: '1';
@@ -42,150 +48,154 @@ div.step-check li:nth-of-type(3):before {
   }
 }
 div.step-check li.now-page:before {
-  background: #ff9800;
+  background: #222;
   color: white;
 }
 div.step-check li.done-page:before {
   content: '\2713';
 }
 
-.main-content > div {
-  padding: 0 !important;
+.main-content {
+  margin-bottom: 0;
+  /*
+  >div {
+  	padding: 0!important;
+  }
+  */
+  /*
+  label.strd-title {
+  	display: block;
+  	font-size: 1rem;
+  	color: $second-text;
+  	margin-bottom: 1rem;
+  }
+  */
 }
-.main-content label.strd-title {
-  display: block;
-  font-size: 1rem;
-  color: #383c3c;
-  margin-bottom: 1rem;
+
+.pro-intro .card {
+  width: 100%;
 }
-.main-content h2.pro-name {
-  /*@include text-hide;*/
+.pro-intro .card .pro-name {
+  width: 50%;
   color: #1f3134;
-  margin: 1rem 0;
   padding: 0 0.75rem;
 }
 @media screen and (max-width: 599px) {
-  .main-content h2.pro-name {
-    font-size: 1.3rem;
-    line-height: 2rem;
+  .pro-intro .card .pro-name {
+    font-size: 1.4rem;
+    line-height: 2.52rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
-  .main-content h2.pro-name {
-    font-size: 1.625rem;
-    line-height: 2.5rem;
+  .pro-intro .card .pro-name {
+    font-size: 1.75rem;
+    line-height: 3.15rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .main-content h2.pro-name {
-    font-size: 1.95rem;
-    line-height: 3rem;
+  .pro-intro .card .pro-name {
+    font-size: 2.1rem;
+    line-height: 3.78rem;
   }
 }
-.main-content figure.pro-pic img {
+.pro-intro .card .pro-pic {
+  width: 50%;
+}
+.pro-intro .card .pro-pic img {
   width: 100%;
 }
-.main-content .pro-size, .main-content .pro-num {
-  margin-bottom: 40px;
-}
-.main-content .pro-size a, .main-content .pro-num a {
-  border: 1px solid #aaa;
-  margin-bottom: 0;
-  text-align: center;
-}
-.main-content .pro-size .select-wrapper span, .main-content .pro-num .select-wrapper span {
-  background: transparent;
-  color: #ff9800;
-  border-radius: 2px;
-  text-align: center;
-  height: 48px;
-  line-height: 42px;
-  border: 3px solid #ff9800;
-}
 
-.price-area {
-  margin-bottom: 1rem;
-  padding: 0 0.75rem;
+.pro-detail .card {
+  padding: 0.75rem 0;
 }
-.price-area dl {
-  margin: 1rem 0;
+.pro-detail .card .select-wrapper span {
+  background: transparent;
+  color: #555;
+  border: 2px solid #555555;
+  border-radius: 24px;
+  height: 36px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 0;
+}
+.pro-detail .card .select-wrapper span:after {
+  right: 4px;
+}
+.pro-detail .card .pro-size, .pro-detail .card .pro-num {
+  /*a {
+  	border: 1px solid #aaa;
+  	margin-bottom: 0;
+  	text-align: center;
+  }*/
+}
+.pro-detail .card .pro-size .select-wrapper span, .pro-detail .card .pro-num .select-wrapper span {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+.pro-detail .card .price-area {
+  border-left: 1px solid #aaa;
+}
+.pro-detail .card .price-area .col {
+  padding: 0;
+}
+.pro-detail .card .price-area dl {
+  margin: 0;
   height: 2.5rem;
   line-height: 2.5rem;
+  margin-bottom: 1rem;
 }
-.price-area dl dt {
+.pro-detail .card .price-area dl dt {
   font-size: 1rem;
+  text-align: left;
 }
-.price-area dl dd {
+.pro-detail .card .price-area dl dd {
   font-size: 1.25rem;
+  text-align: right;
 }
-.price-area dl dd .money-tag {
-  font-size: 0.85rem;
-  font-weight: 700;
+.pro-detail .card .price-area dl dd .money-tag {
+  font-size: 1.25rem;
   padding-right: 0.3rem;
+  font-family: Verdana;
 }
-.price-area .deli-price select {
-  padding: 0;
-  border: 1px solid #e0e0e;
-  position: relative;
-  left: -4px;
-  outline: none;
-  background: #fff;
+.pro-detail .card .price-area dl:last-of-type {
+  margin-bottom: 0;
 }
-.price-area .deli-price dt {
-  width: 15rem;
-  height: 3rem;
+.pro-detail .card .price-area .deli-price .select-wrapper span {
+  margin: 0;
 }
-.price-area .deli-price dt .select-dropdown {
-  border: 0;
-  top: -8px;
-}
-.price-area .deli-price dt .select-dropdown:after {
-  position: relative;
-  top: 5px;
-}
-.price-area .deli-price dd {
-  height: 45px;
-  line-height: 45px;
-}
-.price-area .total-price dd {
-  color: #e9546b;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-}
-.price-area .total-price dd .money-tag {
-  font-size: 1.275rem;
+.pro-detail .card .price-area .total-price dd {
+  color: #e52d27;
 }
 
 .step-area {
-  margin-bottom: 0;
+  margin: .5rem 0 0 0;
 }
 .step-area div a#next-stp {
-  background: #ff9800;
-  color: #fff;
   font-size: 1.3rem;
   width: 100%;
   height: 48px;
-  line-height: 48px;
+  line-height: 44px;
   background: #fff;
-  color: #ff9800;
-  border: 3px solid #ff9800;
+  color: #222;
+  border: 2px solid #222;
 }
 
 /*changeDefault*/
 .dropdown-content {
-  border: 3px solid #ff9800;
+  border: 2px solid #222;
   background: #f3f3f3;
-  max-height: 280px;
+  border-radius: 24px;
 }
 .dropdown-content li:hover {
-  background: #ff9800;
+  background: #222;
   color: #fff;
 }
 .dropdown-content li.disabled {
-  background: #ff9800;
+  background: #222;
   color: #fff;
 }
 .dropdown-content li.disabled:hover {
-  background: #ff9800;
+  background: #222;
   color: #fff;
 }

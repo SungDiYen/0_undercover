@@ -1,8 +1,8 @@
 .main-banner .card {
   margin: 0;
 }
-.main-banner ul.slides {
-  background: #fff;
+.main-banner .card div.slider {
+  height: 400px !important;
 }
 .main-banner ul.slides li {
   text-align: center;
@@ -14,7 +14,8 @@
 .main-banner ul.indicators {
   z-index: 890;
   padding: 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 .main-banner ul.indicators li.indicator-item {
   display: inline-block;
@@ -24,7 +25,7 @@
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
 }
 .main-banner ul.indicators li.indicator-item span {
   background: transparent;
@@ -48,8 +49,9 @@
   background: transparent;
 }
 .main-banner ul.indicators li.indicator-item.active span {
-  background: #ff9800;
-  color: #fff;
+  background: #fff;
+  color: #ff9800;
+  font-weight: 900;
 }
 
 /*.content {
@@ -142,7 +144,7 @@
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
-  border: 3px solid #9fa0a0;
+  border: 2px solid #9fa0a0;
   color: #9fa0a0;
   height: 48px;
   line-height: 42px;
@@ -204,7 +206,7 @@
   font-weight: 700;
 }
 .item-wording .price {
-  color: #e9546b;
+  color: #e52d27;
   font-weight: 400;
 }
 .item-wording .price span {

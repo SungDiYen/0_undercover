@@ -1,5 +1,5 @@
 $basic-fonts: Helvetica, "LiHei Pro", "微軟正黑體", 
-"Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;;
+"Microsoft JhengHei",GillSans, Calibri, Trebuchet, sans-serif;
 
 $white: rgba(#fff, 1);
 $body-color: rgba(#fbfaf5, 1); //生成り色きなりいろ
@@ -16,7 +16,7 @@ $second-text: #383c3c;  //羊羹色
 $third-text: #9fa0a0;  //素鼠
 $fourth-text: #c0c6c9;  //青灰
 
-$price-color: rgba(#e9546b, 1); //Youtube Red
+$price-color: rgba(#e52d27, 1); //Youtube Red
 
 $divider-w: rgba(#fff,.8);
 $divider-b: rgba(#212121,.24);
@@ -42,6 +42,9 @@ $card-radius: 3px;
 $card-bg-color:rgba(#000,.02);
 $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 
+$font-num: Verdana;//, "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", GillSans, sans-serif;
+
+
 @mixin card-style(){
 	box-shadow: $card-shadow;
 	-webkit-box-shadow: $card-shadow;
@@ -55,8 +58,9 @@ $card-shadow: 0 1px 1px 0 rgba(0,0,0,.26);
 	-moz-box-shadow: $card-shadow;
 };
 @mixin money-tag(){
-	font-weight: 700;
+	//font-weight: 700;
 	padding-right: 0.3rem;
+	font-family: $font-num;
 };
 @mixin text-hide(){
 	overflow: hidden;
@@ -81,7 +85,7 @@ $l-header: 64px;
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-align: center;
-	border: 3px solid $third-text;
+	border: 2px solid $third-text;
 	color: $third-text;
 	height: 48px;
 	line-height: 48px - 6px;
@@ -108,4 +112,16 @@ $l-header: 64px;
 
 	}
 }
-
+@mixin btn-active(){
+	background: rgba($primary-color, 1);
+	border-color: $primary-color;
+	color: #fff;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+@mixin btn-fail(){
+	background: #fff;
+	border-color: $price-color;
+	color: $price-color;
+}

@@ -3,9 +3,11 @@
 .main-banner {
 	.card {
 		margin: 0;
+		div.slider {
+			height: 400px!important;
+		}
 	}
 	ul.slides {
-		background: #fff;
 		li {
 			text-align: center;
 		}
@@ -17,8 +19,8 @@
 	ul.indicators {
 		z-index: 890;
 		padding: 0;
-		//margin-bottom: 40px;
-		position: relative;
+		position: absolute;
+		bottom: 0;
 		li.indicator-item {
 			display: inline-block;
 			margin: 0;
@@ -28,7 +30,7 @@
 			-webkit-border-radius: 2px;
 			-moz-border-radius: 2px;
 			border-radius: 2px;
-			background-color: transparent;
+			background: rgba(255,255,255, .6);
 			span {
 				background: transparent;
 				font-size: 1.3rem;
@@ -48,8 +50,9 @@
 		li.indicator-item.active {
 			background: transparent;
 			span {
-				background: $primary-color;
-				color: #fff;
+				background: #fff;//$primary-color
+				color: $primary-color;
+				font-weight: 900;
 				//border: 0;
 				//border-bottom: 2px solid $third-text;
 			}

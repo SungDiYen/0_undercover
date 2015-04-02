@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/m-basic.css">
 <link rel="stylesheet" href="css/m-pay-s1.css">
 </head>
-	<body>
+<body>
 	<header>
 		<nav>
 			<div class="main-header">
@@ -47,7 +47,8 @@
 				<input id="first_name" type="text">
 			</div>
 		</aside>
-	</header><!-- /header -->
+	</header>
+	<!-- /header -->
 	<div class="step-check row">
 		<ul class="col s12 m8 offset-m2 l6 offset-l3">
 			<li class="col s4 m4 l4 now-page">確認商品規格</li>
@@ -55,63 +56,69 @@
 			<li class="col s4 m4 l4">付款並完成訂購</li>
 		</ul>
 	</div>
+
 	<article class="main-content row">
-		<div class="col s12 m8 offset-m2 l6 offset-l3">
-			<h2 class="pro-name col s12 m12 l12">upreme x Nike Air Foamposite One 太空鞋 Penny</h2>
-			<figure class="pro-pic col s6 m6 l6">
-				<img src="images/demo-pic/20150120.jpg">
-			</figure>
-			<div class="col s6 m6 l6">
-				<div class="pro-size">
-					<label class="strd-title">規格</label>
-					<select id="size-select" class="select">
-						<option value="" disabled="">選擇尺寸</option>
-						<option value="8" selected="">8號</option>
-						<option value="9">9號</option>
-						<option value="10">10號</option>
-					</select>
+		<div class="pro-intro col s12">
+			<div class="card table-vertical">
+				<h2 class="pro-name">upreme x Nike Air Foamposite One 太空鞋 Penny</h2>
+				<figure class="pro-pic">
+					<img src="images/demo-pic/20150120.jpg">
+				</figure>
+			</div>
+		</div>
+		<div class="pro-detail col s12">
+			<div class="card row">
+				<div class="col s4">
+					<div class="pro-size">
+						<!--<label class="strd-title">規格</label>-->
+						<select id="size-select" class="select" required="">
+							<option value="" disabled="" selected="">尺寸</option>
+							<option value="8">8號</option>
+							<option value="9">9號</option>
+							<option value="10">10號</option>
+						</select>
+					</div>
+					<div class="pro-num">
+						<!--<label class="strd-title">數量</label>-->
+						<select id="num-select" class="select" required="">
+							<option value="" disabled="" selected="">數量</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
 				</div>
-				<div class="pro-num">
-					<label class="strd-title">數量</label>
-					<select id="num-select" class="select">
-						<option value="" disabled="">選擇數量</option>
-						<option value="1" selected="">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-					</select>
+				<div class="price-area col s8">
+					<dl class="ori-price row">
+						<dt class="col s8">商品金額總計</dt>
+						<dd class="col s4"><span class="money-tag">$</span>6,500</dd>
+					</dl>
+					<dl class="deli-price row">
+						<dt class="col s8">運費
+							<!--<select class="select" required="">
+								<option value="運費" disabled="" selected="">運費</option>
+								<option value="宅配">宅配／$100</option>
+								<option value="7-11取貨">7-11取貨／免運費</option>
+							</select>-->
+						</dt>
+						<dd class="col s4"><span class="money-tag">$</span>0</dd>
+					</dl>
+					<!--<div class="divider"></div>-->
+					<dl class="total-price row">
+						<dt class="col s8">應付金額</dt>
+						<dd class="col s4"><span class="money-tag">$</span>6,500</dd>
+					</dl>
 				</div>
 			</div>
 		</div>
+
 	</article>
-	<div class="price-area row">
-		<div class="card grey lighten-5 col s12 m8 offset-m2 l6 offset-l3">
-			<dl class="ori-price row">
-				<dt class="left">商品金額總計</dt>
-				<dd class="right"><span class="money-tag">$</span>6,500</dd>
-			</dl>
-			<dl class="deli-price row">
-				<dt class="left">
-					<select class="select">
-						<option value="" disabled selected>貨運方式／金額</option>
-						<option value="宅配">宅配／$100</option>
-						<option value="7-11取貨">7-11取貨／免運費</option>
-					</select>
-				</dt>
-				<dd class="right"><span class="money-tag">$</span>0</dd>
-			</dl>
-			<div class="divider"></div>
-			<dl class="total-price row">
-				<dt class="left">應付金額</dt>
-				<dd class="right"><span class="money-tag">$</span>6,500</dd>
-			</dl>
-		</div>
-	</div>
 	<div class="step-area row">
 		<div class="col s12 m8 offset-m2 l6 offset-l3 center">
 			<a class="btn waves-effect waves-orange" id="next-stp">下一步，送貨資訊</a>
@@ -127,10 +134,10 @@ $(function(){
 		'border': '0',
 		'background': '#fff'
 	});*/
-	$('.select-dropdown li').click(function() {
-		/*$(this).parent('.select-dropdown').slideUp(550)*/
+	/*$('.select-dropdown li').click(function() {
+		//$(this).parent('.select-dropdown').slideUp(550)
 		$(this).parent('ul.select-dropdown').animate({'height': '48px'}, 500);
-	});
+	});*/
 });
 </script>
 </body>

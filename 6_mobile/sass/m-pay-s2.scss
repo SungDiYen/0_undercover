@@ -1,16 +1,8 @@
 @import "_style.scss";
 
 .receiver-info, .buyer-info, .check-info {
-	margin: 2rem 0;
+	//margin: 2rem 0;
 	padding: 0 0.75rem;
-	form {
-		h2 {
-			font-size: 1.4285rem;
-			color: $second-text;
-			margin: 0;
-			font-weight: 900;
-		}
-	}
 	.select-wrapper span.select-dropdown {
 		margin-bottom: 0;
 	}
@@ -38,7 +30,7 @@
 	}
 }
 .receiver-check {
-	h2, .radio-btns {
+	.title, .radio-btns {
 		display: inline-block;
 		line-height: 58px;
 	}
@@ -51,7 +43,7 @@
 		br {
 			display: block;
 		}
-		h2, .radio-btns {
+		.title, .radio-btns {
 			line-height: 34px;
 		}
 	}@media screen and (min-width: $m-screen-z){
@@ -67,5 +59,27 @@
 	}
 	&:before {
 		border: 2px solid $primary-color;
+	}
+}
+.card {
+	.title {
+		font-size: 1.4285rem;
+		color: $second-text;
+		margin: 0;
+		font-weight: 900;
+	}
+}
+.notice {
+	.high-light-ul {
+		>li {
+			color: #f5c1c1;
+		}
+	}
+	.num-ul {
+		>li {
+			color: #aaa;
+			list-style: decimal; //inside
+			margin: 0 1.5rem;
+		}
 	}
 }

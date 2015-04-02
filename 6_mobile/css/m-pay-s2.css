@@ -1,12 +1,5 @@
 .receiver-info, .buyer-info, .check-info {
-  margin: 2rem 0;
   padding: 0 0.75rem;
-}
-.receiver-info form h2, .buyer-info form h2, .check-info form h2 {
-  font-size: 1.4285rem;
-  color: #383c3c;
-  margin: 0;
-  font-weight: 900;
 }
 .receiver-info .select-wrapper span.select-dropdown, .buyer-info .select-wrapper span.select-dropdown, .check-info .select-wrapper span.select-dropdown {
   margin-bottom: 0;
@@ -30,7 +23,7 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.receiver-check h2, .receiver-check .radio-btns {
+.receiver-check .title, .receiver-check .radio-btns {
   display: inline-block;
   line-height: 58px;
 }
@@ -41,7 +34,7 @@
   .receiver-check br {
     display: block;
   }
-  .receiver-check h2, .receiver-check .radio-btns {
+  .receiver-check .title, .receiver-check .radio-btns {
     line-height: 34px;
   }
 }
@@ -57,4 +50,20 @@
 }
 [type="radio"].with-gap:checked + label:before {
   border: 2px solid #ff9800;
+}
+
+.card .title {
+  font-size: 1.4285rem;
+  color: #383c3c;
+  margin: 0;
+  font-weight: 900;
+}
+
+.notice .high-light-ul > li {
+  color: #f5c1c1;
+}
+.notice .num-ul > li {
+  color: #aaa;
+  list-style: decimal;
+  margin: 0 1.5rem;
 }

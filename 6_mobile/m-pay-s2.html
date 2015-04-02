@@ -57,8 +57,8 @@
 		</ul>
 	</div>
 	<article class="buyer-info row">
-		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
-			<h2 class="col s12 m12 l12 buyer-title">購買者資料</h2>
+		<form class="col s12 m8 offset-m2 l6 offset-l3 card" autocomplete="on">
+			<h2 class="col s12 m12 l12 title">購買者資料</h2>
 			<div class="buyer-form">
 				<div class="input-field col s12 m12 l12">
 					<input type="text" id="name" required="required">
@@ -110,17 +110,18 @@
 		</form>
 	</article>
 	<article class="receiver-info row">
-		<form class="col s12 m8 offset-m2 l6 offset-l3 card grey lighten-5" autocomplete="on">
+		<form class="col s12 m8 offset-m2 l6 offset-l3 card" autocomplete="on">
 			<section class="receiver-check">
-				<h2 class="col s7 m7 l7 left check-title">收件者是否與<br>購買人相同?</h2>
-				<div class="radio-btns col s5 m5 l5 right">
-					<input class="with-gap" name="receiver" type="radio" id="receiver-yes"  />
-		    		<label for="receiver-yes">Yes</label>
-		    		<input class="with-gap" name="receiver" type="radio" id="receiver-no"  />
+				<h2 class="title col s9">收件者是否與購買人相同?</h2>
+				<div class="radio-btns col s3">
+					<input class="with-gap" name="receiver" type="radio" id="receiver-yes" checked>
+					<label for="receiver-yes">Yes</label>
+
+		    		<input class="with-gap" name="receiver" type="radio" id="receiver-no">
 		    		<label for="receiver-no">No</label>
 		    	</div>
 	    	</section>
-			<h2 class="col s6 m6 l6 left receiver-title">收件者資料</h2>
+			<h2 class="col s6 m6 l6 left title" id="rec">收件者資料</h2>
 			<div class="receiver-form">
 				<div class="input-field col s12 m12 l12">
 					<input type="text" id="name" required="required">
@@ -167,6 +168,40 @@
 			</div>
 		</form>
 	</article>
+
+	<div class="order-list row">
+		<div class="col s12">
+			<div class="card">
+				<div class="title">發票資訊</div>
+				<div class="content">
+					<select class="select">
+						<option value="捐贈" selected>捐贈</option>
+						<option value="個人用">個人用</option>
+						<option value="公司用">公司用</option>
+					</select>
+					<!--<div class="select-detail">
+						<span>
+							說明：支持樂山教養院 你的微薄之力，就是身心障礙孩子們的希望！發票捐贈後則無法變更為開立或索取紙本。
+						</span>
+						<span>
+							說明：將寄送至訂購人地址
+						</span>
+					</div>-->
+					<div class="notice">
+						<ul class="high-light-ul">
+							<li>※ 依據統一發票使用辦法規定: 發票一經開立不得任意更改3或改開發票</li>
+							<li>※ 發票開立須知</li>
+						</ul>
+						<ul class="num-ul">
+							<li>為響應節能省碳愛地球，建議您優先選擇使用電子發票。 您可以選擇以您的手機條碼或自然人憑證條碼載具儲存電子發票。 若您並無該些載具，您可選擇購意思Goiiz會員載具， 中獎發票將由本網站進行通知，我們將於「財政部電子發票整合服務平台」 提供中獎清冊後進行中獎資料核對，核對無誤後將於7個工作天掛號寄出。</li>
+							<li>您如果選擇開立公司行號/機關團體報帳用電子發票紙本或索取個人用電子發票紙本， 發票紙本將會於商品出貨後7個工作天內以平信寄出，如遇國定假日將順延寄送。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="step-area row">
 		<div class="col s12 m8 offset-m2 l6 offset-l3 center">
 			<a class="btn waves-effect waves-orange" id="next-stp">下一步，付款</a>
@@ -178,7 +213,8 @@
 <script>
 $(function(){
 	$('.select').material_select();
-	$('.receiver-form, .receiver-title').hide();
+	var receiver_col= $('.receiver-form, #rec');
+	receiver_col.hide();
 	function checkTitle(){
 		$('.check-title').css({
 			'color':'#9fa0a0',
@@ -187,12 +223,12 @@ $(function(){
 		});
 	}
 	$('#receiver-yes').click(function(){
-		$('.receiver-form, .receiver-title').slideDown(250);
-		checkTitle()
+		receiver_col.slideUp(250);
+		//checkTitle()
 	});
 	$('#receiver-no').click(function(){
-		$('.receiver-form, .receiver-title').slideUp(250);
-		checkTitle()
+		receiver_col.slideDown(250);
+		//checkTitle()
 	});
 	$('.select-dropdown li').click(function() {
 		$(this).parent('.select-dropdown').slideUp(250);

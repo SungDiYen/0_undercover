@@ -338,7 +338,7 @@ $(function(){
 	calcu_indicator_width();
 	function calcu_indicator_width(){
 		var indicator_item_num = $("ul.indicators>li").length;
-		var new_width= 100/indicator_item_num;
+		var new_width= (100/indicator_item_num).toFixed(2);
 		$('li.indicator-item').css('width', new_width+'%');
 	}
 });

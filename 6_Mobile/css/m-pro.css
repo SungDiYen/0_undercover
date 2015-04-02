@@ -1,162 +1,141 @@
-@media screen and (max-width: 599px) {
-  header {
-    height: 88px !important;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 991px) {
-  header {
-    height: 96px !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  header {
-    height: 112px !important;
-  }
-}
-
-.top-area {
+/*header {
+	@media screen and (max-width: $s-screen) {
+		height: $s-header + 48px!important;
+	}
+	@media screen and (min-width: $m-screen-a)and(max-width: $m-screen-z) {
+		height: $m-header + 48px!important;
+	}
+	@media screen and (min-width: $l-screen) {
+		height: $l-header + 48px!important;
+	}
+}*/
+.top-area.row {
   margin: 0;
 }
-.top-area figure {
-  /*height: 300px;
-  overflow: hidden;*/
+.top-area.row figure.card {
+  max-height: 400px;
+  overflow: hidden;
   text-align: center;
-  padding: 0 !important;
+  padding: 0;
+  background: #fff;
+  margin-top: 0;
 }
-.top-area figure img {
-  margin: 0 !important;
-  padding: 0 !important;
+.top-area.row figure.card img {
+  width: 100%;
 }
 
 .middle-area h2 {
   color: #1f3134;
-  margin: 0.5rem 0 0;
-  font-size: 2rem;
-  line-height: 2.8rem;
+  margin: 0;
   /*@include text-hide;*/
 }
+.middle-area .price-area > div {
+  display: inline-block;
+}
+.middle-area .price-area > div .price {
+  font-family: Verdana;
+}
+.middle-area .price-area > div .money-tag {
+  padding-right: 0.3rem;
+  font-family: Verdana;
+}
 .middle-area .price-area .pro-price {
-  color: #e9546b;
-  font-weight: 900;
-  padding: 0;
-  font-size: 2.5rem;
-  /*.price-title {
-  	font-size: 2rem * 0.75;
-  }*/
+  color: #e52d27;
+}
+.middle-area .price-area .pro-price .price-title {
+  font-size: 1.02rem;
 }
 .middle-area .price-area .pro-price .money-tag {
-  font-weight: 700;
-  padding-right: 0.3rem;
-  font-size: 1.5rem;
+  font-size: 2.125rem;
 }
-.middle-area .price-area .pay-way {
-  padding: 0;
+.middle-area .price-area .ori-price {
+  color: #aaa;
+  margin-left: 0.6rem;
 }
-.middle-area .price-area .pay-way img.icon {
-  padding: 8px;
-  max-width: 72px;
-}
-.middle-area .price-area br {
-  display: none;
+.middle-area .price-area .ori-price span.price {
+  text-decoration: line-through;
 }
 @media screen and (max-width: 599px) {
   .middle-area h2 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
+    line-height: 2.38rem;
   }
   .middle-area .price-area .pro-price {
-    font-size: 2.1875rem;
-    line-height: 2.1875rem;
+    font-size: 2.125rem;
   }
-  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
-    font-size: 1.3125rem;
+  .middle-area .price-area .pro-price .money-tag {
+    font-size: 2.125rem;
   }
-  .middle-area br {
-    display: block !important;
+  .middle-area .price-area .pro-price .price-title {
+    font-size: 1.02rem;
   }
-  .middle-area img.icon {
-    width: 20%;
-    padding: 0 !important;
-    margin: 8px;
+  .middle-area .price-area .ori-price {
+    font-size: 1.02rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 991px) {
   .middle-area h2 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
+    line-height: 2.38rem;
   }
   .middle-area .price-area .pro-price {
-    font-size: 2.1875rem;
+    font-size: 2.125rem;
   }
-  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
-    font-size: 1.3125rem;
+  .middle-area .price-area .pro-price .money-tag {
+    font-size: 2.125rem;
   }
-  .middle-area img.icon {
-    width: 20% !important;
+  .middle-area .price-area .pro-price .price-title {
+    font-size: 1.02rem;
+  }
+  .middle-area .price-area .ori-price {
+    font-size: 1.02rem;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1440px) {
   .middle-area h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.38rem;
   }
   .middle-area .price-area .pro-price {
-    font-size: 2.5rem;
+    font-size: 2.125rem;
   }
-  .middle-area .price-area .pro-price .price-title, .middle-area .price-area .pro-price .money-tag {
-    font-size: 1.5rem;
+  .middle-area .price-area .pro-price .money-tag {
+    font-size: 2.125rem;
   }
-  .middle-area img.icon {
-    width: 20% !important;
+  .middle-area .price-area .pro-price .price-title {
+    font-size: 1.02rem;
   }
-}
-@media screen and (min-width: 1441px) {
-  .middle-area img.icon {
-    width: 10% !important;
+  .middle-area .price-area .ori-price {
+    font-size: 1.02rem;
   }
-}
-.middle-area .store-area.row {
-  margin: 0;
-}
-.middle-area .store-area.row .col {
-  padding-left: 0;
-}
-.middle-area .store-area.row .shop-img {
-  max-width: 100px;
-}
-.middle-area .store-area.row .shop-img img {
-  border: 1px solid #9fa0a0;
-}
-.middle-area .store-area.row .shop-name {
-  padding-left: 16px;
-}
-.middle-area .store-area.row .shop-name a {
-  color: #383c3c;
 }
 
 .bottom-area {
   margin: 0;
-  border-top: 1px solid #b6b6b6;
-  padding-top: 1rem;
+  padding: 0 0.75rem;
 }
-.bottom-area h3 {
-  color: #9fa0a0;
-  font-size: 1.5rem;
-  font-weight: 100;
-  margin: 0 0 0.75rem 0;
-  padding: 0 0.5rem;
+.bottom-area section.card {
+  margin-top: 0;
+  padding: 0.75rem 0;
 }
 .bottom-area .pro-size, .bottom-area .sns {
-  margin-bottom: 1rem;
+  width: 50%;
+  float: left;
+  padding: 0 0.75rem;
 }
-.bottom-area .btn-g > span.col {
-  padding: 0;
+.bottom-area .pro-size .title, .bottom-area .sns .title {
+  color: #9fa0a0;
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin: 0 0 0.75rem 0;
   text-align: center;
-  padding: 0 8px;
 }
-.bottom-area .btn-g > span.col a {
+.bottom-area .btn-group a {
   background: transparent;
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
-  border: 3px solid #9fa0a0;
+  border: 2px solid #9fa0a0;
   color: #9fa0a0;
   height: 48px;
   line-height: 42px;
@@ -168,26 +147,69 @@
   display: block;
   margin-bottom: 8px;
   width: 100%;
+  padding: 0;
 }
-.bottom-area .btn-g > span.col a i {
+.bottom-area .btn-group a i {
   padding-right: 4px;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 599px) {
-  .bottom-area .btn-g > span.col a {
+  .bottom-area .btn-group a {
     font-size: 1.15rem;
     height: 40px;
     line-height: 34px;
   }
-  .bottom-area .btn-g > span.col a i {
+  .bottom-area .btn-group a i {
     font-size: 1.15rem;
   }
+}
+.bottom-area .btn-group a.btn-active {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #3b5998;
+  border-color: #3b5998;
+  color: #fff;
+}
+.bottom-area .btn-group a.btn-fail {
+  background: #fff;
+  border-color: #e52d27;
+  color: #e52d27;
+}
+.bottom-area .store-area.row {
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+}
+.bottom-area .store-area.row .col {
+  padding-left: 0;
+}
+.bottom-area .store-area.row .shop-img {
+  max-width: 100px;
+}
+.bottom-area .store-area.row .shop-img img {
+  border: 1px solid #9fa0a0;
+}
+.bottom-area .store-area.row .shop-name a {
+  color: #383c3c;
+  font-size: 1.2rem;
+}
+.bottom-area .pay-way {
+  font-size: 0;
+}
+.bottom-area .pay-way img.icon {
+  padding: 0 0.75rem;
+  opacity: .8;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .extra-area {
   padding: 0;
   padding-top: 2rem !important;
-  border-top: 1px solid #b6b6b6;
   margin-bottom: 38px;
 }
 .extra-area .pro-sub-img {
@@ -205,24 +227,24 @@
   vertical-align: middle;
 }
 
-.cfa-area div {
+.fixed-area div {
   position: fixed;
   z-index: 899;
   bottom: 0;
   margin: 0;
   padding: 0 !important;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
-.cfa-area div span {
+.fixed-area div span {
   padding: 0.75rem !important;
 }
-.cfa-area div span a.btn {
+.fixed-area div span a.btn {
   background: transparent;
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
-  border: 3px solid #9fa0a0;
+  border: 2px solid #9fa0a0;
   color: #9fa0a0;
   height: 48px;
   line-height: 42px;
@@ -237,33 +259,33 @@
   color: #ff9800;
   border-color: #ff9800;
 }
-.cfa-area div span a.btn i {
+.fixed-area div span a.btn i {
   padding-right: 4px;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 599px) {
-  .cfa-area div span a.btn {
+  .fixed-area div span a.btn {
     font-size: 1.15rem;
     height: 40px;
     line-height: 34px;
   }
-  .cfa-area div span a.btn i {
+  .fixed-area div span a.btn i {
     font-size: 1.15rem;
   }
 }
-.cfa-area div span a#tel {
+.fixed-area div span a#tel {
   border-color: #4CAF50;
   color: #4CAF50;
 }
-.cfa-area div span a#tel:hover {
+.fixed-area div span a#tel:hover {
   background: #4CAF50;
   color: #fff;
 }
-.cfa-area div span i {
+.fixed-area div span i {
   padding-right: 0.5rem;
 }
 @media screen and (min-width: 1441px) {
-  .cfa-area div span a.btn {
+  .fixed-area div span a.btn {
     height: 48px;
     line-height: 42px;
   }
